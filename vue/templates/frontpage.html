@@ -1,7 +1,11 @@
 {% extends 'base.html' %}
 {% block navbar %}
-<div>
-    <p>Test</p>
+<div id="timer" class="timer-container">
+    {% if showTimer %}
+    <div class="timer-text"><h1>${timerDisplay}</h1></div>
+    <!--<div><h1 class="timer-bar" :style="{ width: bar + '%', backgroundColor: hue }">a</h1></div>-->
+    <div class="timer-bar" :style="{ width: bar + '%', backgroundColor: hue }"></div> 
+    {% endif %} 
 </div>
 {% endblock %}
 {% block content %}
@@ -27,7 +31,6 @@
 {% endblock %}
 
 {% block script %}
-
 <script>
     var surveyapp = new Vue({
         el: '#survey-app',
@@ -51,6 +54,44 @@
                 if (this.slideCounter < 10) {
                     this.slideCounter ++;
                 }
+            }
+        }
+    });
+</script>
+
+<script>
+    var surveyapp = new Vue({
+        el: '#timer',
+        delimiters: ['${', '}'],
+        data () {
+            return {
+                seconds: 7, 
+                centiseconds: 700,
+                timerDisplay: "00:07",
+                bar : 100,
+                hue: "hsl(120,80%,85%)"
+            }
+        },
+        watch: {
+            centiseconds: {
+                handler(value) {
+                    if (value > 0) {
+                        setTimeout(() => {
+                            this.centiseconds--;
+                            this.seconds =  Math.floor(this.centiseconds/100);
+                            if (this.centiseconds>=10) {
+                                this.timerDisplay = "00:0" + this.seconds + ","+ Math.floor(this.centiseconds/7);
+                            }
+                            else {
+                                this.timerDisplay = "00:0" + this.seconds + ",0"+ Math.floor(this.centiseconds/7);
+                            }
+                            this.bar = Math.floor(this.centiseconds/7)
+                            var hue=(((this.bar/100))*120).toString(10);
+                            this.hue = "hsl(" + hue + ",80%,85%)"; 
+                        }, 10);
+                    }
+                },
+                immediate: true // This ensures the watcher is triggered upon creation
             }
         }
     });

@@ -15,9 +15,12 @@ from vue.forms import Registration
 def frontpage(request, participant_id):
     currentExp = Experiment.objects.get(pk=participant_id)
     slide_list = currentExp.order.slide_order.split(",")
+    show_timer = None
+    show_timer = True
     context = {
         'group':currentExp.group,
-        'slides' : slide_list
+        'slides' : slide_list,
+        'showTimer' : show_timer,
     }
     return render(request, 'frontpage.html', context)
 

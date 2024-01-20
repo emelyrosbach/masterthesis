@@ -1,0 +1,23 @@
+/*'clear browser cache Ctrl + shitf + R*/
+.timer-container{
+    display: flex;
+    width: inherit;
+    height: inherit;
+    background-color:aqua;
+}
+.timer-text {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0px; left: 0px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.timer-bar {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0px; left: 0px;
+    z-index: -1;
+}
