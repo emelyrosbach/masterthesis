@@ -3,17 +3,20 @@
 <div id="timer" class="timer-container">
     {% if showTimer %}
     <div class="timer-text"><h1>${timerDisplay}</h1></div>
-    <!--<div><h1 class="timer-bar" :style="{ width: bar + '%', backgroundColor: hue }">a</h1></div>-->
     <div class="timer-bar" :style="{ width: bar + '%', backgroundColor: hue }"></div> 
-    {% endif %} 
+    {% endif %}
 </div>
 {% endblock %}
 {% block content %}
     <div id="survey-app">
         <h1 class="title">Frontpage</h1>
         <p>Your Group is {{group}}</p>
+        <h1>{{showTimer}}</h1>
         <div>
+            <p>Slide number</p>
             <p>${slides[slideCounter].number}</p>
+            <p>Slide counter</p>
+            <p>{{slideCounter}}</p>
         </div>
         <div>
         {% load static %}
@@ -37,7 +40,9 @@
         delimiters: ['${', '}'],
         data () {
             return {
-                slideCounter: 0,
+                totalSlides: 10,
+                timerActive: {{showTimer}},
+                slideCounter: {{slideCounter}},
                 slides: [
                     {% for slide in slides %}
                         {
@@ -51,8 +56,35 @@
         methods: {
             nextSlide() {
                 //has to be 20 later
-                if (this.slideCounter < 10) {
+                if (this.slideCounter < this.totalSlides) {
                     this.slideCounter ++;
+                    if (this.slideCounter== (this.totalSlides/2)) {
+                        this.timerActive = 1 - this.timerActive;
+                    }
+                    var url = '';
+                    var participantId='{{id}}';
+                    if (this.slideCounter==1) {
+                        url = '../../experiment/'+participantId+'/'+ this.timerActive+ '/'+ this.slideCounter+'/';
+                    }
+                    else if (this.slideCounter == this.totalSlides) {
+                        url = '../../../../end/'+participantId+'/'+ this.timerActive+ '/'+ this.slideCounter+'/';
+                    }
+                    else {
+                        url = '../../../'+participantId+'/'+ this.timerActive+ '/'+ this.slideCounter+'/';
+                    }
+                    fetch(url, {
+                        method: 'POST',
+                        headers: {
+                            'Content-Type': 'apllication/json',
+                            'X-CSRFToken': '{{csrf_token}}'
+                        },
+                    })
+                    .then((response) => {
+                            window.location.href = response.url;
+                    })
+                    .catch(function(error) {
+                        console.log('Error');
+                    })
                 }
             }
         }
@@ -69,7 +101,7 @@
                 centiseconds: 700,
                 timerDisplay: "00:07",
                 bar : 100,
-                hue: "hsl(120,80%,85%)"
+                hue: "hsl(120,80%,85%)",
             }
         },
         watch: {
@@ -92,7 +124,7 @@
                     }
                 },
                 immediate: true // This ensures the watcher is triggered upon creation
-            }
+            },
         }
     });
 </script>

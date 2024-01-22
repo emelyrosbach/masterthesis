@@ -2,30 +2,7 @@ from django.shortcuts import render, redirect
 from django.core.exceptions import ObjectDoesNotExist
 from vue.models import Experiment, Order
 from vue.forms import Registration
-
-'''def frontpage(request):
-    exp = Experiment.objects.get(pk=request.COOKIES.get('participant_id'))
-    slide_list = exp.order.slide_order.split(",")
-    context = {
-        'group':exp.group,
-        'slides' : slide_list
-    }
-    return render(request, 'frontpage.html', context)'''
-
-def frontpage(request, participant_id):
-    currentExp = Experiment.objects.get(pk=participant_id)
-    slide_list = currentExp.order.slide_order.split(",")
-    show_timer = None
-    show_timer = True
-    context = {
-        'group':currentExp.group,
-        'slides' : slide_list,
-        'showTimer' : show_timer,
-    }
-    return render(request, 'frontpage.html', context)
-
-def secondpage(request):
-    return render(request, 'secondpage.html')
+import json
 
 def startingpage(request):
     if request.method =='POST':
@@ -56,7 +33,48 @@ def startingpage(request):
                 currentExp.order = Order.objects.get(pk=order_nr)
                 currentExp.email = form_email
                 currentExp.save()
-            return redirect('frontpage', currentExp.participant_id)
+            return redirect('experimentFirstSlide', currentExp.participant_id)
     else:
         form = Registration()
     return render(request, 'startingpage.html', {'form': form})
+
+def experimentFirstSlide(request, participant_id):
+    currentExp = Experiment.objects.get(pk=participant_id)
+    slide_list = currentExp.order.slide_order.split(",")
+    context = {
+        'id': currentExp.participant_id,
+        'group':currentExp.group,
+        'slides' : slide_list,
+        'showTimer' : None,
+        'slideCounter' : 0,
+    }    
+    show_timer = None
+    if currentExp.group=='A' or currentExp.group=='B':
+        show_timer = 1
+    else:
+        show_timer = 0
+    context['showTimer'] = show_timer
+    return render(request, 'experiment.html', context)
+
+def experiment(request, participant_id, timer_active, slide_counter):
+    if request.method =='POST':
+        #savelogic
+        return redirect('experiment', participant_id, timer_active, slide_counter)
+    else:
+        currentExp = Experiment.objects.get(pk=participant_id)
+        slide_list = currentExp.order.slide_order.split(",")
+        context = {
+            'id': currentExp.participant_id,
+            'group':currentExp.group,
+            'slides' : slide_list,
+            'showTimer' : timer_active,
+            'slideCounter' : slide_counter
+        }
+        return render(request, 'experiment.html', context)
+
+def endpage(request, participant_id, timer_active, slide_counter):
+    if request.method =='POST':
+        #savelogic
+        return redirect('endpage', participant_id, timer_active, slide_counter)
+    else:
+        return render(request, 'endpage.html')

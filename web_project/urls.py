@@ -21,6 +21,7 @@ from vue import views as vue_views
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('', vue_views.startingpage, name='startingpage'),
-    path('frontpage/<int:participant_id>/', vue_views.frontpage, name='frontpage'),
-    path('second/', vue_views.secondpage, name='secondpage'),
+    path('experimentFirstSlide/<int:participant_id>/', vue_views.experimentFirstSlide, name='experimentFirstSlide'),
+    path('experiment/<int:participant_id>/<int:timer_active>/<int:slide_counter>/', vue_views.experiment, name='experiment'),
+     path('end/<int:participant_id>/<int:timer_active>/<int:slide_counter>/', vue_views.endpage, name='endpage'),
 ]
