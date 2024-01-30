@@ -8,30 +8,38 @@
 </div>
 {% endblock %}
 {% block content %}
-    <div id="survey-app">
-        <h1 class="title">Frontpage</h1>
-        <p>Your Group is {{group}}</p>
-        <h1>{{showTimer}}</h1>
-        <div>
-            <p>Slide number</p>
-            <p>${slides[slideCounter].number}</p>
-            <p>Slide counter</p>
-            <p>{{slideCounter}}</p>
+    <div id="survey-app" class="survey-page">
+        <div class="columns">
+            <div class="column is-8 image-container">
+                {% load static %}
+                <img :style="{ backgroundImage: 'url(' + slides[slideCounter].url + ')' }">
+            </div>
+            <div class="column is-4 side-bar">
+                {% if condition == 'XAI' %}
+                <div class="column is-12 AI-rec">
+                    <div>
+                        <h1>AI Reccomendation</h1>
+                        <p>The AI estimates a tumor cell percentage of </p>
+                    </div>
+                </div>
+                {% endif %}
+                <div class="column is-12 your-assesment">
+                    <div>
+                        <p>Please estimate the tumor cell percentage(%):</p>
+                        <form>
+                            <input v-model="tcpEst">
+                        </form>
+                    </div>
+                   
+                </div>
+            </div>
         </div>
-        <div>
-        {% load static %}
-        <img :src=slides[slideCounter].url>
-        </div>
-        <div>
-            <button @click=nextSlide()>Next</button>
-        </div>
+        <footer class="footer is-dark">
+            <button :disabled=!tcpEst @click=nextSlide()>Next</button>
+        </footer>
     </div>
 {% endblock %}
-{% block footer %}
-<div>
-    <p>Footer</p>
-</div>
-{% endblock %}
+
 
 {% block script %}
 <script>
@@ -40,14 +48,16 @@
         delimiters: ['${', '}'],
         data () {
             return {
-                totalSlides: 10,
+                totalSlides: 18,
                 timerActive: {{showTimer}},
                 slideCounter: {{slideCounter}},
+                condition: "{{condition}}",
+                tcpEst : "",
                 slides: [
                     {% for slide in slides %}
                         {
                             "number" : {{slide}},
-                            "url": "{% static '' %}images/" + {{ slide }} + ".png",
+                            "url": "../../../../../static/images/" + {{ slide }} + ".png",
                         },
                     {% endfor %}
                 ]
@@ -55,7 +65,6 @@
         },
         methods: {
             nextSlide() {
-                //has to be 20 later
                 if (this.slideCounter < this.totalSlides) {
                     this.slideCounter ++;
                     if (this.slideCounter== (this.totalSlides/2)) {
@@ -64,20 +73,24 @@
                     var url = '';
                     var participantId='{{id}}';
                     if (this.slideCounter==1) {
-                        url = '../../experiment/'+participantId+'/'+ this.timerActive+ '/'+ this.slideCounter+'/';
+                        url = '../../../experiment/'+participantId+'/'+ this.condition+ '/' + this.timerActive+ '/'+ this.slideCounter+'/';
                     }
                     else if (this.slideCounter == this.totalSlides) {
-                        url = '../../../../end/'+participantId+'/'+ this.timerActive+ '/'+ this.slideCounter+'/';
+                        url = '../../../../../poststudy/'+participantId+'/'+ this.condition+ '/';
                     }
                     else {
-                        url = '../../../'+participantId+'/'+ this.timerActive+ '/'+ this.slideCounter+'/';
+                        url = '../../../../'+participantId+'/'+ this.condition+ '/' + this.timerActive+ '/'+ this.slideCounter+'/';
                     }
+                    const formdata = {
+                        'tcp_est' : this.tcpEst,
+                    };
                     fetch(url, {
                         method: 'POST',
                         headers: {
                             'Content-Type': 'apllication/json',
                             'X-CSRFToken': '{{csrf_token}}'
                         },
+                        body: JSON.stringify(formdata)
                     })
                     .then((response) => {
                             window.location.href = response.url;

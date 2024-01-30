@@ -1,0 +1,113 @@
+{% extends 'base.html' %}
+{% block navbar %}
+<div id="timer" class="timer-container">
+    {% if showTimer %}
+    <div class="timer-text"><h1>${timerDisplay}</h1></div>
+    <div class="timer-bar" :style="{ width: bar + '%', backgroundColor: hue }"></div> 
+    {% endif %}
+</div>
+{% endblock %}
+{% block content %}
+    <div id="survey-app">
+        <h1 class="title">Training</h1>
+        <h1>{{condition}}</h1>
+        <h1>{{showTimer}}</h1>
+        <div>
+            <p>Slide counter</p>
+            <p>{{slideCounter}}</p>
+        </div>
+        <div>
+        {% load static %}
+        <img src="{% static 'trainingImages/' %}{{slideCounter}}.png">
+        </div>
+        <div>
+            <button @click=nextSlide()>Next</button>
+        </div>
+    </div>
+{% endblock %}
+
+{% block script %}
+<script>
+    var surveyapp = new Vue({
+        el: '#survey-app',
+        delimiters: ['${', '}'],
+        data () {
+            return {
+                totalSlides: 2,
+                timerActive: {{showTimer}},
+                slideCounter: {{slideCounter}},
+                condition: "{{condition}}"
+            }
+        },
+        methods: {
+            nextSlide() {
+                if (this.slideCounter < this.totalSlides) {
+                    this.slideCounter ++;
+                    if (this.slideCounter== (this.totalSlides/2)) {
+                        this.timerActive = 1 - this.timerActive;
+                    }
+                    var url = '';
+                    var participantId='{{id}}';
+                    if (this.slideCounter == this.totalSlides) {
+                        url = '../../../../../../prestudy/'+participantId+'/'+ this.condition+ '/';
+                    }
+                    else {
+                        url = '../../../../../training/'+participantId+'/'+ this.condition+ '/'+ this.timerActive+ '/'+ this.slideCounter+'/';
+                    }
+                    fetch(url, {
+                        method: 'POST',
+                        headers: {
+                            'Content-Type': 'apllication/json',
+                            'X-CSRFToken': '{{csrf_token}}'
+                        },
+                    })
+                    .then((response) => {
+                            window.location.href = response.url;
+                    })
+                    .catch(function(error) {
+                        console.log('Error');
+                    })
+                }
+            }
+        }
+    });
+</script>
+
+<script>
+    var surveyapp = new Vue({
+        el: '#timer',
+        delimiters: ['${', '}'],
+        data () {
+            return {
+                seconds: 7, 
+                centiseconds: 700,
+                timerDisplay: "00:07",
+                bar : 100,
+                hue: "hsl(120,80%,85%)",
+            }
+        },
+        watch: {
+            centiseconds: {
+                handler(value) {
+                    if (value > 0) {
+                        setTimeout(() => {
+                            this.centiseconds--;
+                            this.seconds =  Math.floor(this.centiseconds/100);
+                            if (this.centiseconds>=10) {
+                                this.timerDisplay = "00:0" + this.seconds + ","+ Math.floor(this.centiseconds/7);
+                            }
+                            else {
+                                this.timerDisplay = "00:0" + this.seconds + ",0"+ Math.floor(this.centiseconds/7);
+                            }
+                            this.bar = Math.floor(this.centiseconds/7)
+                            var hue=(((this.bar/100))*120).toString(10);
+                            this.hue = "hsl(" + hue + ",80%,85%)"; 
+                        }, 10);
+                    }
+                },
+                immediate: true // This ensures the watcher is triggered upon creation
+            },
+        }
+    });
+</script>
+{% endblock %}

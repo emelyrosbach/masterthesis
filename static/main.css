@@ -1,9 +1,33 @@
 /*'clear browser cache Ctrl + shitf + R*/
+.section {
+    display: flex;
+    padding: 0;
+    height: 88vh;
+    width: 100%;
+}
+.navbar, footer {
+    height: 6vh;
+    width: 100%;
+    padding: 10px !important;
+    background-color: #F8F8F8;
+}
+footer {
+   display: flex; 
+   align-items: center;
+   justify-content: flex-end;
+}
+footer button{
+    width: 80px;
+    height: 30px;
+    margin-right: 30px;
+    border: 1px solid #D3D3D3;
+    background-color: #D3D3D3;
+    border-radius: 5px;
+ }
 .timer-container{
     display: flex;
     width: inherit;
     height: inherit;
-    background-color:aqua;
 }
 .timer-text {
     width: 100%;
@@ -14,10 +38,54 @@
     justify-content: center;
     align-items: center;
 }
+.timer-text h1 {
+    font-size: x-large;
+    font-weight: bold;
+}
 .timer-bar {
     width: 100%;
     height: 100%;
     position: absolute;
     top: 0px; left: 0px;
     z-index: -1;
+}
+.survey-page {
+    width: 100%;
+    height: 100%;
+    padding: 0;
+    margin: 0;
+}
+.columns, column {
+    height: inherit;
+    margin: 0 ! important;
+}
+.image-container {
+    padding: 0;
+    height: inherit;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #D3D3D3;
+}
+.image-container img{
+    width: 100%;
+    height: 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+}
+.side-bar {
+    height: inherit;
+    padding: 30px;
+}
+.AI-rec, .your-assesment {
+    height: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.AI-rec {
+    background-color: #EEEEEE;
+    border: 1px solid #EEEEEE;
+    border-radius: 10px;
 }

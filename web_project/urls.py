@@ -20,8 +20,12 @@ from vue import views as vue_views
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('', vue_views.startingpage, name='startingpage'),
-    path('experimentFirstSlide/<int:participant_id>/', vue_views.experimentFirstSlide, name='experimentFirstSlide'),
-    path('experiment/<int:participant_id>/<int:timer_active>/<int:slide_counter>/', vue_views.experiment, name='experiment'),
-     path('end/<int:participant_id>/<int:timer_active>/<int:slide_counter>/', vue_views.endpage, name='endpage'),
+    path('', vue_views.startingpageBaseline, name='startingpageBaseline'),
+    path('XAI/', vue_views.startingpageXAI, name='startingpageXAI'),
+    path('experimentFirstSlide/<int:participant_id>/<str:condition>/', vue_views.experimentFirstSlide, name='experimentFirstSlide'),
+    path('experiment/<int:participant_id>/<str:condition>/<int:timer_active>/<int:slide_counter>/', vue_views.experiment, name='experiment'),
+    path('end/<int:participant_id>/<str:condition>/', vue_views.endpage, name='endpage'),
+    path('training/<int:participant_id>/<str:condition>/<int:timer_active>/<int:slide_counter>/', vue_views.training, name='training'),
+    path('prestudy/<int:participant_id>/<str:condition>/', vue_views.prestudy, name='prestudy'),
+    path('poststudy/<int:participant_id>/<str:condition>/', vue_views.poststudy, name='poststudy'),
 ]
