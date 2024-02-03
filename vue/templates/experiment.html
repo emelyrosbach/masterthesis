@@ -11,23 +11,58 @@
     <div id="survey-app" class="survey-page">
         <div class="columns">
             <div class="column is-8 image-container">
-                {% load static %}
-                <img :style="{ backgroundImage: 'url(' + slides[slideCounter].url + ')' }">
+                <!--{% load static %}-->
+                <div v-if="condition == 'XAI'" class="image-div" :style="annotationsOn?{ backgroundImage: 'url(' + slides[slideCounter].urlAnnotations + ')' }:{ backgroundImage: 'url(' + slides[slideCounter].url + ')' }">
+                    <div class="field switch-container">
+                        <input id="annotations" name="annotations" class="switch is-rounded is-rtl" type="checkbox" v-model="annotationsOn" autocomplete="off">
+                        <label for="annotations">Annotations</label>
+                    </div>
+                </div>
+                <div v-else class="image-div" :style="{ backgroundImage: 'url(' + slides[slideCounter].url + ')' }"></div>
             </div>
             <div class="column is-4 side-bar">
                 {% if condition == 'XAI' %}
                 <div class="column is-12 AI-rec">
-                    <div>
+                    <div class="AI-rec-titles">
                         <h1>AI Reccomendation</h1>
-                        <p>The AI estimates a tumor cell percentage of </p>
+                        <h2 class="mb-5">The AI estimates a tumor cell percentage of <b>${slides[slideCounter].pred}%</b></h2>
+                        <div class="columns">
+                            <div class="column is-10">
+                                <p>The depicted cells below, are excerpts from the currently displayed slide and serve as prototypical examples for a positive and negative neoplastic cell classification by the AI model:</p>
+                            </div>
+                            <div class="column is-2 icon">
+                                {% load static %}
+                                <img src="../../../../../static/icons/i-icon.png">
+                            </div>
+                        </div>
+                        <div class="columns pt-4">
+                            <div class="column is-6">
+                                <div class="row example">
+                                    <img :src=slides[slideCounter].urlPos>
+                                </div>
+                                <div class="row example">
+                                    <p>Prototypical positive result from this slide</p>
+                                </div>
+                            </div>
+                            <div class="column is-6">
+                                <div class="row example">
+                                    <img :src=slides[slideCounter].urlNeg>
+                                </div>
+                                <div class="row example">
+                                    <p>Prototypical negative result from this slide</p>
+                                </div>
+                            </div>
+                        </div>
                     </div>
                 </div>
                 {% endif %}
-                <div class="column is-12 your-assesment">
+                <div class="column is-12 your-assesment" :style="condition=='XAI'?{ 'height': '50%'}:{ 'height': '100%'}">
                     <div>
-                        <p>Please estimate the tumor cell percentage(%):</p>
+                        <h1 class="mb-4">Your Assesment</h1>
+                        <p v-if="condition == 'XAI'" class="mb-4">Please estimate the tumor cell percentage(%) knowing the AI predicted <b>${slides[slideCounter].pred}%</b>:</p>
+                        <p v-else class="mb-4">Please estimate the tumor cell percentage(%):</p>
                         <form>
-                            <input v-model="tcpEst">
+                            <input v-model="tcpEst" autocomplete="off">
                         </form>
                     </div>
                    
@@ -35,7 +70,12 @@
             </div>
         </div>
         <footer class="footer is-dark">
-            <button :disabled=!tcpEst @click=nextSlide()>Next</button>
+            <div class="slide-progress">
+                <h2 class="ml-4">Page ${slideCounter + 1} out of ${totalSlides}</h2>
+            </div>
+            <div class="next-button">
+                <button :disabled=!tcpEst @click=nextSlide()>Next</button>
+            </div>
         </footer>
     </div>
 {% endblock %}
@@ -53,14 +93,23 @@
                 slideCounter: {{slideCounter}},
                 condition: "{{condition}}",
                 tcpEst : "",
+                annotationsOn: true,
                 slides: [
                     {% for slide in slides %}
                         {
                             "number" : {{slide}},
                             "url": "../../../../../static/images/" + {{ slide }} + ".png",
+                            "urlAnnotations": "../../../../../static/annotations/" + {{ slide }} + ".png",
+                            "urlPos": "../../../../../static/patches/" + {{ slide }} + "0.png",
+                            "urlNeg": "../../../../../static/patches/" + {{ slide }} + "1.png",
+                            {%for key, value in predictions.items %}
+                                {% if key == slide %}
+                                    "pred": {{value}},
+                                {% endif %}
+                            {% endfor %}
                         },
                     {% endfor %}
-                ]
+                ],
             }
         },
         methods: {
@@ -70,17 +119,8 @@
                     if (this.slideCounter== (this.totalSlides/2)) {
                         this.timerActive = 1 - this.timerActive;
                     }
-                    var url = '';
                     var participantId='{{id}}';
-                    if (this.slideCounter==1) {
-                        url = '../../../experiment/'+participantId+'/'+ this.condition+ '/' + this.timerActive+ '/'+ this.slideCounter+'/';
-                    }
-                    else if (this.slideCounter == this.totalSlides) {
-                        url = '../../../../../poststudy/'+participantId+'/'+ this.condition+ '/';
-                    }
-                    else {
-                        url = '../../../../'+participantId+'/'+ this.condition+ '/' + this.timerActive+ '/'+ this.slideCounter+'/';
-                    }
+                    var url = '../../../../'+participantId+'/'+ this.condition+ '/' + this.timerActive+ '/'+ this.slideCounter+'/';
                     const formdata = {
                         'tcp_est' : this.tcpEst,
                     };

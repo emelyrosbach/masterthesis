@@ -1,7 +1,8 @@
 from django.shortcuts import render, redirect
 from django.core.exceptions import ObjectDoesNotExist
+from vue.predictions import AIPredictions, TrainingAIPredictions
 from vue.models import Experiment, Order
-from vue.forms import Registration, PreStudy, PostStudy
+from vue.forms import Registration, PreStudy, PostStudy, Confidence
 import json
 
 def startingpageBaseline(request):
@@ -75,55 +76,72 @@ def startingpageXAI(request):
 def training(request, participant_id, condition, timer_active, slide_counter):
     if request.method =='POST':
         #savelogic
+        content = json.loads(request.body)
+        tcpEst = content['tcp_est']
+        print (tcpEst)
         return redirect('training', participant_id, condition, timer_active, slide_counter)
     else:
         currentExp = Experiment.objects.get(pk=participant_id)
         slide_list = currentExp.order.slide_order.split(",")
+        predictions = TrainingAIPredictions.getTrainingAIPredictions()
         context = {
             'id': currentExp.participant_id,
             'condition': condition,
             'showTimer' : timer_active,
-            'slideCounter' : slide_counter
+            'slideCounter' : slide_counter,
+            'predictions': predictions
         }
         return render(request, 'training.html', context)
     
-def experimentFirstSlide(request, participant_id, condition):
-    currentExp = Experiment.objects.get(pk=participant_id)
-    slide_list = currentExp.order.slide_order.split(",")
-    context = {
-        'id': currentExp.participant_id,
-        'group':currentExp.group,
-        'slides' : slide_list,
-        'showTimer' : None,
-        'slideCounter' : 0,
-        'condition' : condition
-    }    
-    show_timer = None
-    if currentExp.group=='A' or currentExp.group=='B':
-        show_timer = 1
-    else:
-        show_timer = 0
-    context['showTimer'] = show_timer
-    return render(request, 'experiment.html', context)
-
 def experiment(request, participant_id, condition, timer_active, slide_counter):
     if request.method =='POST':
         content = json.loads(request.body)
         tcpEst = content['tcp_est']
         print (tcpEst)
-        return redirect('experiment', participant_id, condition, timer_active, slide_counter)
+        return redirect('confidence', participant_id, condition, timer_active, slide_counter)
     else:
         currentExp = Experiment.objects.get(pk=participant_id)
         slide_list = currentExp.order.slide_order.split(",")
+        predictions = AIPredictions.getAIPredictions()
         context = {
             'id': currentExp.participant_id,
             'group':currentExp.group,
             'slides' : slide_list,
-            'showTimer' : timer_active,
+            'condition' : condition,
             'slideCounter' : slide_counter,
-            'condition' : condition
+            'predictions': predictions,
         }
+        if slide_counter == 0:
+            show_timer = None
+            if currentExp.group=='A' or currentExp.group=='B':
+                show_timer = 1
+            else:
+                show_timer = 0
+            context['showTimer'] = show_timer
+        else:
+            context['showTimer'] = timer_active
         return render(request, 'experiment.html', context)
+  
+
+def confidence(request, participant_id, condition, timer_active, slide_counter):
+    if request.method =='POST':
+        form = Confidence(request.POST)
+        if form.is_valid():
+            form_likertScale = form.cleaned_data["likertScale"]
+            print(form_likertScale)
+            try:
+               #
+                x = 0
+            except ObjectDoesNotExist:
+                #
+                y = 0#
+            if slide_counter==18:
+                return redirect('poststudy', participant_id, condition)
+            else:
+                return redirect('experiment', participant_id, condition, timer_active, slide_counter)
+    else:
+        form = Confidence()
+    return render(request, 'prestudy.html', {'form': form})
 
 def endpage(request, participant_id, condition):
     return render(request, 'endpage.html')
@@ -139,7 +157,7 @@ def prestudy(request, participant_id, condition):
             except ObjectDoesNotExist:
                 #
                 y = 0
-            return redirect('experimentFirstSlide', participant_id, condition)
+            return redirect('experiment', participant_id, condition, 0, 0)
     else:
         form = PreStudy()
     return render(request, 'prestudy.html', {'form': form})

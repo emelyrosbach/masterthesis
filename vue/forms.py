@@ -8,3 +8,18 @@ class PreStudy(forms.Form):
 
 class PostStudy(forms.Form):
     UEQS = forms.CharField(label="UEQS", required=True)
+
+class Confidence(forms.Form):
+    CHOICES = [
+        ('1', 'not confident at all'),
+        ('2', ''),
+        ('3', ''),
+        ('4', ''),
+        ('5', 'completely confident'),
+    ]
+    likertScale = forms.ChoiceField(
+        widget=forms.RadioSelect,
+        choices=CHOICES,
+        label="likertScale",
+        required=True
+    )
