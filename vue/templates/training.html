@@ -28,10 +28,10 @@
                         <h2 v-if="slideCounter==0" class="mb-5">The AI estimates a tumor cell percentage of <b>{{predictions.0}}%</b></h2>
                         <h2 v-else class="mb-5">The AI estimates a tumor cell percentage of <b>{{predictions.1}}%</b></h2>
                         <div class="columns">
-                            <div class="column is-10">
+                            <div class="column is-11">
                                 <p>The depicted cells below, are excerpts from the currently displayed slide and serve as prototypical examples for a positive and negative neoplastic cell classification by the AI model:</p>
                             </div>
-                            <div class="column is-2 icon">
+                            <div class="column is-1 icon">
                                 {% load static %}
                                 <img src="../../../../../static/icons/i-icon.png">
                             </div>
@@ -106,14 +106,8 @@
                     if (this.slideCounter== (this.totalSlides/2)) {
                         this.timerActive = 1 - this.timerActive;
                     }
-                    var url = '';
                     var participantId='{{id}}';
-                    if (this.slideCounter == this.totalSlides) {
-                        url = '../../../../../../prestudy/'+participantId+'/'+ this.condition+ '/';
-                    }
-                    else {
-                        url = '../../../../../training/'+participantId+'/'+ this.condition+ '/'+ this.timerActive+ '/'+ this.slideCounter+'/';
-                    }
+                    var url = '../../../../'+participantId+'/'+ this.condition+ '/' + this.timerActive+ '/'+ this.slideCounter+'/';
                     const formdata = {
                         'tcp_est' : this.tcpEst,
                     };

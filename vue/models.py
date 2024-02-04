@@ -17,27 +17,25 @@ class Experiment(models.Model):
 
 class Data(models.Model):
     condition = models.CharField(max_length=100)
-    slide_number = models.CharField(max_length=200)
-    tcp_est = models.CharField(max_length=200)
-    confidence_score = models.CharField(max_length=200)
-    experiment = models.ForeignKey(Experiment, on_delete=models.CASCADE)
+    tcp_ests = models.CharField(max_length=200, default='0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0')
+    confidence_scores = models.CharField(max_length=200, default='0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0')
+    experiment = models.ForeignKey(Experiment, on_delete=models.CASCADE, null=True)
 
-class PreStudy(models.Model):
+class PreStudyData(models.Model):
     gender = models.CharField(max_length=10)
     age = models.CharField(max_length=10)
     experience = models.CharField(max_length=100)
     interest_in_tech = models.CharField(max_length=100)
     adoption_of_new_tech = models.CharField(max_length=100)
     familiarity_with_AI = models.CharField(max_length=100)
-    experiment = models.OneToOneField(Experiment, on_delete=models.CASCADE)
+    experiment = models.OneToOneField(Experiment, on_delete=models.CASCADE, null=True)
 
-class PostStudy(models.Model):
+class PostStudyData(models.Model):
     condition = models.CharField(max_length=100)
     UEQ_answers = models.CharField(max_length=100)
-    experiment = models.ForeignKey(Experiment, on_delete=models.CASCADE)
+    experiment = models.ForeignKey(Experiment, on_delete=models.CASCADE, null=True)
 
-class Training(models.Model):
+class TrainingData(models.Model):
     condition = models.CharField(max_length=100)
-    tcp_est = models.CharField(max_length=200)
-    confidence_score = models.CharField(max_length=200)
-    experiment = models.ForeignKey(Experiment, on_delete=models.CASCADE)
+    tcp_ests = models.CharField(max_length=200, default='0,0')
+    experiment = models.ForeignKey(Experiment, on_delete=models.CASCADE, null=True)

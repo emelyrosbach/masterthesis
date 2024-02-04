@@ -1,7 +1,7 @@
 from django.shortcuts import render, redirect
 from django.core.exceptions import ObjectDoesNotExist
 from vue.predictions import AIPredictions, TrainingAIPredictions
-from vue.models import Experiment, Order
+from vue.models import Experiment, Order, Data, PostStudyData, PreStudyData, TrainingData
 from vue.forms import Registration, PreStudy, PostStudy, Confidence
 import json
 
@@ -74,15 +74,28 @@ def startingpageXAI(request):
     return render(request, 'startingpageXAI.html', {'form': form})
 
 def training(request, participant_id, condition, timer_active, slide_counter):
+    currentExp = Experiment.objects.get(pk=participant_id)
     if request.method =='POST':
-        #savelogic
         content = json.loads(request.body)
         tcpEst = content['tcp_est']
-        print (tcpEst)
-        return redirect('training', participant_id, condition, timer_active, slide_counter)
+        try:
+            trainingData = TrainingData.objects.get(experiment=currentExp, condition=condition)
+        except ObjectDoesNotExist:
+            trainingData = TrainingData.objects.create()
+            trainingData.experiment = currentExp
+            trainingData.condition = condition
+        tcps = trainingData.tcp_ests.split(",")
+        tcps[slide_counter-1] = tcpEst
+        trainingData.tcp_ests = ','.join(tcps)
+        trainingData.save()
+        if slide_counter==2:
+            if condition == 'XAI':
+                return redirect('startexperiment', participant_id, condition)
+            else:
+                return redirect('prestudy', participant_id, condition)
+        else:
+            return redirect('training', participant_id, condition, timer_active, slide_counter)
     else:
-        currentExp = Experiment.objects.get(pk=participant_id)
-        slide_list = currentExp.order.slide_order.split(",")
         predictions = TrainingAIPredictions.getTrainingAIPredictions()
         context = {
             'id': currentExp.participant_id,
@@ -94,13 +107,22 @@ def training(request, participant_id, condition, timer_active, slide_counter):
         return render(request, 'training.html', context)
     
 def experiment(request, participant_id, condition, timer_active, slide_counter):
+    currentExp = Experiment.objects.get(pk=participant_id)
     if request.method =='POST':
         content = json.loads(request.body)
         tcpEst = content['tcp_est']
-        print (tcpEst)
+        try:
+            expData = Data.objects.get(experiment=currentExp, condition=condition)
+        except ObjectDoesNotExist:
+            expData = Data.objects.create()
+            expData.experiment = currentExp
+            expData.condition = condition
+        tcps = expData.tcp_ests.split(",")
+        tcps[slide_counter-1] = tcpEst
+        expData.tcp_ests = ','.join(tcps)
+        expData.save()
         return redirect('confidence', participant_id, condition, timer_active, slide_counter)
     else:
-        currentExp = Experiment.objects.get(pk=participant_id)
         slide_list = currentExp.order.slide_order.split(",")
         predictions = AIPredictions.getAIPredictions()
         context = {
@@ -124,24 +146,28 @@ def experiment(request, participant_id, condition, timer_active, slide_counter):
   
 
 def confidence(request, participant_id, condition, timer_active, slide_counter):
+    currentExp = Experiment.objects.get(pk=participant_id)
     if request.method =='POST':
         form = Confidence(request.POST)
         if form.is_valid():
             form_likertScale = form.cleaned_data["likertScale"]
-            print(form_likertScale)
             try:
-               #
-                x = 0
+                expData = Data.objects.get(experiment=currentExp, condition=condition)
             except ObjectDoesNotExist:
-                #
-                y = 0#
+                expData = Data.objects.create()
+                expData.experiment = currentExp
+                expData.condition = condition
+            scores = expData.confidence_scores.split(",")
+            scores[slide_counter-1] = form_likertScale
+            expData.confidence_scores = ','.join(scores)
+            expData.save()
             if slide_counter==18:
                 return redirect('poststudy', participant_id, condition)
             else:
                 return redirect('experiment', participant_id, condition, timer_active, slide_counter)
     else:
         form = Confidence()
-    return render(request, 'prestudy.html', {'form': form})
+    return render(request, 'confidence.html', {'form': form})
 
 def endpage(request, participant_id, condition):
     return render(request, 'endpage.html')
@@ -161,6 +187,13 @@ def prestudy(request, participant_id, condition):
     else:
         form = PreStudy()
     return render(request, 'prestudy.html', {'form': form})
+
+def startexperiment(request, participant_id, condition):
+    if request.method =='POST':
+        return redirect('experiment', participant_id, condition, 0, 0)
+    else:
+        form = PreStudy()
+    return render(request, 'startExperiment.html')
 
 def poststudy(request, participant_id, condition):
     if request.method =='POST':
