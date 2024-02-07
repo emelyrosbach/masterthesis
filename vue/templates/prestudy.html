@@ -1,13 +1,24 @@
 {% extends 'base.html' %}
 {% block content %}
-<div>
-    <h1>Demograph</h1>
-    <form method="post">
-        {% csrf_token %}
-        {{ form.as_p }}
-        <div class="form-actions">
-            <button type="submit">Send</button>
+<div class="pre-study-section">
+    <div class="pre-study-container">
+        <form id="prestudy" class="pre-study-form" method="post">
+            <h1 class="mt-5" style="font-size:x-large">Demographic Data</h1>
+            {% csrf_token %}
+            {% for field in form %}
+            <div class="question-container">
+                <div>
+                    <p>{{field.label}}<b class="required">*</b></p>
+                    {{field}}
+                </div>
+            </div>
+            {% endfor %}
+        </form>
+    </div>
+    <footer class="footer is-dark">
+        <div class="next-button" style = "width:100%">
+            <button form="prestudy" type="submit" style = "width:200px; height:50px">Start experiment</button>
         </div>
-    </form>
+    </footer>
 </div>
 {% endblock %}

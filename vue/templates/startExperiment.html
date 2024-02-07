@@ -1,11 +1,86 @@
 {% extends 'base.html' %}
 
 {% block content %}
-    <div>
-        <h1>Start experiment</h1>
-        <form method="post">
-            {% csrf_token %}
-            <button type="submit">Send</button>
-        </form>
+<div id="start" class="content-section">
+    <div class="modalContainer" v-if="modalOpen">
+        <div class="modal">
+            <p> You’ve already completed <b v-if="condition=='XAI'">round 2 </b><b v-else>round 1 </b> of the study. If you start the experiment now your previous entries will be lost. Do you still want to continue?</p>
+            <div class="columns">
+                <div class="column is-6 mr-2">
+                    <button class="cancel" style = "width:200px; height:50px" @click=continueAnyway(false)>Cancel</button>
+                </div>
+                <div class="column is-6 ml-2">
+                    <button class="continue" style = "width:200px; height:50px" @click=continueAnyway(true)>Continue</button>
+                </div>
+            </div>
+        </div>
     </div>
+    <div class="start-form-container">
+        <div class="start-text" style="width:100%;  text-align: center">
+            <h1 style="font-size:x-large">Start the Experiment</h1>
+            <p>You’ve successfully completed the training. As soon as you are ready, you can begin the experiment by clicking the button below.</p>
+            <button id="startButton" type="submit" @click=startExperiment() style = "width:200px; height:50px">Start</button>
+        </div>
+    </div>
+    <footer class="footer is-dark">
+    </footer>
+</div>
+{% endblock %}
+
+{% block script %}
+<script>
+    var surveyapp = new Vue({
+        el: '#start',
+        delimiters: ['${', '}'],
+        data () {
+            return {
+                modalOpen: false,
+                status: '{{status}}',
+                condition: '{{condition}}'
+            }
+        },
+        methods: {
+            submit() {
+                var url = './';
+                fetch(url, {
+                        method: 'POST',
+                        headers: {
+                            'Content-Type': 'apllication/json',
+                            'X-CSRFToken': '{{csrf_token}}'
+                        }
+                    })
+                    .then((response) => {
+                            window.location.href = response.url;
+                    })
+                    .catch(function(error) {
+                        console.log('Error');
+                    })
+            },
+            startExperiment() {
+                if (this.status == 'completed') {
+                    this.modalOpen = true;
+                }
+                else {
+                    this.submit();
+                }
+            },
+            continueAnyway(boolVal) {
+                var url;
+                if (boolVal) {
+                    this.submit();
+                }
+                else {
+                    url ='../../../end';
+                    fetch(url)
+                    .then((response) => {
+                            window.location.href = response.url;
+                    })
+                    .catch(function(error) {
+                        console.log('Error');
+                    })
+                }
+            }
+        }
+    });
+</script>
 {% endblock %}

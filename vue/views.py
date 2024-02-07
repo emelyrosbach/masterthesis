@@ -40,38 +40,41 @@ def startingpageBaseline(request):
     return render(request, 'startingpageBaseline.html', {'form': form})
 
 def startingpageXAI(request):
-    if request.method =='POST':
-        form = Registration(request.POST)
-        if form.is_valid():
-            form_email = form.cleaned_data["email"]
-            try:
-                currentExp = Experiment.objects.get(email=form_email)
-            except ObjectDoesNotExist:
-                currentExp = Experiment.objects.create()
-                group = ""
-                match int(currentExp.participant_id)%4:
-                    case 1:
-                        group = "A"
-                    case 2:
-                        group = "B"
-                    case 3:
-                        group = "C"
-                    case 0:
-                        group = "D"
-                    case _:
-                        print("we should not get here")
-                currentExp.group = group
-                #assign slide order
-                order_nr = currentExp.participant_id%10
-                if order_nr == 0:
-                    order_nr = 10
-                currentExp.order = Order.objects.get(pk=order_nr)
-                currentExp.email = form_email
-                currentExp.save()
-            return redirect('training', currentExp.participant_id, 'XAI', 0, 0)
+    if request.user_agent.is_mobile:
+        return redirect('mobile')
     else:
-        form = Registration()
-    return render(request, 'startingpageXAI.html', {'form': form})
+        if request.method =='POST':
+            form = Registration(request.POST)
+            if form.is_valid():
+                form_email = form.cleaned_data["email"]
+                try:
+                    currentExp = Experiment.objects.get(email=form_email)
+                except ObjectDoesNotExist:
+                    currentExp = Experiment.objects.create()
+                    group = ""
+                    match int(currentExp.participant_id)%4:
+                        case 1:
+                            group = "A"
+                        case 2:
+                            group = "B"
+                        case 3:
+                            group = "C"
+                        case 0:
+                            group = "D"
+                        case _:
+                            print("we should not get here")
+                    currentExp.group = group
+                    #assign slide order
+                    order_nr = currentExp.participant_id%10
+                    if order_nr == 0:
+                        order_nr = 10
+                    currentExp.order = Order.objects.get(pk=order_nr)
+                    currentExp.email = form_email
+                    currentExp.save()
+                return redirect('training', currentExp.participant_id, 'XAI', 0, 0)
+        else:
+            form = Registration()
+        return render(request, 'startingpageXAI.html', {'form': form})
 
 def training(request, participant_id, condition, timer_active, slide_counter):
     currentExp = Experiment.objects.get(pk=participant_id)
@@ -79,20 +82,16 @@ def training(request, participant_id, condition, timer_active, slide_counter):
         content = json.loads(request.body)
         tcpEst = content['tcp_est']
         try:
-            trainingData = TrainingData.objects.get(experiment=currentExp, condition=condition)
+            expData = Data.objects.get(experiment=currentExp, condition=condition, slide=slide_counter-1)
         except ObjectDoesNotExist:
             trainingData = TrainingData.objects.create()
             trainingData.experiment = currentExp
             trainingData.condition = condition
-        tcps = trainingData.tcp_ests.split(",")
-        tcps[slide_counter-1] = tcpEst
-        trainingData.tcp_ests = ','.join(tcps)
+            trainingData.slide = slide_counter-1
+        trainingData.tcp_est = tcpEst
         trainingData.save()
         if slide_counter==2:
-            if condition == 'XAI':
-                return redirect('startexperiment', participant_id, condition)
-            else:
-                return redirect('prestudy', participant_id, condition)
+            return redirect('startexperiment', participant_id, condition)
         else:
             return redirect('training', participant_id, condition, timer_active, slide_counter)
     else:
@@ -108,22 +107,21 @@ def training(request, participant_id, condition, timer_active, slide_counter):
     
 def experiment(request, participant_id, condition, timer_active, slide_counter):
     currentExp = Experiment.objects.get(pk=participant_id)
+    slide_list = currentExp.order.slide_order.split(",")
     if request.method =='POST':
         content = json.loads(request.body)
         tcpEst = content['tcp_est']
         try:
-            expData = Data.objects.get(experiment=currentExp, condition=condition)
+            expData = Data.objects.get(experiment=currentExp, condition=condition, slide=slide_list[slide_counter-1])
         except ObjectDoesNotExist:
             expData = Data.objects.create()
             expData.experiment = currentExp
             expData.condition = condition
-        tcps = expData.tcp_ests.split(",")
-        tcps[slide_counter-1] = tcpEst
-        expData.tcp_ests = ','.join(tcps)
+            expData.slide = slide_list[slide_counter-1]
+        expData.tcp_est = tcpEst
         expData.save()
         return redirect('confidence', participant_id, condition, timer_active, slide_counter)
     else:
-        slide_list = currentExp.order.slide_order.split(",")
         predictions = AIPredictions.getAIPredictions()
         context = {
             'id': currentExp.participant_id,
@@ -147,19 +145,19 @@ def experiment(request, participant_id, condition, timer_active, slide_counter):
 
 def confidence(request, participant_id, condition, timer_active, slide_counter):
     currentExp = Experiment.objects.get(pk=participant_id)
+    slide_list = currentExp.order.slide_order.split(",")
     if request.method =='POST':
         form = Confidence(request.POST)
         if form.is_valid():
             form_likertScale = form.cleaned_data["likertScale"]
             try:
-                expData = Data.objects.get(experiment=currentExp, condition=condition)
+                expData = Data.objects.get(experiment=currentExp, condition=condition, slide=slide_list[slide_counter-1])
             except ObjectDoesNotExist:
                 expData = Data.objects.create()
                 expData.experiment = currentExp
                 expData.condition = condition
-            scores = expData.confidence_scores.split(",")
-            scores[slide_counter-1] = form_likertScale
-            expData.confidence_scores = ','.join(scores)
+                expData.slide = slide_list[slide_counter-1]
+            expData.confidence_score = form_likertScale
             expData.save()
             if slide_counter==18:
                 return redirect('poststudy', participant_id, condition)
@@ -169,20 +167,32 @@ def confidence(request, participant_id, condition, timer_active, slide_counter):
         form = Confidence()
     return render(request, 'confidence.html', {'form': form})
 
-def endpage(request, participant_id, condition):
+def endpage(request):
     return render(request, 'endpage.html')
     
 def prestudy(request, participant_id, condition):
+    currentExp = Experiment.objects.get(pk=participant_id)
     if request.method =='POST':
         form = PreStudy(request.POST)
         if form.is_valid():
             form_gender = form.cleaned_data["gender"]
+            form_age = form.cleaned_data["age"]
+            form_experience = form.cleaned_data["experience"]
+            form_interest = form.cleaned_data["interest"]
+            form_adopt = form.cleaned_data["adopt"]
+            form_aiexp = form.cleaned_data["aiexp"]
             try:
-               #
-                x = 0
+                prestudyData = PreStudyData.objects.get(experiment=currentExp)
             except ObjectDoesNotExist:
-                #
-                y = 0
+                prestudyData = PreStudyData.objects.create()
+                prestudyData.experiment = currentExp
+            prestudyData.gender = form_gender
+            prestudyData.age = form_age
+            prestudyData.experience = form_experience
+            prestudyData.interest_in_tech = form_interest
+            prestudyData.adoption_of_new_tech = form_adopt
+            prestudyData.familiarity_with_AI = form_aiexp
+            prestudyData.save()
             return redirect('experiment', participant_id, condition, 0, 0)
     else:
         form = PreStudy()
@@ -190,24 +200,62 @@ def prestudy(request, participant_id, condition):
 
 def startexperiment(request, participant_id, condition):
     if request.method =='POST':
-        return redirect('experiment', participant_id, condition, 0, 0)
+        if condition == 'XAI':
+            return redirect('experiment', participant_id, condition, 0, 0)
+        else:
+            return redirect('prestudy', participant_id, condition)
+    currentExp = Experiment.objects.get(pk=participant_id)
+    status = None
+    if condition == 'XAI':
+        status = currentExp.statusXAI
     else:
-        form = PreStudy()
-    return render(request, 'startExperiment.html')
+        status = currentExp.statusBaseline
+    return render(request, 'startExperiment.html', {'status':status})
 
 def poststudy(request, participant_id, condition):
+    currentExp = Experiment.objects.get(pk=participant_id)
     if request.method =='POST':
         form = PostStudy(request.POST)
         if form.is_valid():
-            form_UEQS = form.cleaned_data["UEQS"]
+            form_item1 = form.cleaned_data["item1"]
+            form_item2 = form.cleaned_data["item2"]
+            form_item3 = form.cleaned_data["item3"]
+            form_item4 = form.cleaned_data["item4"]
+            form_item5 = form.cleaned_data["item5"]
+            form_item6 = form.cleaned_data["item6"]
+            form_item7 = form.cleaned_data["item7"]
+            form_item8 = form.cleaned_data["item8"]
             try:
-               #
-                x = 0
+                poststudyData = PostStudyData.objects.get(experiment=currentExp, condition=condition)
             except ObjectDoesNotExist:
-                #
-                y = 0
-             #savelogic
-            return redirect('endpage', participant_id, condition)
+                poststudyData = PostStudyData.objects.create()
+                poststudyData.experiment = currentExp
+                poststudyData.condition = condition
+            poststudyData.item1 = form_item1
+            poststudyData.item2 = form_item2
+            poststudyData.item3 = form_item3
+            poststudyData.item4 = form_item4
+            poststudyData.item5 = form_item5
+            poststudyData.item6 = form_item6
+            poststudyData.item7 = form_item7
+            poststudyData.item8 = form_item8
+            poststudyData.save()
+            if condition == 'Baseline':
+                currentExp.statusBaseline = 'completed'
+            else:
+                currentExp.statusXAI = 'completed'
+            currentExp.save()
+            return redirect('endpage')
     else:
         form = PostStudy()
-    return render(request, 'poststudy.html', {'form': form})
+        negAttrib = ["obstructive", "complicated", "inefficient", "confusing", "boring", "not interesting", "conventional", "usual"]
+        posAttrib = ["supportive", "easy", "efficient", "clear", "exciting", "interesting", "inventive", "leading edge"]
+        context = {
+            'form': form,
+            'negAttrib': negAttrib,
+            'posAttrib' : posAttrib
+        }
+    return render(request, 'poststudy.html', context)
+
+def mobile(request):
+    return render(request, 'mobile.html')

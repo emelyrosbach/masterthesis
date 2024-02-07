@@ -9,9 +9,41 @@
 {% endblock %}
 {% block content %}
     <div id="survey-app" class="survey-page">
+        <div class="modalContainer" v-if="modalOpen && slideCounter==0">
+            <div id="carousel" class="carousel">
+                <div class="item-1">
+                    <div class="columns">
+                        <div class="column is-1 modal-icon item-text">
+                            {% load static %}
+                            <img src="../../../../../static/icons/i-icon.png">
+                        </div>
+                        <div class="column is-11 item-text">
+                            <p>This AI model was validated and trained on the BreCaHad breast cancer dataset. Cells are detected and classified with a mean average percision of xx%.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="item-2">
+                    <div class="close-icon">
+                        <a @click="modalOpen=false">
+                            {% load static %}
+                            <img src="../../../../../static/icons/close.png">
+                        </a>
+                    </div>
+                    <div class="columns">
+                        <div class="column is-12 item-text">
+                            <p>As part of this training session please estimate the tumor cell percentage, defined as the ratio of neoplastic cells to the total cell count, on the following to slides. However, the second estimation will be conducted under a time constraint of 7 seconds. Please also asses your confidence in your estimation after each slide. The actual study will be structured similarly to this training session, so feel free to take your time to get acustomed to the format and functionallity of our application.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
         <div class="columns">
             <div class="column is-8 image-container">
                 <!--{% load static %}-->
+                <div v-if="lockOn" class="image-lock">
+                    {% load static %}
+                    <img class="lock-icon" src="../../../../../static/icons/lock.png">
+                </div>
                 <div v-if="condition == 'XAI'" class="image-div" :style="annotationsOn?{ backgroundImage: 'url(../../../../../static/trainingAnnotations/' + slideCounter + '.png)' }:{ backgroundImage: 'url(../../../../../static/trainingImages/' + slideCounter + '.png)' }">
                     <div class="field switch-container">
                         <input id="annotations" name="annotations" class="switch is-rounded is-rtl" type="checkbox" v-model="annotationsOn" autocomplete="off">
@@ -23,6 +55,7 @@
             <div class="column is-4 side-bar">
                 {% if condition == 'XAI' %}
                 <div class="column is-12 AI-rec">
+                    <div v-if="lockOn" class="AI-rec-lock"></div>
                     <div class="AI-rec-titles">
                         <h1>AI Reccomendation</h1>
                         <h2 v-if="slideCounter==0" class="mb-5">The AI estimates a tumor cell percentage of <b>{{predictions.0}}%</b></h2>
@@ -97,7 +130,25 @@
                 condition: "{{condition}}",
                 tcpEst : "",
                 annotationsOn: true,
+                lockOn: false,
+                centiseconds: 700,
+                modalOpen: true,
             }
+        },
+        watch: {
+            centiseconds: {
+                handler(value) {
+                    if (value > 0) {
+                        setTimeout(() => {
+                            this.centiseconds--;
+                            if (this.centiseconds == 200 && this.timerActive==1) {
+                                this.lockOn = true;
+                            }
+                        }, 10);
+                    }
+                },
+                immediate: true // This ensures the watcher is triggered upon creation
+            },
         },
         methods: {
             nextSlide() {
@@ -167,5 +218,13 @@
             },
         }
     });
+</script>
+<script src="https://cdn.jsdelivr.net/npm/bulma-carousel@4.0.3/dist/js/bulma-carousel.min.js"></script>
+<script>
+    bulmaCarousel.attach('#carousel', {
+			slidesToScroll: 1,
+			slidesToShow: 1,
+            icons: { previous: "{% load static %}<img src='../../../../../static/icons/left.png'>", next: "{% load static %}<img src='../../../../../static/icons/right.png'>"}
+		});
 </script>
 {% endblock %}

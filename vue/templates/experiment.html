@@ -12,6 +12,10 @@
         <div class="columns">
             <div class="column is-8 image-container">
                 <!--{% load static %}-->
+                <div v-if="lockOn" class="image-lock">
+                    {% load static %}
+                    <img class="lock-icon" src="../../../../../static/icons/lock.png">
+                </div>
                 <div v-if="condition == 'XAI'" class="image-div" :style="annotationsOn?{ backgroundImage: 'url(' + slides[slideCounter].urlAnnotations + ')' }:{ backgroundImage: 'url(' + slides[slideCounter].url + ')' }">
                     <div class="field switch-container">
                         <input id="annotations" name="annotations" class="switch is-rounded is-rtl" type="checkbox" v-model="annotationsOn" autocomplete="off">
@@ -23,9 +27,11 @@
             <div class="column is-4 side-bar">
                 {% if condition == 'XAI' %}
                 <div class="column is-12 AI-rec">
+                    <div v-if="lockOn" class="AI-rec-lock"></div>
                     <div class="AI-rec-titles">
                         <h1>AI Reccomendation</h1>
-                        <h2 class="mb-5">The AI estimates a tumor cell percentage of <b>${slides[slideCounter].pred}%</b></h2>
+                        <h2>The AI estimates a tumor cell percentage of:</h2>
+                        <h1 class="mb-5 percentage">${slides[slideCounter].pred}%</h1>
                         <div class="columns">
                             <div class="column is-11">
                                 <p>The depicted cells below, are excerpts from the currently displayed slide and serve as prototypical examples for a positive and negative neoplastic cell classification by the AI model:</p>
@@ -94,6 +100,8 @@
                 condition: "{{condition}}",
                 tcpEst : "",
                 annotationsOn: true,
+                lockOn: false,
+                centiseconds: 700,
                 slides: [
                     {% for slide in slides %}
                         {
@@ -111,6 +119,21 @@
                     {% endfor %}
                 ],
             }
+        },
+        watch: {
+            centiseconds: {
+                handler(value) {
+                    if (value > 0) {
+                        setTimeout(() => {
+                            this.centiseconds--;
+                            if (this.centiseconds == 200 && this.timerActive==1) {
+                                this.lockOn = true;
+                            }
+                        }, 10);
+                    }
+                },
+                immediate: true // This ensures the watcher is triggered upon creation
+            },
         },
         methods: {
             nextSlide() {

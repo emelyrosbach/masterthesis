@@ -1,13 +1,40 @@
 {% extends 'base.html' %}
+{% load my-tags %}
 {% block content %}
-<div>
-    <h1>UEQS</h1>
-    <form method="post">
-        {% csrf_token %}
-        {{ form.as_p }}
-        <div class="form-actions">
-            <button type="submit">Send</button>
+<div class="content-section">
+    <div class="start-form-container">
+        <div style = "width:100%">
+            <h1 style="font-size:x-large">User Experience Questionnaire</h1>
+            <div class="question-container">
+                <div class="poststudy-container" style ="width:100%">
+                    <h2 style ="text-align: left; margin-bottom: 50px;">Please asses the application now by only ticking one circle per line<b class="required">*</b></h2>
+                    <div>
+                        <form id="ueqs" method="post">
+                            {% csrf_token %}
+                            {% for field in form %}
+                                <div class="columns">
+                                    <div class="column is-3 negative">
+                                        <p>{{negAttrib|index:forloop.counter0}}</p>
+                                    </div>
+                                    <div class="column is-6 radio-buttons form-field">
+                                        {{field}}
+                                    </div>
+                                    <div class="column is-3 positive">
+                                        <p>{{posAttrib|index:forloop.counter0}}</p>
+                                    </div>
+                                </div>
+                            {% endfor %}
+                        </form>
+                    </div>
+                </div>
+            </div>
         </div>
-    </form>
+        
+    </div>
+    <footer class="footer is-dark">
+        <div class="next-button" style = "width:100%">
+            <button form="ueqs" type="submit" style = "width:200px; height:50px">Finish</button>
+        </div>
+    </footer>
 </div>
 {% endblock %}

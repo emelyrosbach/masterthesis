@@ -10,15 +10,17 @@ class Experiment(models.Model):
     email = models.CharField(max_length=200, null=True)
     group= models.CharField(max_length=1)
     order = models.ForeignKey(Order, on_delete=models.SET_NULL, null=True)
-    status = models.CharField(max_length=200, default='open')
+    statusBaseline = models.CharField(max_length=200, default='open')
+    statusXAI = models.CharField(max_length=200, default='open')
 
     class Meta:
         verbose_name_plural = 'Experiments'
 
 class Data(models.Model):
     condition = models.CharField(max_length=100)
-    tcp_ests = models.CharField(max_length=200, default='0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0')
-    confidence_scores = models.CharField(max_length=200, default='0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0')
+    slide = models.CharField(max_length=10, null=True)
+    tcp_est = models.CharField(max_length=200, null=True)
+    confidence_score = models.CharField(max_length=200, null=True)
     experiment = models.ForeignKey(Experiment, on_delete=models.CASCADE, null=True)
 
 class PreStudyData(models.Model):
@@ -32,10 +34,19 @@ class PreStudyData(models.Model):
 
 class PostStudyData(models.Model):
     condition = models.CharField(max_length=100)
-    UEQ_answers = models.CharField(max_length=100)
+    item1 = models.CharField(max_length=10, null=True)
+    item2 = models.CharField(max_length=10, null=True)
+    item3 = models.CharField(max_length=10, null=True)
+    item4 = models.CharField(max_length=10, null=True)
+    item5 = models.CharField(max_length=10, null=True)
+    item6 = models.CharField(max_length=10, null=True)
+    item7 = models.CharField(max_length=10, null=True)
+    item8 = models.CharField(max_length=10, null=True)
     experiment = models.ForeignKey(Experiment, on_delete=models.CASCADE, null=True)
 
 class TrainingData(models.Model):
     condition = models.CharField(max_length=100)
-    tcp_ests = models.CharField(max_length=200, default='0,0')
+    slide = models.CharField(max_length=10, null=True)
+    tcp_est = models.CharField(max_length=200, null=True)
+    confidence_score = models.CharField(max_length=200, null=True)
     experiment = models.ForeignKey(Experiment, on_delete=models.CASCADE, null=True)
