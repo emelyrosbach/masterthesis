@@ -48,5 +48,4 @@ class TrainingData(models.Model):
     condition = models.CharField(max_length=100)
     slide = models.CharField(max_length=10, null=True)
     tcp_est = models.CharField(max_length=200, null=True)
-    confidence_score = models.CharField(max_length=200, null=True)
     experiment = models.ForeignKey(Experiment, on_delete=models.CASCADE, null=True)

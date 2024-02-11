@@ -1,9 +1,12 @@
 from django.shortcuts import render, redirect
 from django.core.exceptions import ObjectDoesNotExist
 from vue.predictions import AIPredictions, TrainingAIPredictions
+from vue.results import Results
 from vue.models import Experiment, Order, Data, PostStudyData, PreStudyData, TrainingData
 from vue.forms import Registration, PreStudy, PostStudy, Confidence
 import json
+import csv
+import time
 
 def startingpageBaseline(request):
     if request.method =='POST':
@@ -34,6 +37,12 @@ def startingpageBaseline(request):
                 currentExp.order = Order.objects.get(pk=order_nr)
                 currentExp.email = form_email
                 currentExp.save()
+            #log to csv
+            currentExp = Experiment.objects.get(email=form_email)
+            row = [time.ctime(), currentExp.email, 'Baseline', 'register', 'status:' + currentExp.statusBaseline]    
+            with open('log.csv', 'a') as f:
+                w = csv.writer(f)
+                w.writerow(row)
             return redirect('training', currentExp.participant_id, 'Baseline', 0, 0)
     else:
         form = Registration()
@@ -71,6 +80,12 @@ def startingpageXAI(request):
                     currentExp.order = Order.objects.get(pk=order_nr)
                     currentExp.email = form_email
                     currentExp.save()
+                #log to csv
+                currentExp = Experiment.objects.get(email=form_email)
+                row = [time.ctime(), currentExp.email, 'XAI', 'register', 'status:' + currentExp.statusBaseline]    
+                with open('log.csv', 'a') as f:
+                    w = csv.writer(f)
+                    w.writerow(row)
                 return redirect('training', currentExp.participant_id, 'XAI', 0, 0)
         else:
             form = Registration()
@@ -81,8 +96,9 @@ def training(request, participant_id, condition, timer_active, slide_counter):
     if request.method =='POST':
         content = json.loads(request.body)
         tcpEst = content['tcp_est']
+        trainingData = None
         try:
-            expData = Data.objects.get(experiment=currentExp, condition=condition, slide=slide_counter-1)
+            trainingData = TrainingData.objects.get(experiment=currentExp, condition=condition, slide=slide_counter-1)
         except ObjectDoesNotExist:
             trainingData = TrainingData.objects.create()
             trainingData.experiment = currentExp
@@ -90,6 +106,11 @@ def training(request, participant_id, condition, timer_active, slide_counter):
             trainingData.slide = slide_counter-1
         trainingData.tcp_est = tcpEst
         trainingData.save()
+        #log to csv
+        row = [time.ctime(), currentExp.email, condition, 'training', 'TCP estimation for slide ' + str(trainingData.slide) + ': ' + tcpEst]    
+        with open('log.csv', 'a') as f:
+            w = csv.writer(f)
+            w.writerow(row)
         if slide_counter==2:
             return redirect('startexperiment', participant_id, condition)
         else:
@@ -111,6 +132,7 @@ def experiment(request, participant_id, condition, timer_active, slide_counter):
     if request.method =='POST':
         content = json.loads(request.body)
         tcpEst = content['tcp_est']
+        expData = None
         try:
             expData = Data.objects.get(experiment=currentExp, condition=condition, slide=slide_list[slide_counter-1])
         except ObjectDoesNotExist:
@@ -120,6 +142,11 @@ def experiment(request, participant_id, condition, timer_active, slide_counter):
             expData.slide = slide_list[slide_counter-1]
         expData.tcp_est = tcpEst
         expData.save()
+        #log to csv
+        row = [time.ctime(), currentExp.email, condition, 'experiment', 'TCP estimation for slide ' + str(expData.slide) + ': ' + tcpEst + ' with timerActive = ' + str(timer_active)]    
+        with open('log.csv', 'a') as f:
+            w = csv.writer(f)
+            w.writerow(row)
         return redirect('confidence', participant_id, condition, timer_active, slide_counter)
     else:
         predictions = AIPredictions.getAIPredictions()
@@ -150,6 +177,7 @@ def confidence(request, participant_id, condition, timer_active, slide_counter):
         form = Confidence(request.POST)
         if form.is_valid():
             form_likertScale = form.cleaned_data["likertScale"]
+            expData = None
             try:
                 expData = Data.objects.get(experiment=currentExp, condition=condition, slide=slide_list[slide_counter-1])
             except ObjectDoesNotExist:
@@ -159,6 +187,11 @@ def confidence(request, participant_id, condition, timer_active, slide_counter):
                 expData.slide = slide_list[slide_counter-1]
             expData.confidence_score = form_likertScale
             expData.save()
+            #log to csv
+            row = [time.ctime(), currentExp.email, condition, 'confidence', 'confidence for slide ' + str(expData.slide) + ': ' + str(form_likertScale) + ' with timerActive = ' + str(timer_active)]    
+            with open('log.csv', 'a') as f:
+                w = csv.writer(f)
+                w.writerow(row)
             if slide_counter==18:
                 return redirect('poststudy', participant_id, condition)
             else:
@@ -181,6 +214,7 @@ def prestudy(request, participant_id, condition):
             form_interest = form.cleaned_data["interest"]
             form_adopt = form.cleaned_data["adopt"]
             form_aiexp = form.cleaned_data["aiexp"]
+            prestudyData = None
             try:
                 prestudyData = PreStudyData.objects.get(experiment=currentExp)
             except ObjectDoesNotExist:
@@ -193,6 +227,11 @@ def prestudy(request, participant_id, condition):
             prestudyData.adoption_of_new_tech = form_adopt
             prestudyData.familiarity_with_AI = form_aiexp
             prestudyData.save()
+            #log to csv
+            row = [time.ctime(), currentExp.email, condition, 'demographic data', 'gender: ' + prestudyData.gender + ', ' + 'age: ' + prestudyData.age + ', ' + 'experience: ' + prestudyData.experience + ', ' + 'interest in technology: ' + prestudyData.interest_in_tech + ', ' + 'adoption of new technologies: ' + prestudyData.adoption_of_new_tech + ', ' + 'familiarity with AI: ' + prestudyData.familiarity_with_AI]    
+            with open('log.csv', 'a') as f:
+                w = csv.writer(f)
+                w.writerow(row)
             return redirect('experiment', participant_id, condition, 0, 0)
     else:
         form = PreStudy()
@@ -225,6 +264,7 @@ def poststudy(request, participant_id, condition):
             form_item6 = form.cleaned_data["item6"]
             form_item7 = form.cleaned_data["item7"]
             form_item8 = form.cleaned_data["item8"]
+            poststudyData = None
             try:
                 poststudyData = PostStudyData.objects.get(experiment=currentExp, condition=condition)
             except ObjectDoesNotExist:
@@ -245,6 +285,11 @@ def poststudy(request, participant_id, condition):
             else:
                 currentExp.statusXAI = 'completed'
             currentExp.save()
+              #log to csv
+            row = [time.ctime(), currentExp.email, condition, 'UEQS', 'item1: ' + poststudyData.item1 + ', ' + 'item2: ' + poststudyData.item2 + ', ' + 'item3: ' + poststudyData.item3 + ', ' + 'item4: ' + poststudyData.item4 + ', ' + 'item5: ' + poststudyData.item5 + ', ' + 'item6: ' + poststudyData.item6 + ', ' + 'item7: ' + poststudyData.item7 + ', ' + 'item8: ' + poststudyData.item8]    
+            with open('log.csv', 'a') as f:
+                w = csv.writer(f)
+                w.writerow(row)
             return redirect('endpage')
     else:
         form = PostStudy()
@@ -259,3 +304,7 @@ def poststudy(request, participant_id, condition):
 
 def mobile(request):
     return render(request, 'mobile.html')
+
+def results(request):
+    Results.exportResults()
+    return render(request, 'results.html')

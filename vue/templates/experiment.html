@@ -80,12 +80,11 @@
                 <h2 class="ml-4">Page ${slideCounter + 1} out of ${totalSlides}</h2>
             </div>
             <div class="next-button">
-                <button :disabled=!tcpEst @click=nextSlide()>Next</button>
+                <button class="next" :disabled=!tcpEst @click=nextSlide()>Next</button>
             </div>
         </footer>
     </div>
 {% endblock %}
-
 
 {% block script %}
 <script>

@@ -30,4 +30,5 @@ urlpatterns = [
     path('poststudy/<int:participant_id>/<str:condition>/', vue_views.poststudy, name='poststudy'),
     path('confidence/<int:participant_id>/<str:condition>/<int:timer_active>/<int:slide_counter>/', vue_views.confidence, name='confidence'),
     path('mobile/', vue_views.mobile, name='mobile'),
+    path('results/', vue_views.results, name='results'),
 ]
