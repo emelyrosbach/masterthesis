@@ -18,8 +18,15 @@
                 </div>
                 <div v-if="condition == 'XAI'" class="image-div" :style="annotationsOn?{ backgroundImage: 'url(' + slides[slideCounter].urlAnnotations + ')' }:{ backgroundImage: 'url(' + slides[slideCounter].url + ')' }">
                     <div class="field switch-container">
-                        <input id="annotations" name="annotations" class="switch is-rounded is-rtl" type="checkbox" v-model="annotationsOn" autocomplete="off">
-                        <label for="annotations">Annotations</label>
+                        <div>
+                           <div class="switch-toggle-container">
+                                <input id="annotations" name="annotations" class="switch is-rounded is-rtl" type="checkbox" v-model="annotationsOn" autocomplete="off">
+                                <label for="annotations">Annotations</label>
+                            </div>
+                            <div>
+                                <p><b class="tumor-cell">${slides[slideCounter].tumorCells}</b>/${slides[slideCounter].totalCells}</p>
+                            </div> 
+                        </div>
                     </div>
                 </div>
                 <div v-else class="image-div" :style="{ backgroundImage: 'url(' + slides[slideCounter].url + ')' }"></div>
@@ -43,7 +50,7 @@
                         </div>
                         <div class="columns pt-4">
                             <div class="column is-6">
-                                <div class="row example">
+                                <div class="row example pos-ex">
                                     <img :src=slides[slideCounter].urlPos>
                                 </div>
                                 <div class="row example">
@@ -51,7 +58,7 @@
                                 </div>
                             </div>
                             <div class="column is-6">
-                                <div class="row example">
+                                <div class="row example neg-ex">
                                     <img :src=slides[slideCounter].urlNeg>
                                 </div>
                                 <div class="row example">
@@ -67,7 +74,7 @@
                         <h1 class="mb-4">Your Assesment</h1>
                         <p v-if="condition == 'XAI'" class="mb-4">Please estimate the tumor cell percentage(%) knowing the AI predicted <b>${slides[slideCounter].pred}%</b>:</p>
                         <p v-else class="mb-4">Please estimate the tumor cell percentage(%):</p>
-                        <form>
+                        <form onsubmit="return false">
                             <input v-model="tcpEst" autocomplete="off">
                         </form>
                     </div>
@@ -112,6 +119,16 @@
                             {%for key, value in predictions.items %}
                                 {% if key == slide %}
                                     "pred": {{value}},
+                                {% endif %}
+                            {% endfor %}
+                            {%for key, value in tumorCells.items %}
+                                {% if key == slide %}
+                                    "tumorCells": {{value}},
+                                {% endif %}
+                            {% endfor %}
+                            {%for key, value in totalCells.items %}
+                                {% if key == slide %}
+                                    "totalCells": {{value}},
                                 {% endif %}
                             {% endfor %}
                         },

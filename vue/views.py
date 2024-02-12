@@ -117,12 +117,17 @@ def training(request, participant_id, condition, timer_active, slide_counter):
             return redirect('training', participant_id, condition, timer_active, slide_counter)
     else:
         predictions = TrainingAIPredictions.getTrainingAIPredictions()
+        tumorCells= TrainingAIPredictions.getTrainingAITumorCellCount()
+        totalCells= TrainingAIPredictions.getTrainingAITotalCellCount()
+        print(tumorCells.get(0))
         context = {
             'id': currentExp.participant_id,
             'condition': condition,
             'showTimer' : timer_active,
             'slideCounter' : slide_counter,
-            'predictions': predictions
+            'predictions': predictions,
+            'tumorCells': tumorCells,
+            'totalCells': totalCells
         }
         return render(request, 'training.html', context)
     
@@ -150,6 +155,8 @@ def experiment(request, participant_id, condition, timer_active, slide_counter):
         return redirect('confidence', participant_id, condition, timer_active, slide_counter)
     else:
         predictions = AIPredictions.getAIPredictions()
+        tumorCells= AIPredictions.getAITumorCellCount()
+        totalCells= AIPredictions.getAITotalCellCount()
         context = {
             'id': currentExp.participant_id,
             'group':currentExp.group,
@@ -157,6 +164,8 @@ def experiment(request, participant_id, condition, timer_active, slide_counter):
             'condition' : condition,
             'slideCounter' : slide_counter,
             'predictions': predictions,
+            'tumorCells': tumorCells,
+            'totalCells': totalCells
         }
         if slide_counter == 0:
             show_timer = None
