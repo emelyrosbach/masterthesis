@@ -108,6 +108,7 @@
                 annotationsOn: true,
                 lockOn: false,
                 centiseconds: 700,
+                startTime: new Date(),
                 slides: [
                     {% for slide in slides %}
                         {
@@ -160,8 +161,30 @@
                     }
                     var participantId='{{id}}';
                     var url = '../../../../'+participantId+'/'+ this.condition+ '/' + this.timerActive+ '/'+ this.slideCounter+'/';
+                    const currentTime = new Date();
+                    var timeDiff = currentTime.getTime() - this.startTime.getTime();
+                    var diffSecs = Math.floor(timeDiff/1000);
+                    var diffMins = Math.floor((timeDiff/1000)/60);
+                    var taskTime = null;
+                    if (diffMins<10) {
+                        if (diffSecs<10) {
+                            taskTime = "0"+diffMins + ":0" + diffSecs;
+                        }
+                        else {
+                            taskTime = "0"+diffMins + ":" + diffSecs;
+                        }
+                    }
+                    else {
+                        if (diffSecs<10) {
+                            taskTime = diffMins + ":0" + diffSecs;
+                        }
+                        else {
+                            taskTime = diffMins + ":" + diffSecs;
+                        }
+                    }
                     const formdata = {
                         'tcp_est' : this.tcpEst,
+                        'task_time' : taskTime,
                     };
                     fetch(url, {
                         method: 'POST',
