@@ -137,6 +137,7 @@ def experiment(request, participant_id, condition, timer_active, slide_counter):
     if request.method =='POST':
         content = json.loads(request.body)
         tcpEst = content['tcp_est']
+        taskTime = content['task_time']
         expData = None
         try:
             expData = Data.objects.get(experiment=currentExp, condition=condition, slide=slide_list[slide_counter-1])
@@ -152,6 +153,11 @@ def experiment(request, participant_id, condition, timer_active, slide_counter):
         with open('log.csv', 'a') as f:
             w = csv.writer(f)
             w.writerow(row)
+        #log time
+        rowTime = [currentExp.email, condition, slide_list[slide_counter-1], timer_active, taskTime]    
+        with open('timeLog.csv', 'a') as f:
+            x = csv.writer(f)
+            x.writerow(rowTime)
         return redirect('confidence', participant_id, condition, timer_active, slide_counter)
     else:
         predictions = AIPredictions.getAIPredictions()
