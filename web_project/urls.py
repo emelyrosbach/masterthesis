@@ -20,7 +20,15 @@ from vue import views as vue_views
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('', vue_views.startingpage, name='startingpage'),
-    path('frontpage/<int:participant_id>/', vue_views.frontpage, name='frontpage'),
-    path('second/', vue_views.secondpage, name='secondpage'),
+    path('', vue_views.startingpageBaseline, name='startingpageBaseline'),
+    path('XAI/', vue_views.startingpageXAI, name='startingpageXAI'),
+    path('experiment/<int:participant_id>/<str:condition>/<int:timer_active>/<int:slide_counter>/', vue_views.experiment, name='experiment'),
+    path('end/', vue_views.endpage, name='endpage'),
+    path('training/<int:participant_id>/<str:condition>/<int:timer_active>/<int:slide_counter>/', vue_views.training, name='training'),
+    path('prestudy/<int:participant_id>/<str:condition>/', vue_views.prestudy, name='prestudy'),
+    path('startexperiment/<int:participant_id>/<str:condition>/', vue_views.startexperiment, name='startexperiment'),
+    path('poststudy/<int:participant_id>/<str:condition>/', vue_views.poststudy, name='poststudy'),
+    path('confidence/<int:participant_id>/<str:condition>/<int:timer_active>/<int:slide_counter>/', vue_views.confidence, name='confidence'),
+    path('mobile/', vue_views.mobile, name='mobile'),
+    path('results/', vue_views.results, name='results'),
 ]

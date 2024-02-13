@@ -1,3 +1,5 @@
+{% load static %}
+
 <!DOCTYPE html>
 <html>
   <head>
@@ -5,24 +7,25 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1">
 		<title>Vue</title>
 		<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.0/css/bulma.min.css">
+		<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma-switch@2.0.4/dist/css/bulma-switch.min.css">
+		<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma-carousel@4.0.3/dist/css/bulma-carousel.min.css">
+		<link rel="stylesheet" href="{% static 'main.css' %}">
 		<script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
 	</head>
 	
   <body>
-	<nav class="navbar is-dark">
+	<nav class="navbar">
+		{% load static %}
+        <img class="ml-4" src="{% static '' %}icons/THI-logo.png">
 		{% block navbar %}
-            {% endblock %}
+        {% endblock %}
 	</nav>
     <section class="section">
-			{% block content %}
-            {% endblock %}
-		</section>
-		<footer class="footer is-dark">
-			{% block footer %}
-				{% endblock %}
-		</footer>
-		{% block script %}
-		{% endblock %}
+		{% block content %}
+        {% endblock %}
+	</section>
+	{% block script %}
+	{% endblock %}
   </body>
 </html>
 

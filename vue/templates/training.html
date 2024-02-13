@@ -1,0 +1,243 @@
+{% extends 'base.html' %}
+{% load my-tags %}
+
+{% block navbar %}
+<div id="timer" class="timer-container">
+    {% if showTimer %}
+    <div class="timer-text"><h1>${timerDisplay}</h1></div>
+    <div class="timer-bar" :style="{ width: bar + '%', backgroundColor: hue }"></div> 
+    {% endif %}
+</div>
+{% endblock %}
+{% block content %}
+    <div id="survey-app" class="survey-page">
+        <div class="modalContainer" v-if="modalOpen && slideCounter==0">
+            <div id="carousel" class="carousel">
+                <div class="item-1">
+                    <div class="columns">
+                        <div class="column is-1 modal-icon item-text">
+                            {% load static %}
+                            <img src="../../../../../static/icons/i-icon.png">
+                        </div>
+                        <div class="column is-11 item-text">
+                            <p>This AI model was validated and trained on the BreCaHad breast cancer dataset with its main tasks being the detection and classification of various cell types such as e.g. neoplastic cells.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="item-2">
+                    <div class="close-icon">
+                        <a @click="modalOpen=false">
+                            {% load static %}
+                            <img src="../../../../../static/icons/close.png">
+                        </a>
+                    </div>
+                    <div class="columns">
+                        <div class="column is-12 item-text">
+                            <p>As part of this training session please estimate the tumor cell percentage, defined as the ratio of neoplastic cells to the total cell count, on the following to slides. However, the second estimation will be conducted under a time constraint of 7 seconds. Please also asses your confidence in your estimation after each slide. The actual study will be structured similarly to this training session, so feel free to take your time to get acustomed to the format and functionallity of our application.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="training-sign">
+            {% load static %}
+            <img src="../../../../../static/icons/training.png">
+            <h1>Training</h1> 
+        </div>
+        <div class="columns">
+            <div class="column is-8 image-container">
+                <!--{% load static %}-->
+                <div v-if="lockOn" class="image-lock">
+                    {% load static %}
+                    <img class="lock-icon" src="../../../../../static/icons/lock.png">
+                </div>
+                <div v-if="condition == 'XAI'" class="image-div" :style="annotationsOn?{ backgroundImage: 'url(../../../../../static/trainingAnnotations/' + slideCounter + '.png)' }:{ backgroundImage: 'url(../../../../../static/trainingImages/' + slideCounter + '.png)' }">
+                    <div class="field switch-container">
+                        <div>
+                           <div class="switch-toggle-container">
+                                <input id="annotations" name="annotations" class="switch is-rounded is-rtl" type="checkbox" v-model="annotationsOn" autocomplete="off">
+                                <label for="annotations">Annotations</label>
+                            </div>
+                            <div>
+                                <p><b class="tumor-cell">{{tumorCells|dicIndex:slideCounter}}</b>/{{totalCells|dicIndex:slideCounter}}</p>
+                            </div> 
+                        </div>
+                    </div>
+                </div>
+                <div v-else class="image-div" :style="{ backgroundImage: 'url(../../../../../static/trainingImages/' + slideCounter + '.png)' }"></div>
+            </div>
+            <div class="column is-4 side-bar">
+                {% if condition == 'XAI' %}
+                <div class="column is-12 AI-rec">
+                    <div v-if="lockOn" class="AI-rec-lock"></div>
+                    <div class="AI-rec-titles">
+                        <h1>AI Reccomendation</h1>
+                        <h2>The AI estimates a tumor cell percentage of:</h2>
+                        <h1 class="mb-5 percentage">{{predictions|dicIndex:slideCounter}}%</h1>
+                        <div class="columns">
+                            <div class="column is-11">
+                                <p>The depicted cells below, are excerpts from the currently displayed slide and serve as prototypical examples for a positive and negative neoplastic cell classification by the AI model:</p>
+                            </div>
+                            <div class="column is-1 icon">
+                                {% load static %}
+                                <img src="../../../../../static/icons/i-icon.png">
+                            </div>
+                        </div>
+                        <div class="columns pt-4">
+                            <div class="column is-6">
+                                <div class="row example pos-ex">
+                                    {% load static %}
+                                    <img src="{% static 'trainingPatches/' %}{{slideCounter}}0.png">
+                                </div>
+                                <div class="row example">
+                                    <p>Prototypical positive result from this slide</p>
+                                </div>
+                            </div>
+                            <div class="column is-6">
+                                <div class="row example neg-ex">
+                                    {% load static %}
+                                    <img src="{% static 'trainingPatches/' %}{{slideCounter}}1.png">
+                                </div>
+                                <div class="row example">
+                                    <p>Prototypical negative result from this slide</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                {% endif %}
+                <div class="column is-12 your-assesment" :style="condition=='XAI'?{ 'height': '35%'}:{ 'height': '100%'}">
+                    <div>
+                        <h1 class="mb-4">Your Assesment</h1>
+                        <p v-if="condition == 'XAI'" class="mb-4">Please estimate the tumor cell percentage(%) knowing the AI predicted <b>{{predictions|dicIndex:slideCounter}}%</b>:</p>
+                        <p v-else class="mb-4">Please estimate the tumor cell percentage(%):</p>
+                        <form onsubmit="return false">
+                            <input v-model="tcpEst" autocomplete="off">
+                        </form>
+                    </div>
+                   
+                </div>
+            </div>
+        </div>
+        <footer class="footer is-dark">
+            <div class="slide-progress">
+                <h2 class="ml-4">Page ${slideCounter + 1} out of ${totalSlides}</h2>
+            </div>
+            <div class="next-button">
+                <button class="next" :disabled=!tcpEst @click=nextSlide()>Next</button>
+            </div>
+        </footer>
+    </div>
+{% endblock %}
+
+{% block script %}
+<script>
+    var surveyapp = new Vue({
+        el: '#survey-app',
+        delimiters: ['${', '}'],
+        data () {
+            return {
+                totalSlides: 2,
+                timerActive: {{showTimer}},
+                slideCounter: {{slideCounter}},
+                condition: "{{condition}}",
+                tcpEst : "",
+                annotationsOn: true,
+                lockOn: false,
+                centiseconds: 700,
+                modalOpen: true,
+            }
+        },
+        watch: {
+            centiseconds: {
+                handler(value) {
+                    if (value > 0) {
+                        setTimeout(() => {
+                            this.centiseconds--;
+                            if (this.centiseconds == 200 && this.timerActive==1) {
+                                this.lockOn = true;
+                            }
+                        }, 10);
+                    }
+                },
+                immediate: true // This ensures the watcher is triggered upon creation
+            },
+        },
+        methods: {
+            nextSlide() {
+                if (this.slideCounter < this.totalSlides) {
+                    this.slideCounter ++;
+                    if (this.slideCounter== (this.totalSlides/2)) {
+                        this.timerActive = 1 - this.timerActive;
+                    }
+                    var participantId='{{id}}';
+                    var url = '../../../../'+participantId+'/'+ this.condition+ '/' + this.timerActive+ '/'+ this.slideCounter+'/';
+                    const formdata = {
+                        'tcp_est' : this.tcpEst,
+                    };
+                    fetch(url, {
+                        method: 'POST',
+                        headers: {
+                            'Content-Type': 'apllication/json',
+                            'X-CSRFToken': '{{csrf_token}}'
+                        },
+                        body: JSON.stringify(formdata)
+                    })
+                    .then((response) => {
+                            window.location.href = response.url;
+                    })
+                    .catch(function(error) {
+                        console.log('Error');
+                    })
+                }
+            }
+        }
+    });
+</script>
+
+<script>
+    var surveyapp = new Vue({
+        el: '#timer',
+        delimiters: ['${', '}'],
+        data () {
+            return {
+                seconds: 7, 
+                centiseconds: 700,
+                timerDisplay: "00:07",
+                bar : 100,
+                hue: "hsl(120,80%,85%)",
+            }
+        },
+        watch: {
+            centiseconds: {
+                handler(value) {
+                    if (value > 0) {
+                        setTimeout(() => {
+                            this.centiseconds--;
+                            this.seconds =  Math.floor(this.centiseconds/100);
+                            if (this.centiseconds>=10) {
+                                this.timerDisplay = "00:0" + this.seconds + ","+ Math.floor(this.centiseconds/7);
+                            }
+                            else {
+                                this.timerDisplay = "00:0" + this.seconds + ",0"+ Math.floor(this.centiseconds/7);
+                            }
+                            this.bar = Math.floor(this.centiseconds/7)
+                            var hue=(((this.bar/100))*120).toString(10);
+                            this.hue = "hsl(" + hue + ",80%,85%)"; 
+                        }, 10);
+                    }
+                },
+                immediate: true // This ensures the watcher is triggered upon creation
+            },
+        }
+    });
+</script>
+<script src="https://cdn.jsdelivr.net/npm/bulma-carousel@4.0.3/dist/js/bulma-carousel.min.js"></script>
+<script>
+    bulmaCarousel.attach('#carousel', {
+			slidesToScroll: 1,
+			slidesToShow: 1,
+            icons: { previous: "{% load static %}<img src='../../../../../static/icons/left.png'>", next: "{% load static %}<img src='../../../../../static/icons/right.png'>"}
+		});
+</script>
+{% endblock %}
