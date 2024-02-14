@@ -30,7 +30,7 @@ class PreStudy(forms.Form):
     age = forms.ChoiceField(
         widget=forms.RadioSelect,
         choices=AGEOPTS,
-        label="What is your Age?",
+        label="What is your age?",
         required=True
     )
     EXPOPTS = [
@@ -42,7 +42,7 @@ class PreStudy(forms.Form):
     experience = forms.ChoiceField(
         widget=forms.RadioSelect,
         choices=EXPOPTS,
-        label="What is the duration of your experience working in the mediacal field?",
+        label="What is the duration of your experience working in the medical field?",
         required=True
     )
     INTERESTOPTS = [
