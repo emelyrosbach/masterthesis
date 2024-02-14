@@ -26,7 +26,10 @@ SECRET_KEY = 'django-insecure-xb#x2x+(sj7qc-oh(sjuigax7yonk1pmlqh!+01i772@4e9ur)
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = [
+    'deepmicroscopy.org',
+    'survey.deepmicroscopy.org'
+]
 
 
 # Application definition

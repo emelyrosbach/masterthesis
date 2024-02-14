@@ -176,7 +176,7 @@ h1 {
     height: inherit;
     padding: 1%;
 }
-.AI-rec, .your-assesment {
+.AI-rec, .your-assessment {
     display: flex;
     align-items: center;
     justify-content: center;
@@ -189,7 +189,7 @@ h1 {
     border: 1px solid #EEEEEE;
     border-radius: 10px;
 }
-.AI-rec-titles h1,h2, .your-assesment h1 {
+.AI-rec-titles h1,h2, .your-assessment h1 {
     text-align: center;
 }
 .example {
@@ -223,10 +223,10 @@ h1 {
     align-items: flex-start;
 }
 
-.your-assesment div {
+.your-assessment div {
     width: inherit;
 }
-.your-assesment div form input {
+.your-assessment div form input {
     width: 100%;
     height: 30px;
     border-color: #D3D3D3;

@@ -33,7 +33,7 @@
                     </div>
                     <div class="columns">
                         <div class="column is-12 item-text">
-                            <p>As part of this training session please estimate the tumor cell percentage, defined as the ratio of neoplastic cells to the total cell count, on the following to slides. However, the second estimation will be conducted under a time constraint of 7 seconds. Please also asses your confidence in your estimation after each slide. The actual study will be structured similarly to this training session, so feel free to take your time to get acustomed to the format and functionallity of our application.</p>
+                            <p>As part of this training session please estimate the tumor cell percentage, defined as the ratio of neoplastic cells to the total cell count, on the following two slides. Kindly note, that the second estimation will be conducted under a time constraint of 7 seconds. Please also assess your confidence in your estimation after each slide. The actual study will be structured similarly to this training session, so feel free to take your time to get acustomed to the format and functionallity of our application.</p>
                         </div>
                     </div>
                 </div>
@@ -106,9 +106,9 @@
                     </div>
                 </div>
                 {% endif %}
-                <div class="column is-12 your-assesment" :style="condition=='XAI'?{ 'height': '35%'}:{ 'height': '100%'}">
+                <div class="column is-12 your-assessment" :style="condition=='XAI'?{ 'height': '35%'}:{ 'height': '100%'}">
                     <div>
-                        <h1 class="mb-4">Your Assesment</h1>
+                        <h1 class="mb-4">Your Assessment</h1>
                         <p v-if="condition == 'XAI'" class="mb-4">Please estimate the tumor cell percentage(%) knowing the AI predicted <b>{{predictions|dicIndex:slideCounter}}%</b>:</p>
                         <p v-else class="mb-4">Please estimate the tumor cell percentage(%):</p>
                         <form onsubmit="return false">
