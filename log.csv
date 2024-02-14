@@ -17,3 +17,41 @@ Wed Feb 14 09:06:19 2024,emelyrosbach@web.de,Baseline,training,TCP estimation fo
 Wed Feb 14 09:14:08 2024,emelyrosbach@web.de,Baseline,demographic data,"gender: Female, age: <18, experience: <5 years, interest in technology: 5, adoption of new technologies: 1, familiarity with AI: 2"
 Wed Feb 14 09:14:15 2024,emelyrosbach@web.de,Baseline,experiment,TCP estimation for slide 17: jj with timerActive = 1
 Wed Feb 14 09:18:17 2024,emelyrosbach@web.de,Baseline,confidence,confidence for slide 17: 5 with timerActive = 1
+Wed Feb 14 08:35:11 2024,marc.aubreville@thi.de,Baseline,register,status:open
+Wed Feb 14 08:39:20 2024,marc.aubreville@thi.de,Baseline,training,TCP estimation for slide 0: 23
+Wed Feb 14 08:40:34 2024,marc.aubreville@thi.de,Baseline,training,TCP estimation for slide 1: 40
+Wed Feb 14 08:41:01 2024,marc.aubreville@thi.de,Baseline,demographic data,"gender: Prefer not to say, age: >55, experience: >15 years, interest in technology: 1, adoption of new technologies: 4, familiarity with AI: 1"
+Wed Feb 14 08:41:16 2024,marc.aubreville@thi.de,Baseline,experiment,TCP estimation for slide 10: 20 with timerActive = 1
+Wed Feb 14 08:41:22 2024,marc.aubreville@thi.de,Baseline,confidence,confidence for slide 10: 4 with timerActive = 1
+Wed Feb 14 08:41:54 2024,marc.aubreville@thi.de,Baseline,experiment,TCP estimation for slide 11: 34 with timerActive = 1
+Wed Feb 14 08:41:58 2024,marc.aubreville@thi.de,Baseline,confidence,confidence for slide 11: 5 with timerActive = 1
+Wed Feb 14 08:42:05 2024,marc.aubreville@thi.de,Baseline,experiment,TCP estimation for slide 12: 70 with timerActive = 1
+Wed Feb 14 08:42:09 2024,marc.aubreville@thi.de,Baseline,confidence,confidence for slide 12: 5 with timerActive = 1
+Wed Feb 14 08:42:20 2024,marc.aubreville@thi.de,Baseline,experiment,TCP estimation for slide 13: 10 with timerActive = 1
+Wed Feb 14 08:42:23 2024,marc.aubreville@thi.de,Baseline,confidence,confidence for slide 13: 5 with timerActive = 1
+Wed Feb 14 08:42:29 2024,marc.aubreville@thi.de,Baseline,experiment,TCP estimation for slide 14: 21 with timerActive = 1
+Wed Feb 14 08:42:33 2024,marc.aubreville@thi.de,Baseline,confidence,confidence for slide 14: 5 with timerActive = 1
+Wed Feb 14 08:42:37 2024,marc.aubreville@thi.de,Baseline,experiment,TCP estimation for slide 15: 8 with timerActive = 1
+Wed Feb 14 08:42:40 2024,marc.aubreville@thi.de,Baseline,confidence,confidence for slide 15: 5 with timerActive = 1
+Wed Feb 14 08:42:44 2024,marc.aubreville@thi.de,Baseline,experiment,TCP estimation for slide 16: DD with timerActive = 1
+Wed Feb 14 08:42:51 2024,marc.aubreville@thi.de,Baseline,confidence,confidence for slide 16: 5 with timerActive = 1
+Wed Feb 14 08:42:57 2024,marc.aubreville@thi.de,Baseline,experiment,TCP estimation for slide 17: 2A with timerActive = 1
+Wed Feb 14 08:43:00 2024,marc.aubreville@thi.de,Baseline,confidence,confidence for slide 17: 5 with timerActive = 1
+Wed Feb 14 08:43:06 2024,marc.aubreville@thi.de,Baseline,experiment,TCP estimation for slide 18: 80% with timerActive = 0
+Wed Feb 14 08:43:09 2024,marc.aubreville@thi.de,Baseline,confidence,confidence for slide 18: 5 with timerActive = 0
+Wed Feb 14 08:43:11 2024,emelyrosbach@web.de,Baseline,register,status:completed
+Wed Feb 14 08:43:16 2024,marc.aubreville@thi.de,Baseline,experiment,TCP estimation for slide 20: 99 with timerActive = 0
+Wed Feb 14 08:43:18 2024,marc.aubreville@thi.de,Baseline,confidence,confidence for slide 20: 5 with timerActive = 0
+Wed Feb 14 08:44:01 2024,emelyrosbach@web.de,Baseline,training,TCP estimation for slide 0: 11
+Wed Feb 14 08:44:05 2024,emelyrosbach@web.de,Baseline,training,TCP estimation for slide 1: 12
+Wed Feb 14 08:44:18 2024,emelyrosbach@web.de,Baseline,demographic data,"gender: Other, age: 18-24, experience: 10-15 years, interest in technology: 1, adoption of new technologies: 1, familiarity with AI: 1"
+Wed Feb 14 08:45:10 2024,emelyrosbach@web.de,Baseline,experiment,TCP estimation for slide 17: 11 with timerActive = 1
+Wed Feb 14 08:45:58 2024,emelyrosbach@web.de,XAI,register,status:completed
+Wed Feb 14 08:46:05 2024,emelyrosbach@web.de,XAI,training,TCP estimation for slide 0: 11
+Wed Feb 14 08:46:08 2024,emelyrosbach@web.de,XAI,training,TCP estimation for slide 1: 11
+Wed Feb 14 08:46:20 2024,jony.ive@apple.com,XAI,register,status:open
+Wed Feb 14 08:47:09 2024,jony.ive@apple.com,XAI,training,TCP estimation for slide 0: 56
+Wed Feb 14 08:47:26 2024,jony.ive@apple.com,XAI,training,TCP estimation for slide 1: 23
+Wed Feb 14 08:47:36 2024,jony.ive@apple.com,XAI,experiment,TCP estimation for slide 11: 50 with timerActive = 1
+Wed Feb 14 08:47:39 2024,jony.ive@apple.com,XAI,confidence,confidence for slide 11: 5 with timerActive = 1
+Wed Feb 14 08:47:47 2024,jony.ive@apple.com,XAI,experiment,TCP estimation for slide 12: 40 with timerActive = 1
