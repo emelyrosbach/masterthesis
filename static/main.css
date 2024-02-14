@@ -260,6 +260,7 @@ h1 {
     top: 0px;
     left: 0px;
     background-color: rgba(255,255,255,0.05);
+    -webkit-backdrop-filter: blur(40px);
     backdrop-filter: blur(40px);
     z-index: 10;
 }
@@ -314,6 +315,7 @@ h1 {
     top: 0px;
     left: 0px;
     background-color: rgba(255,255,255,0.4);
+    -webkit-backdrop-filter: blur(40px);
     backdrop-filter: blur(15px);
     z-index: 10;
     mix-blend-mode: overlay;
@@ -368,6 +370,7 @@ h1 {
     align-items: center;
 }
 .start-text {
+    width: 100%;
     margin: 0 8% 0 8%;
 }
 .start-text * {
