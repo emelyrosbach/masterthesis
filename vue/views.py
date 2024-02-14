@@ -119,7 +119,6 @@ def training(request, participant_id, condition, timer_active, slide_counter):
         predictions = TrainingAIPredictions.getTrainingAIPredictions()
         tumorCells= TrainingAIPredictions.getTrainingAITumorCellCount()
         totalCells= TrainingAIPredictions.getTrainingAITotalCellCount()
-        print(tumorCells.get(0))
         context = {
             'id': currentExp.participant_id,
             'condition': condition,
@@ -321,5 +320,6 @@ def mobile(request):
     return render(request, 'mobile.html')
 
 def results(request):
-    Results.exportResults()
+    result = Results()
+    result.exportResults()
     return render(request, 'results.html')

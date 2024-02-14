@@ -1,11 +1,11 @@
 import xlsxwriter
-from vue.models import Experiment, PostStudyData, PreStudyData, TrainingData
+from vue.models import Experiment, PostStudyData, PreStudyData, TrainingData, Data
 from django.core.exceptions import ObjectDoesNotExist
 from io import BytesIO
+import os
 
 class Results():
-    def exportResults():
-        workbook = xlsxwriter.Workbook('results.xlsx')
+    def createGeneralOverview(self, workbook):
         worksheet = workbook.add_worksheet('General data')
         #Header
         worksheet.write('A1', 'ID')
@@ -42,7 +42,6 @@ class Results():
         worksheet.write('AC2', 'item6')
         worksheet.write('AD2', 'item7')
         worksheet.write('AE2', 'item8')
-
         #data
         expList = Experiment.objects.all()
         i = 2
@@ -91,4 +90,34 @@ class Results():
             except ObjectDoesNotExist:
                 print ("ups")
             i = i + 1
+    
+    def createConsistenError(self, workbook, condition):
+        worksheet = workbook.add_worksheet('Consistent Error '+ condition)
+        #Header
+        worksheet.write(0, 0, 'ID')
+        slide_names = ['slide1', 'slide2', 'slide3', 'slide4', 'slide5', 'slide6', 'slide7', 'slide8', 'slide9', 'slide10', 'slide11', 'slide12', 'slide13', 'slide14', 'slide15', 'slide16', 'slide17', 'slide18']
+        for col_num, data in enumerate(slide_names):
+            worksheet.write(0, col_num+1, data)
+        worksheet.write(0, 19, 'consistent error')
+        worksheet.write(0,20, 'label')
+        #Data
+        expList = Experiment.objects.all()
+        i = 1
+        for exp in expList:
+            worksheet.write(i, 0, exp.email)
+            try:
+                data = Data.objects.filter(experiment=exp, condition=condition)
+                for col_num, entry in enumerate(data):
+                    worksheet.write(i, col_num+1, entry.tcp_est)
+            except ObjectDoesNotExist:
+                print ("ups in consisten Error" + condition)
+            i = i + 1
+
+    def exportResults(self):
+        if os.path.isfile('../results.xlsx'):
+           os.remove('../results.xlsx') 
+        workbook = xlsxwriter.Workbook('results.xlsx')
+        self.createGeneralOverview(workbook)
+        self.createConsistenError(workbook,'Baseline')
+        self.createConsistenError(workbook,'XAI')
         workbook.close()
