@@ -29,6 +29,7 @@ DEBUG = True
 ALLOWED_HOSTS = [
     'deepmicroscopy.org',
     'survey.deepmicroscopy.org',
+    '85.214.21.251',
     '127.0.0.1'
 ]
 
