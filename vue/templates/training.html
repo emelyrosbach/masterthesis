@@ -164,31 +164,52 @@
             },
         },
         methods: {
+            validateEnty() {
+                let temp = this.tcpEst;
+                temp = temp.replace(',','.');
+                temp = temp.replace('%','');
+                temp = temp.replace(' ','');
+                let value = parseFloat(temp) ;
+                if (value < 0 ||  value> 100) {
+                    alert("Please enter a whole number between 0 and 100");
+                    return false;
+                }
+                else if(isNaN(value)) {
+                    alert("Illegal string");
+                    return false;
+                }
+                else {
+                    this.tcpEst= "" + Math.round(value);
+                    return true;
+                }
+            },
             nextSlide() {
-                if (this.slideCounter < this.totalSlides) {
-                    this.slideCounter ++;
-                    if (this.slideCounter== (this.totalSlides/2)) {
-                        this.timerActive = 1 - this.timerActive;
+                if (this.validateEnty()) {
+                    if (this.slideCounter < this.totalSlides) {
+                        this.slideCounter ++;
+                        if (this.slideCounter== (this.totalSlides/2)) {
+                            this.timerActive = 1 - this.timerActive;
+                        }
+                        var participantId='{{id}}';
+                        var url = '../../../../'+participantId+'/'+ this.condition+ '/' + this.timerActive+ '/'+ this.slideCounter+'/';
+                        const formdata = {
+                            'tcp_est' : this.tcpEst,
+                        };
+                        fetch(url, {
+                            method: 'POST',
+                            headers: {
+                                'Content-Type': 'apllication/json',
+                                'X-CSRFToken': '{{csrf_token}}'
+                            },
+                            body: JSON.stringify(formdata)
+                        })
+                        .then((response) => {
+                                window.location.href = response.url;
+                        })
+                        .catch(function(error) {
+                            console.log('Error');
+                        })
                     }
-                    var participantId='{{id}}';
-                    var url = '../../../../'+participantId+'/'+ this.condition+ '/' + this.timerActive+ '/'+ this.slideCounter+'/';
-                    const formdata = {
-                        'tcp_est' : this.tcpEst,
-                    };
-                    fetch(url, {
-                        method: 'POST',
-                        headers: {
-                            'Content-Type': 'apllication/json',
-                            'X-CSRFToken': '{{csrf_token}}'
-                        },
-                        body: JSON.stringify(formdata)
-                    })
-                    .then((response) => {
-                            window.location.href = response.url;
-                    })
-                    .catch(function(error) {
-                        console.log('Error');
-                    })
                 }
             }
         }

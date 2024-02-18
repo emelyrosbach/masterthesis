@@ -153,53 +153,74 @@
             },
         },
         methods: {
+            validateEnty() {
+                let temp = this.tcpEst;
+                temp = temp.replace(',','.');
+                temp = temp.replace('%','');
+                temp = temp.replace(' ','');
+                let value = parseFloat(temp) ;
+                if (value < 0 ||  value> 100) {
+                    alert("Please enter a whole number between 0 and 100");
+                    return false;
+                }
+                else if(isNaN(value)) {
+                    alert("Illegal string");
+                    return false;
+                }
+                else {
+                    this.tcpEst= "" + Math.round(value);
+                    return true;
+                }
+            },
             nextSlide() {
-                if (this.slideCounter < this.totalSlides) {
-                    this.slideCounter ++;
-                    if (this.slideCounter== (this.totalSlides/2)) {
-                        this.timerActive = 1 - this.timerActive;
-                    }
-                    var participantId='{{id}}';
-                    var url = '../../../../'+participantId+'/'+ this.condition+ '/' + this.timerActive+ '/'+ this.slideCounter+'/';
-                    const currentTime = new Date();
-                    var timeDiff = currentTime.getTime() - this.startTime.getTime();
-                    var diffSecs = Math.floor(timeDiff/1000);
-                    var diffMins = Math.floor((timeDiff/1000)/60);
-                    var taskTime = null;
-                    if (diffMins<10) {
-                        if (diffSecs<10) {
-                            taskTime = "0"+diffMins + ":0" + diffSecs;
+                if (this.validateEnty()) {
+                    if (this.slideCounter < this.totalSlides) {
+                        this.slideCounter ++;
+                        if (this.slideCounter== (this.totalSlides/2)) {
+                            this.timerActive = 1 - this.timerActive;
+                        }
+                        var participantId='{{id}}';
+                        var url = '../../../../'+participantId+'/'+ this.condition+ '/' + this.timerActive+ '/'+ this.slideCounter+'/';
+                        const currentTime = new Date();
+                        var timeDiff = currentTime.getTime() - this.startTime.getTime();
+                        var diffSecs = Math.floor(timeDiff/1000);
+                        var diffMins = Math.floor((timeDiff/1000)/60);
+                        var taskTime = null;
+                        if (diffMins<10) {
+                            if (diffSecs<10) {
+                                taskTime = "0"+diffMins + ":0" + diffSecs;
+                            }
+                            else {
+                                taskTime = "0"+diffMins + ":" + diffSecs;
+                            }
                         }
                         else {
-                            taskTime = "0"+diffMins + ":" + diffSecs;
+                            if (diffSecs<10) {
+                                taskTime = diffMins + ":0" + diffSecs;
+                            }
+                            else {
+                                taskTime = diffMins + ":" + diffSecs;
+                            }
                         }
+                        const formdata = {
+                            'tcp_est' : this.tcpEst,
+                            'task_time' : taskTime,
+                        };
+                        fetch(url, {
+                            method: 'POST',
+                            headers: {
+                                'Content-Type': 'apllication/json',
+                                'X-CSRFToken': '{{csrf_token}}'
+                            },
+                            body: JSON.stringify(formdata)
+                        })
+                        .then((response) => {
+                                window.location.href = response.url;
+                        })
+                        .catch(function(error) {
+                            console.log('Error');
+                        })
                     }
-                    else {
-                        if (diffSecs<10) {
-                            taskTime = diffMins + ":0" + diffSecs;
-                        }
-                        else {
-                            taskTime = diffMins + ":" + diffSecs;
-                        }
-                    }
-                    const formdata = {
-                        'tcp_est' : this.tcpEst,
-                        'task_time' : taskTime,
-                    };
-                    fetch(url, {
-                        method: 'POST',
-                        headers: {
-                            'Content-Type': 'apllication/json',
-                            'X-CSRFToken': '{{csrf_token}}'
-                        },
-                        body: JSON.stringify(formdata)
-                    })
-                    .then((response) => {
-                            window.location.href = response.url;
-                    })
-                    .catch(function(error) {
-                        console.log('Error');
-                    })
                 }
             }
         }

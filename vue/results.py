@@ -3,6 +3,7 @@ from vue.models import Experiment, PostStudyData, PreStudyData, TrainingData, Da
 from django.core.exceptions import ObjectDoesNotExist
 from io import BytesIO
 import os
+from vue.predictions import GroundTruth, AIPredictions
 
 class Results():
     def createGeneralOverview(self, workbook):
@@ -91,9 +92,9 @@ class Results():
                 print ("ups")
             i = i + 1
     
-    def createConsistenError(self, workbook, condition):
+    def createConsistentError(self, workbook, condition):
         worksheet = workbook.add_worksheet('Consistent Error '+ condition)
-        #Header
+        #Headers
         worksheet.write(0, 0, 'ID')
         slide_names = ['slide1', 'slide2', 'slide3', 'slide4', 'slide5', 'slide6', 'slide7', 'slide8', 'slide9', 'slide10', 'slide11', 'slide12', 'slide13', 'slide14', 'slide15', 'slide16', 'slide17', 'slide18']
         for col_num, data in enumerate(slide_names):
@@ -107,17 +108,173 @@ class Results():
             worksheet.write(i, 0, exp.email)
             try:
                 data = Data.objects.filter(experiment=exp, condition=condition)
+                sum = 0
                 for col_num, entry in enumerate(data):
                     worksheet.write(i, col_num+1, entry.tcp_est)
+                    sum = sum + self.calcDeviation(entry.slide, entry.tcp_est)
+                mean = sum / 18
+                worksheet.write(i, 19, mean)
+                #value to be changed later
+                label = ''
+                if mean < -1:
+                    label = 'underestimation'
+                elif mean > 1:
+                    label = 'overestimation'
+                else:
+                    label = 'no tendency'
+                worksheet.write(i, 20, label)
             except ObjectDoesNotExist:
                 print ("ups in consisten Error" + condition)
             i = i + 1
+
+    def consistenErrorConditions(self, workbook, condition):
+        worksheetNoTP = workbook.add_worksheet('Consistent Error '+ condition+ '-NoTP')
+        worksheetTP = workbook.add_worksheet('Consistent Error '+ condition+ '-TP')
+        #Headers
+        worksheetNoTP.write(0, 0, 'ID')
+        worksheetTP.write(0, 0, 'ID')
+        slide_names = ['slide1', 'slide2', 'slide3', 'slide4', 'slide5', 'slide6', 'slide7', 'slide8', 'slide9']
+        for col_num, data in enumerate(slide_names):
+            worksheetNoTP.write(0, col_num+1, data)
+            worksheetTP.write(0, col_num+1, data)
+        worksheetNoTP.write(0, 10, 'consistent error')
+        worksheetTP.write(0, 10, 'consistent error')
+        worksheetNoTP.write(0,11, 'label')
+        worksheetTP.write(0,11, 'label')
+        #Data
+        expList = Experiment.objects.all()
+        i = 1
+        for exp in expList:
+            worksheetNoTP.write(i, 0, exp.email)
+            worksheetTP.write(i, 0, exp.email)
+            try:
+                slideList = exp.order.slide_order.split(",")
+                firstSplit = slideList[:len(slideList)//2]
+                secondSplit = slideList[len(slideList)//2:]
+                sumNoTP = 0
+                sumTP = 0
+                for col_num,slide in enumerate(firstSplit):
+                    dataFirst = Data.objects.get(experiment=exp, condition=condition, slide=firstSplit[col_num]) 
+                    dataSecond = Data.objects.get(experiment=exp, condition=condition, slide=secondSplit[col_num])
+                    if (exp.group == 'A' or exp.group== 'B'):
+                        #starts with the TP condition
+                        worksheetNoTP.write(i, col_num+1, dataSecond.tcp_est)
+                        worksheetTP.write(i, col_num+1, dataFirst.tcp_est)
+                        sumNoTP = sumNoTP + self.calcDeviation(dataSecond.slide, dataSecond.tcp_est)
+                        sumTP = sumTP+  self.calcDeviation(dataFirst.slide, dataFirst.tcp_est)
+                    else:
+                        #starts with the noTP condition
+                        worksheetNoTP.write(i, col_num+1, dataFirst.tcp_est)
+                        worksheetTP.write(i, col_num+1, dataSecond.tcp_est)
+                        sumNoTP = sumNoTP + self.calcDeviation(dataFirst.slide, dataFirst.tcp_est)
+                        sumTP = sumTP+  self.calcDeviation(dataSecond.slide, dataSecond.tcp_est)
+                meanNoTP = sumNoTP / 9
+                meanTP = sumTP / 9
+                worksheetNoTP.write(i, 10, meanNoTP)
+                worksheetTP.write(i, 10, meanTP)
+                #value to be changed later
+                labelNoTP = ''
+                if meanNoTP < -1:
+                    labelNoTP = 'underestimation'
+                elif meanNoTP > 1:
+                    labelNoTP = 'overestimation'
+                else:
+                    labelNoTP = 'no tendency'
+                worksheetNoTP.write(i, 11, labelNoTP)
+                labelTP = ''
+                if meanTP < -1:
+                    labelTP = 'underestimation'
+                elif meanTP > 1:
+                    labelTP = 'overestimation'
+                else:
+                    labelTP = 'no tendency'
+                worksheetTP.write(i, 11, labelTP)
+            except ObjectDoesNotExist:
+                print ("ups in filling conditions with data")
+            i = i + 1
+    
+    def compareToAI(self, workbook):
+        worksheetJAS = workbook.add_worksheet('JAS')
+        worksheetErr = workbook.add_worksheet('Consistent Error AI')
+        #Headers
+        worksheetJAS.write(0, 0, 'ID')
+        worksheetErr.write(0, 0, 'ID')
+        worksheetJAS.write(0, 1, 'AI-underestimation')
+        worksheetErr.write(0, 1, 'AI-underestimation')
+        worksheetJAS.write(0, 2, 'AI-no-deviation')
+        worksheetErr.write(0, 2, 'AI-no-deviation')
+        worksheetJAS.write(0, 3, 'AI-overestimation')
+        worksheetErr.write(0, 3, 'AI-overestimation')
+        #Data
+        expList = Experiment.objects.all()
+        i = 1
+        for exp in expList:
+            worksheetJAS.write(i, 0, exp.email)
+            worksheetErr.write(i, 0, exp.email)
+            underestimation = [10,12,17,21,23,28]
+            overestimation = [14,15,16,24,25,26]
+            nothing = [11,13,18,20,22,27]
+            sumUnder = 0
+            sumNothing = 0
+            sumOver = 0
+            sumJASUnder = 0
+            sumJASNothing = 0
+            sumJASOver = 0
+            try:
+                data = Data.objects.filter(experiment=exp, condition='XAI')
+                for col_num,slide in enumerate(underestimation):
+                    dataUnderestimation = Data.objects.get(experiment=exp, condition='XAI', slide=underestimation[col_num]) 
+                    dataNothing = Data.objects.get(experiment=exp, condition='XAI', slide=nothing[col_num])
+                    dataOverestimation = Data.objects.get(experiment=exp, condition='XAI', slide=overestimation[col_num])
+                    #Baseline data for JAS
+                    dataUnderestimationBaseline = Data.objects.get(experiment=exp, condition='Baseline', slide=underestimation[col_num]) 
+                    dataNothingBaseline = Data.objects.get(experiment=exp, condition='Baseline', slide=nothing[col_num])
+                    dataOverestimationBaseline = Data.objects.get(experiment=exp, condition='Baseline', slide=overestimation[col_num])
+                    #consist error
+                    sumUnder = sumUnder + self.calcDeviation(dataUnderestimation.slide, dataUnderestimation.tcp_est)
+                    sumNothing = sumNothing + self.calcDeviation(dataNothing.slide, dataNothing.tcp_est)
+                    sumOver = sumOver + self.calcDeviation(dataOverestimation.slide, dataOverestimation.tcp_est)
+                    #JAS
+                    sumJASUnder = sumJASUnder + self.calcJAS(dataUnderestimation.slide, dataUnderestimationBaseline.tcp_est, dataUnderestimation.tcp_est)
+                    sumJASNothing = sumJASNothing + self.calcJAS(dataNothing.slide, dataNothingBaseline.tcp_est, dataNothing.tcp_est)
+                    sumJASOver = sumJASOver + self.calcJAS(dataOverestimation.slide, dataOverestimationBaseline.tcp_est, dataOverestimation.tcp_est)
+                meanUnder = sumUnder / 6
+                meanNothing = sumNothing / 6
+                meanOver = sumOver / 6
+                meanJASUnder = sumJASUnder / 6
+                meanJASNothing = sumJASNothing/ 6
+                meanJASOver = sumJASOver / 6
+                worksheetErr.write(i, 1, meanUnder)
+                worksheetErr.write(i, 2, meanNothing)
+                worksheetErr.write(i, 3, meanOver)
+                worksheetJAS.write(i, 1, meanJASUnder)
+                worksheetJAS.write(i, 2, meanJASNothing)
+                worksheetJAS.write(i, 3, meanJASOver)
+            except ObjectDoesNotExist:
+                print ("ups in comp to AI")
+            i = i + 1
+
+    def calcDeviation (self, slide, tcpEst):
+        gt = GroundTruth.getGroundTruth(slide)
+        deviation = float(tcpEst)-gt
+        return deviation
+     
+    def calcJAS (self, slide, tcpBaseline, tcpXAI):
+        aiPRed= AIPredictions.getAIPredictions()
+        prediction = float(aiPRed.get(slide))
+        xai = float(tcpXAI)
+        baseline = float(tcpBaseline)
+        jas = abs(xai-baseline)/(abs(xai-prediction)+abs(xai-baseline))
+        return jas
 
     def exportResults(self):
         if os.path.isfile('../results.xlsx'):
            os.remove('../results.xlsx') 
         workbook = xlsxwriter.Workbook('results.xlsx')
         self.createGeneralOverview(workbook)
-        self.createConsistenError(workbook,'Baseline')
-        self.createConsistenError(workbook,'XAI')
+        self.createConsistentError(workbook,'Baseline')
+        self.createConsistentError(workbook,'XAI')
+        self.consistenErrorConditions(workbook,'Baseline')
+        self.consistenErrorConditions(workbook,'XAI')
+        self.compareToAI(workbook)
         workbook.close()

@@ -89,3 +89,27 @@ class TrainingAIPredictions():
             1: "1382",
         } 
         return TrainingAIpredictions 
+    
+class GroundTruth():
+    def getGroundTruth(key):
+        GT = {
+            "10": 30,
+            "11": 44,
+            "12": 63,
+            "13": 72,
+            "14": 19,
+            "15": 15,
+            "16": 22,
+            "17": 61,
+            "18": 88,
+            "20": 28,
+            "21": 49,
+            "22": 60,
+            "23": 71,
+            "24": 14,
+            "25": 11,
+            "26": 20,
+            "27": 55,
+            "28": 87,
+        } 
+        return GT.get(key)
