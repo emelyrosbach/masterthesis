@@ -9,44 +9,47 @@ import csv
 import time
 
 def startingpageBaseline(request):
-    if request.method =='POST':
-        form = Registration(request.POST)
-        if form.is_valid():
-            form_email = form.cleaned_data["email"]
-            try:
-                currentExp = Experiment.objects.get(email=form_email)
-            except ObjectDoesNotExist:
-                currentExp = Experiment.objects.create()
-                group = ""
-                match int(currentExp.participant_id)%4:
-                    case 1:
-                        group = "A"
-                    case 2:
-                        group = "B"
-                    case 3:
-                        group = "C"
-                    case 0:
-                        group = "D"
-                    case _:
-                        print("we should not get here")
-                currentExp.group = group
-                #assign slide order
-                order_nr = currentExp.participant_id%10
-                if order_nr == 0:
-                    order_nr = 10
-                currentExp.order = Order.objects.get(pk=order_nr)
-                currentExp.email = form_email
-                currentExp.save()
-            #log to csv
-            currentExp = Experiment.objects.get(email=form_email)
-            row = [time.ctime(), currentExp.email, 'Baseline', 'register', 'status:' + currentExp.statusBaseline]    
-            with open('log.csv', 'a') as f:
-                w = csv.writer(f)
-                w.writerow(row)
-            return redirect('training', currentExp.participant_id, 'Baseline', 0, 0)
+    if request.user_agent.is_mobile:
+        return redirect('mobile')
     else:
-        form = Registration()
-    return render(request, 'startingpageBaseline.html', {'form': form})
+        if request.method =='POST':
+            form = Registration(request.POST)
+            if form.is_valid():
+                form_email = form.cleaned_data["email"]
+                try:
+                    currentExp = Experiment.objects.get(email=form_email)
+                except ObjectDoesNotExist:
+                    currentExp = Experiment.objects.create()
+                    group = ""
+                    match int(currentExp.participant_id)%4:
+                        case 1:
+                            group = "A"
+                        case 2:
+                            group = "B"
+                        case 3:
+                            group = "C"
+                        case 0:
+                            group = "D"
+                        case _:
+                            print("we should not get here")
+                    currentExp.group = group
+                    #assign slide order
+                    order_nr = currentExp.participant_id%10
+                    if order_nr == 0:
+                        order_nr = 10
+                    currentExp.order = Order.objects.get(pk=order_nr)
+                    currentExp.email = form_email
+                    currentExp.save()
+                #log to csv
+                currentExp = Experiment.objects.get(email=form_email)
+                row = [time.ctime(), currentExp.email, 'Baseline', 'register', 'status:' + currentExp.statusBaseline]    
+                with open('log.csv', 'a') as f:
+                    w = csv.writer(f)
+                    w.writerow(row)
+                return redirect('training', currentExp.participant_id, 'Baseline', 0, 0)
+        else:
+            form = Registration()
+        return render(request, 'startingpageBaseline.html', {'form': form})
 
 def startingpageXAI(request):
     if request.user_agent.is_mobile:
