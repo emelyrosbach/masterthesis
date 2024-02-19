@@ -164,7 +164,7 @@
             },
         },
         methods: {
-            validateEnty() {
+            validateEntry() {
                 let temp = this.tcpEst;
                 temp = temp.replace(',','.');
                 temp = temp.replace('%','');
@@ -184,14 +184,14 @@
                 }
             },
             nextSlide() {
-                if (this.validateEnty()) {
+                if (this.validateEntry()) {
                     if (this.slideCounter < this.totalSlides) {
-                        this.slideCounter ++;
-                        if (this.slideCounter== (this.totalSlides/2)) {
+                        var newSlideCounter = this.slideCounter + 1;
+                        if (newSlideCounter== (this.totalSlides/2)) {
                             this.timerActive = 1 - this.timerActive;
                         }
                         var participantId='{{id}}';
-                        var url = '../../../../'+participantId+'/'+ this.condition+ '/' + this.timerActive+ '/'+ this.slideCounter+'/';
+                        var url = '../../../../'+participantId+'/'+ this.condition+ '/' + this.timerActive+ '/'+ newSlideCounter+'/';
                         const formdata = {
                             'tcp_est' : this.tcpEst,
                         };
