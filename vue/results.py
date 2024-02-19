@@ -264,7 +264,12 @@ class Results():
         prediction = float(aiPRed.get(slide))
         xai = float(tcpXAI)
         baseline = float(tcpBaseline)
-        jas = abs(xai-baseline)/(abs(xai-prediction)+abs(xai-baseline))
+        jas = None
+        try:
+            jas = abs(xai-baseline)/(abs(xai-prediction)+abs(xai-baseline))
+        except ZeroDivisionError:
+            #xai=baselien=prediction
+            jas = 0
         return jas
 
     def exportResults(self):
