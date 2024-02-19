@@ -58,6 +58,13 @@ MIDDLEWARE = [
     'django_user_agents.middleware.UserAgentMiddleware',
 ]
 
+CSRF_TRUSTED_ORIGINS = [
+    'http://deepmicroscopy.org',
+    'https://survey.deepmicroscopy.org',
+    'http://85.214.21.251',
+    'https://127.0.0.1'
+]
+
 ROOT_URLCONF = 'web_project.urls'
 
 TEMPLATES = [
