@@ -60,3 +60,9 @@ Mon Feb 19 14:35:53 2024,emelyrosbach@web.de,Baseline,training,TCP estimation fo
 Mon Feb 19 14:35:58 2024,emelyrosbach@web.de,Baseline,training,TCP estimation for slide 1: 99
 Mon Feb 19 14:37:44 2024,emelyrosbach@web.de,XAI,register,status:completed
 Mon Feb 19 20:15:25 2024,emelyrosbach@web.de,XAI,register,status:completed
+Tue Feb 20 09:28:54 2024,test@bla.de,Baseline,register,status:open
+Tue Feb 20 09:29:01 2024,test@bla.de,Baseline,training,TCP estimation for slide 0: 11
+Tue Feb 20 09:29:04 2024,test@bla.de,Baseline,training,TCP estimation for slide 1: 12
+Tue Feb 20 09:29:13 2024,test@bla.de,Baseline,demographic data,"gender: Female, age: 25-34, experience: <5 years, interest in technology: 5, adoption of new technologies: 4, familiarity with AI: 1"
+Tue Feb 20 09:29:17 2024,test@bla.de,Baseline,experiment,TCP estimation for slide 18: 1 with timerActive = 0
+Tue Feb 20 09:29:21 2024,test@bla.de,Baseline,confidence,confidence for slide 18: 1 with timerActive = 0
