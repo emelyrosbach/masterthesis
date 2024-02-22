@@ -256,7 +256,7 @@ class Results():
 
     def calcDeviation (self, slide, tcpEst):
         gt = GroundTruth.getGroundTruth(slide)
-        deviation = float(tcpEst)-gt
+        deviation = float(tcpEst)-float(gt)
         return deviation
      
     def calcJAS (self, slide, tcpBaseline, tcpXAI):

@@ -66,3 +66,87 @@ Tue Feb 20 09:29:04 2024,test@bla.de,Baseline,training,TCP estimation for slide 
 Tue Feb 20 09:29:13 2024,test@bla.de,Baseline,demographic data,"gender: Female, age: 25-34, experience: <5 years, interest in technology: 5, adoption of new technologies: 4, familiarity with AI: 1"
 Tue Feb 20 09:29:17 2024,test@bla.de,Baseline,experiment,TCP estimation for slide 18: 1 with timerActive = 0
 Tue Feb 20 09:29:21 2024,test@bla.de,Baseline,confidence,confidence for slide 18: 1 with timerActive = 0
+Wed Feb 21 15:05:08 2024,chloe.puget@fu-berlin.de,Baseline,register,status:open
+Wed Feb 21 15:06:33 2024,chloe.puget@fu-berlin.de,Baseline,register,status:open
+Wed Feb 21 15:07:11 2024,chloe.puget@fu-berlin.de,Baseline,register,status:open
+Wed Feb 21 15:09:44 2024,chloe.puget@fu-berlin.de,Baseline,training,TCP estimation for slide 0: 80
+Wed Feb 21 15:09:54 2024,chloe.puget@fu-berlin.de,Baseline,training,TCP estimation for slide 1: 50
+Wed Feb 21 15:16:27 2024,chloe.puget@fu-berlin.de,Baseline,demographic data,"gender: Female, age: 25-34, experience: <5 years, interest in technology: 5, adoption of new technologies: 3, familiarity with AI: 4"
+Wed Feb 21 15:16:34 2024,chloe.puget@fu-berlin.de,Baseline,experiment,TCP estimation for slide 14: 20 with timerActive = 1
+Wed Feb 21 15:16:40 2024,chloe.puget@fu-berlin.de,Baseline,confidence,confidence for slide 14: 3 with timerActive = 1
+Wed Feb 21 15:17:03 2024,chloe.puget@fu-berlin.de,Baseline,experiment,TCP estimation for slide 15: 30 with timerActive = 1
+Wed Feb 21 15:17:07 2024,chloe.puget@fu-berlin.de,Baseline,confidence,confidence for slide 15: 2 with timerActive = 1
+Wed Feb 21 15:17:16 2024,chloe.puget@fu-berlin.de,Baseline,experiment,TCP estimation for slide 16: 50 with timerActive = 1
+Wed Feb 21 15:17:22 2024,chloe.puget@fu-berlin.de,Baseline,confidence,confidence for slide 16: 2 with timerActive = 1
+Wed Feb 21 15:18:03 2024,chloe.puget@fu-berlin.de,Baseline,experiment,TCP estimation for slide 7: 0 with timerActive = 1
+Wed Feb 21 15:18:06 2024,chloe.puget@fu-berlin.de,Baseline,confidence,confidence for slide 7: 1 with timerActive = 1
+Wed Feb 21 15:18:15 2024,chloe.puget@fu-berlin.de,Baseline,experiment,TCP estimation for slide 18: 5 with timerActive = 1
+Wed Feb 21 15:18:18 2024,chloe.puget@fu-berlin.de,Baseline,confidence,confidence for slide 18: 2 with timerActive = 1
+Wed Feb 21 15:18:26 2024,chloe.puget@fu-berlin.de,Baseline,experiment,TCP estimation for slide 10: 60 with timerActive = 1
+Wed Feb 21 15:18:29 2024,chloe.puget@fu-berlin.de,Baseline,confidence,confidence for slide 10: 2 with timerActive = 1
+Wed Feb 21 15:18:46 2024,chloe.puget@fu-berlin.de,Baseline,experiment,TCP estimation for slide 11: 80 with timerActive = 1
+Wed Feb 21 15:18:53 2024,chloe.puget@fu-berlin.de,Baseline,confidence,confidence for slide 11: 4 with timerActive = 1
+Wed Feb 21 15:19:00 2024,chloe.puget@fu-berlin.de,Baseline,experiment,TCP estimation for slide 12: 80 with timerActive = 1
+Wed Feb 21 15:19:05 2024,chloe.puget@fu-berlin.de,Baseline,confidence,confidence for slide 12: 3 with timerActive = 1
+Wed Feb 21 15:19:11 2024,chloe.puget@fu-berlin.de,Baseline,experiment,TCP estimation for slide 13: 95 with timerActive = 0
+Wed Feb 21 15:19:14 2024,chloe.puget@fu-berlin.de,Baseline,confidence,confidence for slide 13: 4 with timerActive = 0
+Wed Feb 21 15:19:42 2024,chloe.puget@fu-berlin.de,Baseline,experiment,TCP estimation for slide 24: 15 with timerActive = 0
+Wed Feb 21 15:19:45 2024,chloe.puget@fu-berlin.de,Baseline,confidence,confidence for slide 24: 4 with timerActive = 0
+Wed Feb 21 15:20:08 2024,chloe.puget@fu-berlin.de,Baseline,experiment,TCP estimation for slide 25: 10 with timerActive = 0
+Wed Feb 21 15:20:12 2024,chloe.puget@fu-berlin.de,Baseline,confidence,confidence for slide 25: 4 with timerActive = 0
+Wed Feb 21 15:20:30 2024,chloe.puget@fu-berlin.de,Baseline,experiment,TCP estimation for slide 26: 30 with timerActive = 0
+Wed Feb 21 15:20:32 2024,chloe.puget@fu-berlin.de,Baseline,confidence,confidence for slide 26: 3 with timerActive = 0
+Wed Feb 21 15:20:39 2024,chloe.puget@fu-berlin.de,Baseline,experiment,TCP estimation for slide 27: 50 with timerActive = 0
+Wed Feb 21 15:20:42 2024,chloe.puget@fu-berlin.de,Baseline,confidence,confidence for slide 27: 3 with timerActive = 0
+Wed Feb 21 15:20:56 2024,chloe.puget@fu-berlin.de,Baseline,experiment,TCP estimation for slide 28: 90 with timerActive = 0
+Wed Feb 21 15:20:58 2024,chloe.puget@fu-berlin.de,Baseline,confidence,confidence for slide 28: 4 with timerActive = 0
+Wed Feb 21 15:21:36 2024,chloe.puget@fu-berlin.de,Baseline,experiment,TCP estimation for slide 20: 50 with timerActive = 0
+Wed Feb 21 15:21:40 2024,chloe.puget@fu-berlin.de,Baseline,confidence,confidence for slide 20: 2 with timerActive = 0
+Wed Feb 21 15:21:52 2024,chloe.puget@fu-berlin.de,Baseline,experiment,TCP estimation for slide 21: 75 with timerActive = 0
+Wed Feb 21 15:21:54 2024,chloe.puget@fu-berlin.de,Baseline,confidence,confidence for slide 21: 3 with timerActive = 0
+Wed Feb 21 15:22:17 2024,chloe.puget@fu-berlin.de,Baseline,experiment,TCP estimation for slide 22: 50 with timerActive = 0
+Wed Feb 21 15:22:20 2024,chloe.puget@fu-berlin.de,Baseline,confidence,confidence for slide 22: 3 with timerActive = 0
+Wed Feb 21 15:22:33 2024,chloe.puget@fu-berlin.de,Baseline,experiment,TCP estimation for slide 23: 90 with timerActive = 0
+Wed Feb 21 15:22:37 2024,chloe.puget@fu-berlin.de,Baseline,confidence,confidence for slide 23: 2 with timerActive = 0
+Wed Feb 21 15:25:03 2024,chloe.puget@fu-berlin.de,Baseline,UEQS,"item1: 4, item2: 7, item3: 7, item4: 6, item5: 7, item6: 7, item7: 4, item8: 4"
+Wed Feb 21 15:25:54 2024,chloe.puget@fu-berlin.de,XAI,register,status:completed
+Wed Feb 21 15:27:12 2024,chloe.puget@fu-berlin.de,XAI,training,TCP estimation for slide 0: 65
+Wed Feb 21 15:28:18 2024,chloe.puget@fu-berlin.de,XAI,training,TCP estimation for slide 1: 65
+Wed Feb 21 15:29:35 2024,chloe.puget@fu-berlin.de,XAI,experiment,TCP estimation for slide 14: 60 with timerActive = 1
+Wed Feb 21 15:29:45 2024,chloe.puget@fu-berlin.de,XAI,confidence,confidence for slide 14: 2 with timerActive = 1
+Wed Feb 21 15:30:02 2024,chloe.puget@fu-berlin.de,XAI,experiment,TCP estimation for slide 15: 40 with timerActive = 1
+Wed Feb 21 15:30:05 2024,chloe.puget@fu-berlin.de,XAI,confidence,confidence for slide 15: 2 with timerActive = 1
+Wed Feb 21 15:30:25 2024,chloe.puget@fu-berlin.de,XAI,experiment,TCP estimation for slide 16: 20 with timerActive = 1
+Wed Feb 21 15:30:26 2024,chloe.puget@fu-berlin.de,XAI,confidence,confidence for slide 16: 1 with timerActive = 1
+Wed Feb 21 15:30:44 2024,chloe.puget@fu-berlin.de,XAI,experiment,TCP estimation for slide 7: 0 with timerActive = 1
+Wed Feb 21 15:30:48 2024,chloe.puget@fu-berlin.de,XAI,confidence,confidence for slide 7: 1 with timerActive = 1
+Wed Feb 21 15:30:56 2024,chloe.puget@fu-berlin.de,XAI,experiment,TCP estimation for slide 18: 90 with timerActive = 1
+Wed Feb 21 15:30:58 2024,chloe.puget@fu-berlin.de,XAI,confidence,confidence for slide 18: 4 with timerActive = 1
+Wed Feb 21 15:31:10 2024,chloe.puget@fu-berlin.de,XAI,experiment,TCP estimation for slide 10: 40 with timerActive = 1
+Wed Feb 21 15:31:13 2024,chloe.puget@fu-berlin.de,XAI,confidence,confidence for slide 10: 3 with timerActive = 1
+Wed Feb 21 15:31:22 2024,chloe.puget@fu-berlin.de,XAI,experiment,TCP estimation for slide 11: 50 with timerActive = 1
+Wed Feb 21 15:31:26 2024,chloe.puget@fu-berlin.de,XAI,confidence,confidence for slide 11: 3 with timerActive = 1
+Wed Feb 21 15:31:35 2024,chloe.puget@fu-berlin.de,XAI,experiment,TCP estimation for slide 12: 60 with timerActive = 1
+Wed Feb 21 15:31:38 2024,chloe.puget@fu-berlin.de,XAI,confidence,confidence for slide 12: 3 with timerActive = 1
+Wed Feb 21 15:31:46 2024,chloe.puget@fu-berlin.de,XAI,experiment,TCP estimation for slide 13: 90 with timerActive = 0
+Wed Feb 21 15:31:48 2024,chloe.puget@fu-berlin.de,XAI,confidence,confidence for slide 13: 3 with timerActive = 0
+Wed Feb 21 15:32:03 2024,chloe.puget@fu-berlin.de,XAI,experiment,TCP estimation for slide 24: 50 with timerActive = 0
+Wed Feb 21 15:32:06 2024,chloe.puget@fu-berlin.de,XAI,confidence,confidence for slide 24: 3 with timerActive = 0
+Wed Feb 21 15:32:21 2024,chloe.puget@fu-berlin.de,XAI,experiment,TCP estimation for slide 25: 25 with timerActive = 0
+Wed Feb 21 15:32:23 2024,chloe.puget@fu-berlin.de,XAI,confidence,confidence for slide 25: 4 with timerActive = 0
+Wed Feb 21 15:32:41 2024,chloe.puget@fu-berlin.de,XAI,experiment,TCP estimation for slide 26: 25 with timerActive = 0
+Wed Feb 21 15:32:43 2024,chloe.puget@fu-berlin.de,XAI,confidence,confidence for slide 26: 3 with timerActive = 0
+Wed Feb 21 15:32:54 2024,chloe.puget@fu-berlin.de,XAI,experiment,TCP estimation for slide 27: 50 with timerActive = 0
+Wed Feb 21 15:32:57 2024,chloe.puget@fu-berlin.de,XAI,confidence,confidence for slide 27: 3 with timerActive = 0
+Wed Feb 21 15:33:22 2024,chloe.puget@fu-berlin.de,XAI,experiment,TCP estimation for slide 28: 75 with timerActive = 0
+Wed Feb 21 15:33:25 2024,chloe.puget@fu-berlin.de,XAI,confidence,confidence for slide 28: 3 with timerActive = 0
+Wed Feb 21 15:33:54 2024,chloe.puget@fu-berlin.de,XAI,experiment,TCP estimation for slide 20: 40 with timerActive = 0
+Wed Feb 21 15:33:57 2024,chloe.puget@fu-berlin.de,XAI,confidence,confidence for slide 20: 3 with timerActive = 0
+Wed Feb 21 15:38:42 2024,chloe.puget@fu-berlin.de,XAI,experiment,TCP estimation for slide 21: 55 with timerActive = 0
+Wed Feb 21 15:38:45 2024,chloe.puget@fu-berlin.de,XAI,confidence,confidence for slide 21: 3 with timerActive = 0
+Wed Feb 21 15:39:08 2024,chloe.puget@fu-berlin.de,XAI,experiment,TCP estimation for slide 22: 65 with timerActive = 0
+Wed Feb 21 15:39:10 2024,chloe.puget@fu-berlin.de,XAI,confidence,confidence for slide 22: 3 with timerActive = 0
+Wed Feb 21 15:40:14 2024,chloe.puget@fu-berlin.de,XAI,experiment,TCP estimation for slide 23: 85 with timerActive = 0
+Wed Feb 21 15:40:18 2024,chloe.puget@fu-berlin.de,XAI,confidence,confidence for slide 23: 3 with timerActive = 0
+Wed Feb 21 15:41:38 2024,chloe.puget@fu-berlin.de,XAI,UEQS,"item1: 5, item2: 7, item3: 7, item4: 7, item5: 7, item6: 7, item7: 5, item8: 6"
+Thu Feb 22 09:13:37 2024,chloe.puget@fu-berlin.de,Baseline,register,status:completed
