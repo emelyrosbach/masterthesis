@@ -33,7 +33,7 @@
                     </div>
                     <div class="columns">
                         <div class="column is-12 item-text">
-                            <p>As part of this training session please estimate the tumor cell percentage, defined as the ratio of neoplastic cells to the total cell count, on the following two slides. Kindly note, that the second estimation will be conducted under a time constraint of 7 seconds. The actual study will be structured similarly to this training session, so feel free to take your time to get acustomed to the format and functionallity of our application.</p>
+                            <p>As part of this training session please estimate the tumor cell percentage, defined as the ratio of tumor cells to the total cell count, on the following two slides. Kindly note, that the second estimation will be conducted under a time constraint of 7 seconds. The actual study will be structured similarly to this training session, so feel free to take your time to get acustomed to the format and functionallity of our application.</p>
                         </div>
                     </div>
                 </div>
@@ -137,7 +137,7 @@
         delimiters: ['${', '}'],
         data () {
             return {
-                totalSlides: 2,
+                totalSlides: 3,
                 timerActive: {{showTimer}},
                 slideCounter: {{slideCounter}},
                 condition: "{{condition}}",
@@ -187,7 +187,8 @@
                 if (this.validateEntry()) {
                     if (this.slideCounter < this.totalSlides) {
                         var newSlideCounter = this.slideCounter + 1;
-                        if (newSlideCounter== (this.totalSlides/2)) {
+                        //if (newSlideCounter== (this.totalSlides/2)) {
+                        if (newSlideCounter == 1) {
                             this.timerActive = 1 - this.timerActive;
                         }
                         var participantId='{{id}}';

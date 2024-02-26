@@ -73,6 +73,7 @@ class TrainingAIPredictions():
         TrainingAIpredictions = {
             0: "53",
             1: "56",
+            2: "63",
         } 
         return TrainingAIpredictions
     
@@ -80,6 +81,7 @@ class TrainingAIPredictions():
         TrainingAIpredictions = {
             0: "72",
             1: "780",
+            2: "74",
         } 
         return TrainingAIpredictions
     
@@ -87,6 +89,7 @@ class TrainingAIPredictions():
         TrainingAIpredictions = {
             0: "137",
             1: "1382",
+            2: "118",
         } 
         return TrainingAIpredictions 
     

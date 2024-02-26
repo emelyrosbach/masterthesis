@@ -114,7 +114,7 @@ def training(request, participant_id, condition, timer_active, slide_counter):
         with open('log.csv', 'a') as f:
             w = csv.writer(f)
             w.writerow(row)
-        if slide_counter==2:
+        if slide_counter==3:
             return redirect('startexperiment', participant_id, condition)
         else:
             return redirect('training', participant_id, condition, timer_active, slide_counter)
