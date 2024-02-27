@@ -290,4 +290,7 @@ Sat Feb 24 17:21:54 2024,test@bla.de,XAI,training,TCP estimation for slide 0: 22
 Sat Feb 24 17:22:02 2024,test@bla.de,XAI,training,TCP estimation for slide 1: 3
 Sat Feb 24 20:37:13 2024,test@bla.de,XAI,register,status:completed
 Sun Feb 25 21:35:34 2024,test@bla.de,XAI,register,status:completed
-Sun Feb 25 21:35:42 2024,test@bla.de,XAI,training,TCP estimation for slide 0: 55
+Sun Feb 25 21:35:42 2024,test@bla.de,XAI,training,TCP estimation for slide 0: 55Mon Feb 26 14:42:19 2024,test@bla.de,XAI,register,status:completed
+Mon Feb 26 14:42:24 2024,test@bla.de,XAI,training,TCP estimation for slide 0: 44
+Mon Feb 26 14:42:34 2024,test@bla.de,XAI,training,TCP estimation for slide 1: 44
+Mon Feb 26 14:42:39 2024,test@bla.de,XAI,training,TCP estimation for slide 2: 44
