@@ -294,3 +294,12 @@ Sun Feb 25 21:35:42 2024,test@bla.de,XAI,training,TCP estimation for slide 0: 55
 Mon Feb 26 14:42:24 2024,test@bla.de,XAI,training,TCP estimation for slide 0: 44
 Mon Feb 26 14:42:34 2024,test@bla.de,XAI,training,TCP estimation for slide 1: 44
 Mon Feb 26 14:42:39 2024,test@bla.de,XAI,training,TCP estimation for slide 2: 44
+Tue Feb 27 10:49:49 2024,test@bla.de,Baseline,register,status:completed
+Tue Feb 27 10:49:54 2024,test@bla.de,Baseline,training,TCP estimation for slide 0: 44
+Tue Feb 27 10:49:57 2024,test@bla.de,Baseline,training,TCP estimation for slide 1: 44
+Tue Feb 27 10:50:03 2024,test@bla.de,Baseline,training,TCP estimation for slide 2: 44
+Tue Feb 27 14:04:19 2024,test@bla.de,Baseline,register,status:completed
+Tue Feb 27 15:08:51 2024,test@bla.de,XAI,UEQS,"item1: 4, item2: 4, item3: 4, item4: 4, item5: 4, item6: 4, item7: 4, item8: 4"
+Tue Feb 27 15:10:48 2024,test@bla.de,XAI,UEQS,"item1: 3, item2: 3, item3: 3, item4: 3, item5: 3, item6: 3, item7: 3, item8: 3"
+Tue Feb 27 15:17:18 2024,test@bla.de,XAI,UEQS,"item1: 3, item2: 3, item3: 3, item4: 4, item5: 4, item6: 4, item7: 3, item8: 3"
+Tue Feb 27 15:25:23 2024,test@bla.de,Baseline,UEQS,"item1: 1, item2: 1, item3: 1, item4: 1, item5: 1, item6: 1, item7: 1, item8: 1"

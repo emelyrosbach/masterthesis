@@ -31,6 +31,11 @@
         height: 15px;
         margin: 0 1.5vw 0 1.5vw;
     }
+    #id_question1 input, #id_question2 input, #id_question3 input, #id_question4 input {
+        width: 15px;
+        height: 15px;
+        margin: 0 1vw 0 1vw;
+    }
     .training-sign {
         left: calc(50vw - 150px);
         width: 300px;
@@ -67,6 +72,11 @@
         width: 20px;
         height: 20px;
         margin: 0 45px 0 45px;
+    }
+    #id_question1 input, #id_question2 input, #id_question3 input, #id_question4 input {
+        width: 20px;
+        height: 20px;
+        margin: 0 30px 0 30px;
     }
     .training-sign {
         left: calc(50vw - 250px);
@@ -168,15 +178,50 @@ h1 {
     justify-content: center;
     align-items: center;
 }
-.image-div {
+#image-div {
     width: 100%;
     height: 100%;
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: contain;
+    position: relative;
     display: flex;
     justify-content: flex-start;
     align-items: flex-end;
+    overflow: hidden;
+}
+#drag-img {
+    cursor: move;
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    object-position: center;
+    z-index: -1;
+    max-width: none;
+    max-height: none;
+}
+.zoom {
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    top: 10px;
+    right: 0px;
+}
+.zoom button {
+    width: 50px;
+    height: 50px;
+    border-color: rgba(56, 56, 56, 0.88);
+    border-radius: 10px;
+    background-color: rgba(56, 56, 56, 0.88);
+    margin: 5px 20px 5px 5px;
+}
+.zoom button img {
+    width: 70%;
+    height: auto;
+}
+.zoom button:disabled {
+    border-color: rgba(176, 176, 176, 0.88);
+    background-color: rgba(176, 176, 176, 0.88);
 }
 .side-bar {
     height: inherit;
@@ -235,7 +280,7 @@ h1 {
 .your-assessment div form input {
     width: 100%;
     height: 30px;
-    border-color: #D3D3D3;
+    border: 1px solid #D3D3D3;
 }
 .navbar img {
     height: 3vh;
@@ -336,14 +381,22 @@ h1 {
 }
 .pre-study-section {
     width: 100%;
+    height: 93vh;
 }
 .pre-study-container {
     width: 100%;
+    height: 86vh;
     display: flex;
     justify-content: center;
+    overflow-y: auto;
+}
+.justUEQ {
+    display: flex;
+    align-items: center;
 }
 .pre-study-form {
     width: 80%;
+    height: fit-content;
 }
 .question-container {
     width: 100%;
@@ -360,8 +413,13 @@ h1 {
 .required {
     color: #FF4949;
 }
-.form-field, #id_likertScale, #id_item1, #id_item2, #id_item3, #id_item4, #id_item5, #id_item6, #id_item7, #id_item8 {
+.form-field, #id_likertScale, #id_item1, #id_item2, #id_item3, #id_item4, #id_item5, #id_item6, #id_item7, #id_item8, #id_question1, #id_question2, #id_question3, #id_question4 {
     display: flex;
+}
+#id_question5, #id_question6 {
+    border: 1px solid #D3D3D3;;
+    height: 25px;
+    width: 100%;
 }
 #id_likertScale *{
     margin: 0 5px 0 5px;
@@ -386,7 +444,7 @@ h1 {
     width: 200px;
     padding: 5px 5px 7px 20px;
     border-radius: 5px;
-    border-color: #666666;
+    border-color: #D3D3D3;
 }
 
 .negative, .positive, .radio-buttons {
@@ -446,4 +504,7 @@ h1 {
 }
 .tumor-cell {
     color: #ED9B40;
+}
+.spacer {
+    margin-top: 30px !important;
 }

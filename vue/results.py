@@ -44,6 +44,12 @@ class Results():
         worksheet.write('AD2', 'item6')
         worksheet.write('AE2', 'item7')
         worksheet.write('AF2', 'item8')
+        worksheet.write('AG2', 'question1')
+        worksheet.write('AH2', 'question2')
+        worksheet.write('AI2', 'question3')
+        worksheet.write('AJ2', 'question4')
+        worksheet.write('AK2', 'question5')
+        worksheet.write('AL2', 'question6')
         #data
         expList = Experiment.objects.all()
         i = 2
@@ -93,6 +99,12 @@ class Results():
                 worksheet.write(i, 30, poststudyData.item6)
                 worksheet.write(i, 31, poststudyData.item7)
                 worksheet.write(i, 32, poststudyData.item8)
+                worksheet.write(i, 33, poststudyData.question1)
+                worksheet.write(i, 34, poststudyData.question2)
+                worksheet.write(i, 35, poststudyData.question3)
+                worksheet.write(i, 36, poststudyData.question4)
+                worksheet.write(i, 37, poststudyData.question5)
+                worksheet.write(i, 38, poststudyData.question6)
             except ObjectDoesNotExist:
                 print ("ups")
             i = i + 1
