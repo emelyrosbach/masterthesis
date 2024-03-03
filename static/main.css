@@ -188,7 +188,6 @@ h1 {
     overflow: hidden;
 }
 #drag-img {
-    cursor: move;
     position: absolute;
     top: 0px;
     left: 0px;
@@ -204,8 +203,10 @@ h1 {
     display: flex;
     flex-direction: column;
     position: absolute;
-    top: 10px;
-    right: 0px;
+    top: 0px;
+    left: 0px;
+    padding: 1%;
+    margin: 2%;
 }
 .zoom button {
     width: 50px;
@@ -213,7 +214,7 @@ h1 {
     border-color: rgba(56, 56, 56, 0.88);
     border-radius: 10px;
     background-color: rgba(56, 56, 56, 0.88);
-    margin: 5px 20px 5px 5px;
+    margin: 5px 0px 5px 0px;
 }
 .zoom button img {
     width: 70%;

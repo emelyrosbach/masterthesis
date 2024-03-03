@@ -51,7 +51,7 @@
                     {% load static %}
                     <img class="lock-icon" src="../../../../../static/icons/lock.png">
                 </div>
-                <div v-if="condition == 'XAI'" class="image-div" :style="annotationsOn?{ backgroundImage: 'url(../../../../../static/trainingAnnotations/' + slideCounter + '.png)' }:{ backgroundImage: 'url(../../../../../static/trainingImages/' + slideCounter + '.png)' }">
+                <div id="image-div" @mousedown="startDrag()" @mouseup="stopDrag()" @mousemove="whileDrag()">
                     <div class="field switch-container">
                         <div>
                            <div class="switch-toggle-container">
@@ -63,8 +63,23 @@
                             </div> 
                         </div>
                     </div>
+                    <div class="zoom">
+                        <button id="plus" @click="zoomIn()">
+                            {% load static %}
+                             <img src="../../../../../static/icons/plus.png">
+                        </button>
+                        <button id="minus" @click="zoomOut()" disabled="true">
+                            {% load static %}
+                                <img src="../../../../../static/icons/minus.png">
+                        </button>
+                        <button @click="reset()">
+                            {% load static %}
+                                <img style="width:100%" src="../../../../../static/icons/reset.png">
+                        </button>
+                    </div>
+                    <img v-if="annotationsOn && condition=='XAI'" id="drag-img" :src="'../../../../../static/trainingAnnotations/' + slideCounter + '.png'">
+                    <img v-else ondragstart="return false" id="drag-img" :src="'../../../../../static/trainingImages/' + slideCounter + '.png'">
                 </div>
-                <div v-else class="image-div" :style="{ backgroundImage: 'url(../../../../../static/trainingImages/' + slideCounter + '.png)' }"></div>
             </div>
             <div class="column is-4 side-bar">
                 {% if condition == 'XAI' %}
@@ -143,6 +158,10 @@
                 condition: "{{condition}}",
                 tcpEst : "",
                 annotationsOn: true,
+                zoomLevel: 0,
+                posX: 0,
+                posY: 0,
+                dragOn: false,
                 lockOn: false,
                 centiseconds: 700,
                 modalOpen: true,
@@ -187,7 +206,6 @@
                 if (this.validateEntry()) {
                     if (this.slideCounter < this.totalSlides) {
                         var newSlideCounter = this.slideCounter + 1;
-                        //if (newSlideCounter== (this.totalSlides/2)) {
                         if (newSlideCounter == 1) {
                             this.timerActive = 1 - this.timerActive;
                         }
@@ -210,6 +228,113 @@
                         .catch(function(error) {
                             console.log('Error');
                         })
+                    }
+                }
+            },
+            zoomIn() {
+                var draggable = document.querySelector('#drag-img');
+                var draggableRect = draggable.getBoundingClientRect();
+                var parent = document.querySelector('#image-div');
+                var parentRect = parent.getBoundingClientRect();
+                const scale = 1.5;
+                if(this.zoomLevel < 3) {
+                    const newWidth = draggableRect.width * scale;
+                    const newHeight = draggableRect.height * scale;
+                    draggable.style.width = newWidth+ "px";
+                    draggable.style.height = newHeight + "px"
+                    //zoom from img middle
+                    /*var oCX = draggable.offsetLeft + (draggableRect.width/2);
+                    var oCY = draggable.offsetTop + (draggableRect.height/2);
+                    var newX = oCX - (newWidth/2);
+                    var newY = oCY - (newHeight/2);*/
+                    //zoom from parent middel
+                    var oCX = (parent.offsetLeft + parentRect.width/2) - draggable.offsetLeft;
+                    var oCY = (parent.offsetTop + parentRect.height/2) - draggable.offsetTop;
+                    var newX = (parent.offsetLeft + parentRect.width/2)-(oCX*scale);
+                    var newY = (parent.offsetTop + parentRect.height/2)-(oCY*scale);
+                    draggable.style.left = newX + "px";
+                    draggable.style.top = newY + "px";
+                    this.zoomLevel++;
+                    if (this.zoomLevel == 3) {
+                        document.getElementById("plus").disabled = true;
+                    }
+                    else {
+                        document.getElementById("minus").disabled = false;
+                    }
+                }
+            },
+            zoomOut() {
+                var draggable = document.querySelector('#drag-img');
+                var draggableRect = draggable.getBoundingClientRect();
+                var parent = document.querySelector('#image-div');
+                var parentRect = parent.getBoundingClientRect();
+                const scale = 1.5;
+                if(this.zoomLevel > 0) {
+                    const newWidth = draggableRect.width/scale;
+                    const newHeight = draggableRect.height/scale;
+                    draggable.style.width = newWidth+ "px";
+                    draggable.style.height = newHeight + "px"
+                    //zoom from img middle
+                    /*var oCX = draggable.offsetLeft + (draggableRect.width/2);
+                    var oCY = draggable.offsetTop + (draggableRect.height/2);
+                    var newX = oCX - (newWidth/2);
+                    var newY = oCY - (newHeight/2);*/
+                    //zoom from parent middel
+                    var oCX = (parent.offsetLeft + parentRect.width/2) - draggable.offsetLeft;
+                    var oCY = (parent.offsetTop + parentRect.height/2) - draggable.offsetTop;
+                    var newX = (parent.offsetLeft + parentRect.width/2) - (oCX/scale);
+                    var newY = (parent.offsetTop + parentRect.height/2) - (oCY/scale);
+                    draggable.style.left = newX + "px";
+                    draggable.style.top = newY + "px";
+                    this.zoomLevel--;
+                    if (this.zoomLevel == 0) {
+                        document.getElementById("minus").disabled = true;
+                    }
+                    else {
+                        document.getElementById("plus").disabled = false;
+                    }
+                }
+            },
+            reset() {
+                var draggable = document.querySelector('#drag-img');
+                var draggableRect = draggable.getBoundingClientRect();
+                this. zoomLevel = 0;
+                draggable.style.width = "100%";
+                draggable.style.height = "100%";
+                draggable.style.left = "0px";
+                draggable.style.top = "0px";
+                document.getElementById("plus").disabled = false;
+                document.getElementById("minus").disabled = true;
+            },
+            startDrag() {
+                this.dragOn = true;
+                document.getElementById("image-div").style.cursor = "move";
+                window.event.preventDefault();
+                var draggable = document.querySelector('#drag-img');
+                this.posX = window.event.clientX - draggable.offsetLeft;
+                this.posY = window.event.clientY - draggable.offsetTop;
+            },
+            stopDrag() {
+                this.dragOn = false;
+                this.originalX = 0;
+                this.originalY = 0;
+                document.getElementById("image-div").style.cursor = "default";
+            },
+            whileDrag() {
+                var parent = document.querySelector('#image-div');
+                var parentRect = parent.getBoundingClientRect();
+                var draggable = document.querySelector('#drag-img');
+                var mouseX = window.event.clientX;
+                var mouseY = window.event.clientY;
+                if (this.dragOn==true) {
+                    if( (mouseX >= (parentRect.left+10) && (mouseX <= (parentRect.right-10))) && (mouseY >= (parentRect.top+10) && (mouseY <= (parentRect.bottom-10))) ){
+                        var newX = window.event.clientX - this.posX;
+                        var newY = window.event.clientY - this.posY;
+                        draggable.style.left = (newX) + "px";
+                        draggable.style.top = (newY) + "px";
+                    }
+                    else {
+                        this.stopDrag();
                     }
                 }
             }

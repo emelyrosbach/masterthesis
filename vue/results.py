@@ -171,6 +171,7 @@ class Results():
                 sumNoTP = 0
                 sumTP = 0
                 for col_num,slide in enumerate(firstSplit):
+                    print(exp.email + " " + condition + " " + slide + " " + str(Data.objects.get(experiment=exp, condition=condition, slide=firstSplit[col_num])))
                     dataFirst = Data.objects.get(experiment=exp, condition=condition, slide=firstSplit[col_num]) 
                     dataSecond = Data.objects.get(experiment=exp, condition=condition, slide=secondSplit[col_num])
                     if (exp.group == 'A' or exp.group== 'B'):

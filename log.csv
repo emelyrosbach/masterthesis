@@ -1,72 +1,5 @@
 time,email,condition,action,data
 
-Tue Feb 13 10:25:32 2024,emelyrosbach@web.de,XAI,experiment,TCP estimation for slide 17: 12 with timerActive = 1Mon Feb 19 10:05:15 2024,emelyrosbach@web.de,Baseline,register,status:completedMon Feb 19 12:47:17 2024,joluga@web.de,Baseline,register,status:openMon Feb 19 14:50:58 2024,emelyrosbach@web.de,Baseline,register,status:completed
-
-Mon Feb 19 13:55:21 2024,emelyrosbach@web.de,Baseline,register,status:completed
-Mon Feb 19 13:55:41 2024,joluga@web.de,Baseline,register,status:open
-Mon Feb 19 13:55:48 2024,joluga@web.de,Baseline,training,TCP estimation for slide 0: 12
-Mon Feb 19 13:55:52 2024,joluga@web.de,Baseline,training,TCP estimation for slide 1: 12
-Mon Feb 19 13:56:08 2024,joluga@web.de,Baseline,demographic data,"gender: Male, age: 25-34, experience: 5-10 years, interest in technology: 5, adoption of new technologies: 4, familiarity with AI: 4"
-Mon Feb 19 13:56:12 2024,joluga@web.de,Baseline,experiment,TCP estimation for slide 13: 33 with timerActive = 0
-Mon Feb 19 13:56:16 2024,joluga@web.de,Baseline,confidence,confidence for slide 13: 1 with timerActive = 0
-Mon Feb 19 13:56:20 2024,joluga@web.de,Baseline,experiment,TCP estimation for slide 14: 22 with timerActive = 0
-Mon Feb 19 13:56:23 2024,joluga@web.de,Baseline,confidence,confidence for slide 14: 2 with timerActive = 0
-Mon Feb 19 13:56:28 2024,joluga@web.de,Baseline,experiment,TCP estimation for slide 15: 23 with timerActive = 0
-Mon Feb 19 13:56:31 2024,joluga@web.de,Baseline,confidence,confidence for slide 15: 5 with timerActive = 0
-Mon Feb 19 13:56:34 2024,joluga@web.de,Baseline,experiment,TCP estimation for slide 16: 23 with timerActive = 0
-Mon Feb 19 13:56:36 2024,joluga@web.de,Baseline,confidence,confidence for slide 16: 5 with timerActive = 0
-Mon Feb 19 13:56:39 2024,joluga@web.de,Baseline,experiment,TCP estimation for slide 17: 12 with timerActive = 0
-Mon Feb 19 13:56:42 2024,joluga@web.de,Baseline,confidence,confidence for slide 17: 5 with timerActive = 0
-Mon Feb 19 13:56:46 2024,joluga@web.de,Baseline,experiment,TCP estimation for slide 18: 44 with timerActive = 0
-Mon Feb 19 13:56:48 2024,joluga@web.de,Baseline,confidence,confidence for slide 18: 5 with timerActive = 0
-Mon Feb 19 13:56:52 2024,joluga@web.de,Baseline,experiment,TCP estimation for slide 10: 12 with timerActive = 0
-Mon Feb 19 13:56:55 2024,joluga@web.de,Baseline,confidence,confidence for slide 10: 5 with timerActive = 0
-Mon Feb 19 13:56:57 2024,joluga@web.de,Baseline,experiment,TCP estimation for slide 11: 12 with timerActive = 0
-Mon Feb 19 13:56:59 2024,joluga@web.de,Baseline,confidence,confidence for slide 11: 5 with timerActive = 0
-Mon Feb 19 13:57:03 2024,joluga@web.de,Baseline,experiment,TCP estimation for slide 12: 12 with timerActive = 1
-Mon Feb 19 13:57:05 2024,joluga@web.de,Baseline,confidence,confidence for slide 12: 1 with timerActive = 1
-Mon Feb 19 13:57:10 2024,joluga@web.de,Baseline,experiment,TCP estimation for slide 23: 23 with timerActive = 1
-Mon Feb 19 13:57:12 2024,joluga@web.de,Baseline,confidence,confidence for slide 23: 4 with timerActive = 1
-Mon Feb 19 13:57:16 2024,joluga@web.de,Baseline,experiment,TCP estimation for slide 24: 12 with timerActive = 1
-Mon Feb 19 13:57:19 2024,joluga@web.de,Baseline,confidence,confidence for slide 24: 2 with timerActive = 1
-Mon Feb 19 13:57:21 2024,joluga@web.de,Baseline,experiment,TCP estimation for slide 25: 44 with timerActive = 1
-Mon Feb 19 13:57:24 2024,joluga@web.de,Baseline,confidence,confidence for slide 25: 4 with timerActive = 1
-Mon Feb 19 13:57:27 2024,joluga@web.de,Baseline,experiment,TCP estimation for slide 26: 34 with timerActive = 1
-Mon Feb 19 13:57:29 2024,joluga@web.de,Baseline,confidence,confidence for slide 26: 5 with timerActive = 1
-Mon Feb 19 13:57:32 2024,joluga@web.de,Baseline,experiment,TCP estimation for slide 27: 12 with timerActive = 1
-Mon Feb 19 13:57:34 2024,joluga@web.de,Baseline,confidence,confidence for slide 27: 5 with timerActive = 1
-Mon Feb 19 13:57:37 2024,joluga@web.de,Baseline,experiment,TCP estimation for slide 28: 12 with timerActive = 1
-Mon Feb 19 13:57:39 2024,joluga@web.de,Baseline,confidence,confidence for slide 28: 5 with timerActive = 1
-Mon Feb 19 13:57:42 2024,joluga@web.de,Baseline,experiment,TCP estimation for slide 20: 12 with timerActive = 1
-Mon Feb 19 13:57:44 2024,joluga@web.de,Baseline,confidence,confidence for slide 20: 5 with timerActive = 1
-Mon Feb 19 13:57:48 2024,joluga@web.de,Baseline,experiment,TCP estimation for slide 21: 33 with timerActive = 1
-Mon Feb 19 13:57:51 2024,joluga@web.de,Baseline,confidence,confidence for slide 21: 5 with timerActive = 1
-Mon Feb 19 13:57:55 2024,joluga@web.de,Baseline,experiment,TCP estimation for slide 22: 33 with timerActive = 1
-Mon Feb 19 13:57:57 2024,joluga@web.de,Baseline,confidence,confidence for slide 22: 5 with timerActive = 1
-Mon Feb 19 13:58:05 2024,joluga@web.de,Baseline,UEQS,"item1: 4, item2: 4, item3: 4, item4: 4, item5: 4, item6: 4, item7: 4, item8: 4"
-Mon Feb 19 13:58:26 2024,joluga@web.de,Baseline,register,status:completed
-Mon Feb 19 13:58:31 2024,joluga@web.de,Baseline,training,TCP estimation for slide 0: 22
-Mon Feb 19 13:58:35 2024,joluga@web.de,Baseline,training,TCP estimation for slide 1: 11
-Mon Feb 19 13:58:57 2024,joluga@web.de,XAI,register,status:completed
-Mon Feb 19 13:59:05 2024,joluga@web.de,XAI,training,TCP estimation for slide 0: 12
-Mon Feb 19 13:59:13 2024,joluga@web.de,XAI,training,TCP estimation for slide 1: 33
-Mon Feb 19 13:59:23 2024,joluga@web.de,XAI,experiment,TCP estimation for slide 13: 22 with timerActive = 0
-Mon Feb 19 13:59:27 2024,joluga@web.de,XAI,confidence,confidence for slide 13: 1 with timerActive = 0
-Mon Feb 19 13:59:48 2024,joluga@web.de,XAI,experiment,TCP estimation for slide 24: 95 with timerActive = 1
-Mon Feb 19 14:34:07 2024,emelyrosbach@web.de,Baseline,register,status:completed
-Mon Feb 19 14:35:00 2024,emelyrosbach@web.de,Baseline,training,TCP estimation for slide 0: 22
-Mon Feb 19 14:35:04 2024,emelyrosbach@web.de,Baseline,training,TCP estimation for slide 1: 23
-Mon Feb 19 14:35:46 2024,emelyrosbach@web.de,Baseline,register,status:completed
-Mon Feb 19 14:35:53 2024,emelyrosbach@web.de,Baseline,training,TCP estimation for slide 0: 88
-Mon Feb 19 14:35:58 2024,emelyrosbach@web.de,Baseline,training,TCP estimation for slide 1: 99
-Mon Feb 19 14:37:44 2024,emelyrosbach@web.de,XAI,register,status:completed
-Mon Feb 19 20:15:25 2024,emelyrosbach@web.de,XAI,register,status:completed
-Tue Feb 20 09:28:54 2024,test@bla.de,Baseline,register,status:open
-Tue Feb 20 09:29:01 2024,test@bla.de,Baseline,training,TCP estimation for slide 0: 11
-Tue Feb 20 09:29:04 2024,test@bla.de,Baseline,training,TCP estimation for slide 1: 12
-Tue Feb 20 09:29:13 2024,test@bla.de,Baseline,demographic data,"gender: Female, age: 25-34, experience: <5 years, interest in technology: 5, adoption of new technologies: 4, familiarity with AI: 1"
-Tue Feb 20 09:29:17 2024,test@bla.de,Baseline,experiment,TCP estimation for slide 18: 1 with timerActive = 0
-Tue Feb 20 09:29:21 2024,test@bla.de,Baseline,confidence,confidence for slide 18: 1 with timerActive = 0
 Wed Feb 21 15:05:08 2024,chloe.puget@fu-berlin.de,Baseline,register,status:open
 Wed Feb 21 15:06:33 2024,chloe.puget@fu-berlin.de,Baseline,register,status:open
 Wed Feb 21 15:07:11 2024,chloe.puget@fu-berlin.de,Baseline,register,status:open
@@ -151,47 +84,6 @@ Wed Feb 21 15:40:14 2024,chloe.puget@fu-berlin.de,XAI,experiment,TCP estimation 
 Wed Feb 21 15:40:18 2024,chloe.puget@fu-berlin.de,XAI,confidence,confidence for slide 23: 3 with timerActive = 0
 Wed Feb 21 15:41:38 2024,chloe.puget@fu-berlin.de,XAI,UEQS,"item1: 5, item2: 7, item3: 7, item4: 7, item5: 7, item6: 7, item7: 5, item8: 6"
 Thu Feb 22 09:13:37 2024,chloe.puget@fu-berlin.de,Baseline,register,status:completed
-Thu Feb 22 15:21:14 2024,test@bla.de,Baseline,register,status:open
-Thu Feb 22 15:22:28 2024,test@bla.de,Baseline,training,TCP estimation for slide 0: 22
-Thu Feb 22 15:22:41 2024,test@bla.de,Baseline,training,TCP estimation for slide 1: 33
-Thu Feb 22 15:24:05 2024,test@bla.de,Baseline,demographic data,"gender: Female, age: 25-34, experience: <5 years, interest in technology: 2, adoption of new technologies: 3, familiarity with AI: 2"
-Thu Feb 22 15:24:15 2024,test@bla.de,Baseline,experiment,TCP estimation for slide 18: 22 with timerActive = 0
-Thu Feb 22 15:24:22 2024,test@bla.de,Baseline,confidence,confidence for slide 18: 2 with timerActive = 0
-Thu Feb 22 15:24:27 2024,test@bla.de,Baseline,experiment,TCP estimation for slide 10: 33 with timerActive = 0
-Thu Feb 22 15:24:31 2024,test@bla.de,Baseline,confidence,confidence for slide 10: 3 with timerActive = 0
-Thu Feb 22 15:24:38 2024,test@bla.de,Baseline,experiment,TCP estimation for slide 11: 23 with timerActive = 0
-Thu Feb 22 15:24:42 2024,test@bla.de,Baseline,confidence,confidence for slide 11: 3 with timerActive = 0
-Thu Feb 22 15:24:47 2024,test@bla.de,Baseline,experiment,TCP estimation for slide 12: 34 with timerActive = 0
-Thu Feb 22 15:24:55 2024,test@bla.de,Baseline,confidence,confidence for slide 12: 4 with timerActive = 0
-Thu Feb 22 15:25:01 2024,test@bla.de,Baseline,experiment,TCP estimation for slide 13: 55 with timerActive = 0
-Thu Feb 22 15:25:06 2024,test@bla.de,Baseline,confidence,confidence for slide 13: 3 with timerActive = 0
-Thu Feb 22 15:25:12 2024,test@bla.de,Baseline,experiment,TCP estimation for slide 14: 33 with timerActive = 0
-Thu Feb 22 15:25:15 2024,test@bla.de,Baseline,confidence,confidence for slide 14: 3 with timerActive = 0
-Thu Feb 22 15:25:19 2024,test@bla.de,Baseline,experiment,TCP estimation for slide 15: 33 with timerActive = 0
-Thu Feb 22 15:25:24 2024,test@bla.de,Baseline,confidence,confidence for slide 15: 3 with timerActive = 0
-Thu Feb 22 15:25:28 2024,test@bla.de,Baseline,experiment,TCP estimation for slide 16: 33 with timerActive = 0
-Thu Feb 22 15:25:33 2024,test@bla.de,Baseline,confidence,confidence for slide 16: 3 with timerActive = 0
-Thu Feb 22 15:25:38 2024,test@bla.de,Baseline,experiment,TCP estimation for slide 17: 33 with timerActive = 1
-Thu Feb 22 15:25:42 2024,test@bla.de,Baseline,confidence,confidence for slide 17: 3 with timerActive = 1
-Thu Feb 22 15:25:47 2024,test@bla.de,Baseline,experiment,TCP estimation for slide 28: 33 with timerActive = 1
-Thu Feb 22 15:25:53 2024,test@bla.de,Baseline,confidence,confidence for slide 28: 3 with timerActive = 1
-Thu Feb 22 15:26:12 2024,test@bla.de,Baseline,experiment,TCP estimation for slide 20: 33 with timerActive = 1
-Thu Feb 22 15:26:17 2024,test@bla.de,Baseline,confidence,confidence for slide 20: 3 with timerActive = 1
-Thu Feb 22 15:26:33 2024,test@bla.de,Baseline,experiment,TCP estimation for slide 21: 33 with timerActive = 1
-Thu Feb 22 15:26:41 2024,test@bla.de,Baseline,confidence,confidence for slide 21: 3 with timerActive = 1
-Thu Feb 22 15:26:49 2024,test@bla.de,Baseline,experiment,TCP estimation for slide 22: 22 with timerActive = 1
-Thu Feb 22 15:26:53 2024,test@bla.de,Baseline,confidence,confidence for slide 22: 3 with timerActive = 1
-Thu Feb 22 15:26:58 2024,test@bla.de,Baseline,experiment,TCP estimation for slide 23: 33 with timerActive = 1
-Thu Feb 22 15:27:02 2024,test@bla.de,Baseline,confidence,confidence for slide 23: 3 with timerActive = 1
-Thu Feb 22 15:27:11 2024,test@bla.de,Baseline,experiment,TCP estimation for slide 24: 33 with timerActive = 1
-Thu Feb 22 15:27:15 2024,test@bla.de,Baseline,confidence,confidence for slide 24: 3 with timerActive = 1
-Thu Feb 22 15:27:31 2024,test@bla.de,Baseline,experiment,TCP estimation for slide 25: 12 with timerActive = 1
-Thu Feb 22 15:27:34 2024,test@bla.de,Baseline,confidence,confidence for slide 25: 3 with timerActive = 1
-Thu Feb 22 15:27:39 2024,test@bla.de,Baseline,experiment,TCP estimation for slide 26: 12 with timerActive = 1
-Thu Feb 22 15:27:43 2024,test@bla.de,Baseline,confidence,confidence for slide 26: 3 with timerActive = 1
-Thu Feb 22 15:27:49 2024,test@bla.de,Baseline,experiment,TCP estimation for slide 27: 22 with timerActive = 1
-Thu Feb 22 15:27:53 2024,test@bla.de,Baseline,confidence,confidence for slide 27: 3 with timerActive = 1
-Thu Feb 22 15:28:38 2024,test@bla.de,Baseline,UEQS,"item1: 4, item2: 4, item3: 4, item4: 4, item5: 4, item6: 4, item7: 4, item8: 4"
 Sat Feb 24 10:14:46 2024,e.reinsberg@web.de,Baseline,register,status:open
 Sat Feb 24 10:18:18 2024,e.reinsberg@web.de,Baseline,training,TCP estimation for slide 0: 5
 Sat Feb 24 10:18:33 2024,e.reinsberg@web.de,Baseline,training,TCP estimation for slide 1: 20
@@ -273,27 +165,7 @@ Sat Feb 24 10:40:19 2024,e.reinsberg@web.de,XAI,confidence,confidence for slide 
 Sat Feb 24 10:40:43 2024,e.reinsberg@web.de,XAI,experiment,TCP estimation for slide 24: 80 with timerActive = 0
 Sat Feb 24 10:40:46 2024,e.reinsberg@web.de,XAI,confidence,confidence for slide 24: 1 with timerActive = 0
 Sat Feb 24 10:41:45 2024,e.reinsberg@web.de,XAI,UEQS,"item1: 5, item2: 5, item3: 6, item4: 4, item5: 7, item6: 7, item7: 7, item8: 7"
-Sat Feb 24 15:26:40 2024,test@bla.de,XAI,register,status:completed
-Sat Feb 24 15:26:46 2024,test@bla.de,XAI,training,TCP estimation for slide 0: 11
 Sat Feb 24 16:53:48 2024,chloe.puget@fu-berlin.de,XAI,register,status:completed
-Sat Feb 24 17:08:23 2024,test@bla.de,XAI,register,status:completed
-Sat Feb 24 17:08:43 2024,test@bla.de,XAI,experiment,TCP estimation for slide 25: 33 with timerActive = 0
-Sat Feb 24 17:08:46 2024,test@bla.de,XAI,confidence,confidence for slide 25: 2 with timerActive = 0
-Sat Feb 24 17:08:51 2024,test@bla.de,XAI,experiment,TCP estimation for slide 26: 33 with timerActive = 0
-Sat Feb 24 17:08:54 2024,test@bla.de,XAI,confidence,confidence for slide 26: 4 with timerActive = 0
-Sat Feb 24 17:09:02 2024,test@bla.de,XAI,experiment,TCP estimation for slide 27: 44 with timerActive = 0
-Sat Feb 24 17:09:04 2024,test@bla.de,XAI,confidence,confidence for slide 27: 4 with timerActive = 0
-Sat Feb 24 17:15:33 2024,test@bla.de,XAI,experiment,TCP estimation for slide 25: 66 with timerActive = 0
-Sat Feb 24 17:15:35 2024,test@bla.de,XAI,confidence,confidence for slide 25: 4 with timerActive = 0
-Sat Feb 24 17:21:33 2024,test@bla.de,XAI,register,status:completed
-Sat Feb 24 17:21:54 2024,test@bla.de,XAI,training,TCP estimation for slide 0: 22
-Sat Feb 24 17:22:02 2024,test@bla.de,XAI,training,TCP estimation for slide 1: 3
-Sat Feb 24 20:37:13 2024,test@bla.de,XAI,register,status:completed
-Sun Feb 25 21:35:34 2024,test@bla.de,XAI,register,status:completed
-Sun Feb 25 21:35:42 2024,test@bla.de,XAI,training,TCP estimation for slide 0: 55Mon Feb 26 14:42:19 2024,test@bla.de,XAI,register,status:completed
-Mon Feb 26 14:42:24 2024,test@bla.de,XAI,training,TCP estimation for slide 0: 44
-Mon Feb 26 14:42:34 2024,test@bla.de,XAI,training,TCP estimation for slide 1: 44
-Mon Feb 26 14:42:39 2024,test@bla.de,XAI,training,TCP estimation for slide 2: 44
 Tue Feb 27 09:47:29 2024,christof.bertram@vetmeduni.ac.at,Baseline,register,status:open
 Tue Feb 27 09:48:19 2024,christof.bertram@vetmeduni.ac.at,Baseline,training,TCP estimation for slide 0: 40
 Tue Feb 27 09:48:26 2024,christof.bertram@vetmeduni.ac.at,Baseline,training,TCP estimation for slide 1: 20
@@ -404,3 +276,44 @@ Tue Feb 27 10:23:50 2024,test@gmx.de,XAI,confidence,confidence for slide 25: 2 w
 Tue Feb 27 10:24:01 2024,test@gmx.de,XAI,experiment,TCP estimation for slide 26: 32 with timerActive = 1
 Tue Feb 27 10:24:04 2024,test@gmx.de,XAI,confidence,confidence for slide 26: 3 with timerActive = 1
 Tue Feb 27 10:24:34 2024,test@gmx.de,XAI,UEQS,"item1: 4, item2: 6, item3: 6, item4: 5, item5: 7, item6: 7, item7: 6, item8: 6"
+Sun Mar  3 10:25:50 2024,christof.bertram@vetmeduni.ac.at,XAI,register,status:completed
+Sun Mar  3 10:25:58 2024,christof.bertram@vetmeduni.ac.at,XAI,training,TCP estimation for slide 0: 53
+Sun Mar  3 10:26:01 2024,christof.bertram@vetmeduni.ac.at,XAI,training,TCP estimation for slide 1: 56
+Sun Mar  3 10:26:06 2024,christof.bertram@vetmeduni.ac.at,XAI,training,TCP estimation for slide 2: 70
+Sun Mar  3 10:26:16 2024,christof.bertram@vetmeduni.ac.at,XAI,experiment,TCP estimation for slide 16: 39 with timerActive = 0
+Sun Mar  3 10:26:18 2024,christof.bertram@vetmeduni.ac.at,XAI,confidence,confidence for slide 16: 2 with timerActive = 0
+Sun Mar  3 10:26:21 2024,christof.bertram@vetmeduni.ac.at,XAI,experiment,TCP estimation for slide 17: 92 with timerActive = 0
+Sun Mar  3 10:26:23 2024,christof.bertram@vetmeduni.ac.at,XAI,confidence,confidence for slide 17: 2 with timerActive = 0
+Sun Mar  3 10:26:27 2024,christof.bertram@vetmeduni.ac.at,XAI,experiment,TCP estimation for slide 18: 24 with timerActive = 0
+Sun Mar  3 10:26:31 2024,christof.bertram@vetmeduni.ac.at,XAI,confidence,confidence for slide 18: 2 with timerActive = 0
+Sun Mar  3 10:26:37 2024,christof.bertram@vetmeduni.ac.at,XAI,experiment,TCP estimation for slide 10: 50 with timerActive = 0
+Sun Mar  3 10:26:41 2024,christof.bertram@vetmeduni.ac.at,XAI,confidence,confidence for slide 10: 3 with timerActive = 0
+Sun Mar  3 10:26:44 2024,christof.bertram@vetmeduni.ac.at,XAI,experiment,TCP estimation for slide 11: 60 with timerActive = 0
+Sun Mar  3 10:26:49 2024,christof.bertram@vetmeduni.ac.at,XAI,confidence,confidence for slide 11: 2 with timerActive = 0
+Sun Mar  3 10:26:53 2024,christof.bertram@vetmeduni.ac.at,XAI,experiment,TCP estimation for slide 12: 76 with timerActive = 0
+Sun Mar  3 10:26:55 2024,christof.bertram@vetmeduni.ac.at,XAI,confidence,confidence for slide 12: 3 with timerActive = 0
+Sun Mar  3 10:27:02 2024,christof.bertram@vetmeduni.ac.at,XAI,experiment,TCP estimation for slide 13: 20 with timerActive = 0
+Sun Mar  3 10:27:05 2024,christof.bertram@vetmeduni.ac.at,XAI,confidence,confidence for slide 13: 2 with timerActive = 0
+Sun Mar  3 10:27:09 2024,christof.bertram@vetmeduni.ac.at,XAI,experiment,TCP estimation for slide 14: 80 with timerActive = 0
+Sun Mar  3 10:27:11 2024,christof.bertram@vetmeduni.ac.at,XAI,confidence,confidence for slide 14: 3 with timerActive = 0
+Sun Mar  3 10:27:28 2024,christof.bertram@vetmeduni.ac.at,XAI,experiment,TCP estimation for slide 15: 20 with timerActive = 0
+Sun Mar  3 10:27:32 2024,christof.bertram@vetmeduni.ac.at,XAI,confidence,confidence for slide 15: 1 with timerActive = 0
+Sun Mar  3 10:27:37 2024,christof.bertram@vetmeduni.ac.at,XAI,experiment,TCP estimation for slide 26: 61 with timerActive = 1
+Sun Mar  3 10:27:39 2024,christof.bertram@vetmeduni.ac.at,XAI,confidence,confidence for slide 26: 2 with timerActive = 1
+Sun Mar  3 10:27:43 2024,christof.bertram@vetmeduni.ac.at,XAI,experiment,TCP estimation for slide 27: 71 with timerActive = 1
+Sun Mar  3 10:27:45 2024,christof.bertram@vetmeduni.ac.at,XAI,confidence,confidence for slide 27: 2 with timerActive = 1
+Sun Mar  3 10:27:49 2024,christof.bertram@vetmeduni.ac.at,XAI,experiment,TCP estimation for slide 28: 30 with timerActive = 1
+Sun Mar  3 10:27:51 2024,christof.bertram@vetmeduni.ac.at,XAI,confidence,confidence for slide 28: 2 with timerActive = 1
+Sun Mar  3 10:27:56 2024,christof.bertram@vetmeduni.ac.at,XAI,experiment,TCP estimation for slide 20: 40 with timerActive = 1
+Sun Mar  3 10:27:59 2024,christof.bertram@vetmeduni.ac.at,XAI,confidence,confidence for slide 20: 4 with timerActive = 1
+Sun Mar  3 10:28:03 2024,christof.bertram@vetmeduni.ac.at,XAI,experiment,TCP estimation for slide 21: 70 with timerActive = 1
+Sun Mar  3 10:28:08 2024,christof.bertram@vetmeduni.ac.at,XAI,confidence,confidence for slide 21: 2 with timerActive = 1
+Sun Mar  3 10:28:11 2024,christof.bertram@vetmeduni.ac.at,XAI,experiment,TCP estimation for slide 22: 70 with timerActive = 1
+Sun Mar  3 10:28:13 2024,christof.bertram@vetmeduni.ac.at,XAI,confidence,confidence for slide 22: 3 with timerActive = 1
+Sun Mar  3 10:28:20 2024,christof.bertram@vetmeduni.ac.at,XAI,experiment,TCP estimation for slide 23: 15 with timerActive = 1
+Sun Mar  3 10:28:22 2024,christof.bertram@vetmeduni.ac.at,XAI,confidence,confidence for slide 23: 3 with timerActive = 1
+Sun Mar  3 10:28:27 2024,christof.bertram@vetmeduni.ac.at,XAI,experiment,TCP estimation for slide 24: 23 with timerActive = 1
+Sun Mar  3 10:28:31 2024,christof.bertram@vetmeduni.ac.at,XAI,confidence,confidence for slide 24: 3 with timerActive = 1
+Sun Mar  3 10:28:35 2024,christof.bertram@vetmeduni.ac.at,XAI,experiment,TCP estimation for slide 25: 32 with timerActive = 1
+Sun Mar  3 10:28:39 2024,christof.bertram@vetmeduni.ac.at,XAI,confidence,confidence for slide 25: 3 with timerActive = 1
+Sun Mar  3 10:28:53 2024,christof.bertram@vetmeduni.ac.at,XAI,UEQS,"item1: 3, item2: 3, item3: 3, item4: 3, item5: 3, item6: 3, item7: 3, item8: 3"

@@ -151,12 +151,15 @@ def experiment(request, participant_id, condition, timer_active, slide_counter):
         expData.tcp_est = tcpEst
         expData.save()
         #log to csv
-        row = [time.ctime(), currentExp.email, condition, 'experiment', 'TCP estimation for slide ' + str(expData.slide) + ': ' + tcpEst + ' with timerActive = ' + str(timer_active)]    
+        tempTimer = timer_active
+        if slide_counter == 9:
+            tempTimer = 1 - tempTimer
+        row = [time.ctime(), currentExp.email, condition, 'experiment', 'TCP estimation for slide ' + str(expData.slide) + ': ' + tcpEst + ' with timerActive = ' + str(tempTimer)]    
         with open('log.csv', 'a') as f:
             w = csv.writer(f)
             w.writerow(row)
         #log time
-        rowTime = [currentExp.email, condition, slide_list[slide_counter-1], timer_active, taskTime]    
+        rowTime = [currentExp.email, condition, slide_list[slide_counter-1], tempTimer, taskTime]    
         with open('timeLog.csv', 'a') as f:
             x = csv.writer(f)
             x.writerow(rowTime)
@@ -205,7 +208,10 @@ def confidence(request, participant_id, condition, timer_active, slide_counter):
             expData.confidence_score = form_likertScale
             expData.save()
             #log to csv
-            row = [time.ctime(), currentExp.email, condition, 'confidence', 'confidence for slide ' + str(expData.slide) + ': ' + str(form_likertScale) + ' with timerActive = ' + str(timer_active)]    
+            tempTimer = timer_active
+            if slide_counter == 9:
+                tempTimer = 1 - tempTimer
+            row = [time.ctime(), currentExp.email, condition, 'confidence', 'confidence for slide ' + str(expData.slide) + ': ' + str(form_likertScale) + ' with timerActive = ' + str(tempTimer)]    
             with open('log.csv', 'a') as f:
                 w = csv.writer(f)
                 w.writerow(row)
