@@ -44,6 +44,12 @@ class Results():
         worksheet.write('AD2', 'item6')
         worksheet.write('AE2', 'item7')
         worksheet.write('AF2', 'item8')
+        worksheet.write('AG2', 'question1')
+        worksheet.write('AH2', 'question2')
+        worksheet.write('AI2', 'question3')
+        worksheet.write('AJ2', 'question4')
+        worksheet.write('AK2', 'question5')
+        worksheet.write('AL2', 'question6')
         #data
         expList = Experiment.objects.all()
         i = 2
@@ -93,6 +99,12 @@ class Results():
                 worksheet.write(i, 30, poststudyData.item6)
                 worksheet.write(i, 31, poststudyData.item7)
                 worksheet.write(i, 32, poststudyData.item8)
+                worksheet.write(i, 33, poststudyData.question1)
+                worksheet.write(i, 34, poststudyData.question2)
+                worksheet.write(i, 35, poststudyData.question3)
+                worksheet.write(i, 36, poststudyData.question4)
+                worksheet.write(i, 37, poststudyData.question5)
+                worksheet.write(i, 38, poststudyData.question6)
             except ObjectDoesNotExist:
                 print ("ups")
             i = i + 1
@@ -101,11 +113,11 @@ class Results():
         worksheet = workbook.add_worksheet('Consistent Error '+ condition)
         #Headers
         worksheet.write(0, 0, 'ID')
-        slide_names = ['slide1', 'slide2', 'slide3', 'slide4', 'slide5', 'slide6', 'slide7', 'slide8', 'slide9', 'slide10', 'slide11', 'slide12', 'slide13', 'slide14', 'slide15', 'slide16', 'slide17', 'slide18']
+        slide_names = ['slide1', 'slide2', 'slide3', 'slide4', 'slide5', 'slide6', 'slide7', 'slide8', 'slide9', 'slide10', 'slide11', 'slide12', 'slide13', 'slide14', 'slide15', 'slide16', 'slide17', 'slide18', 'slide19', 'slide20']
         for col_num, data in enumerate(slide_names):
             worksheet.write(0, col_num+1, data)
-        worksheet.write(0, 19, 'consistent error')
-        worksheet.write(0,20, 'label')
+        worksheet.write(0, 21, 'consistent error')
+        worksheet.write(0,22, 'label')
         #Data
         expList = Experiment.objects.all()
         i = 1
@@ -117,8 +129,8 @@ class Results():
                 for col_num, entry in enumerate(data):
                     worksheet.write(i, col_num+1, entry.tcp_est)
                     sum = sum + self.calcDeviation(entry.slide, entry.tcp_est)
-                mean = sum / 18
-                worksheet.write(i, 19, mean)
+                mean = sum / 20
+                worksheet.write(i, 21, mean)
                 #value to be changed later
                 label = ''
                 if mean < -1:
@@ -127,7 +139,7 @@ class Results():
                     label = 'overestimation'
                 else:
                     label = 'no tendency'
-                worksheet.write(i, 20, label)
+                worksheet.write(i, 22, label)
             except ObjectDoesNotExist:
                 print ("ups in consisten Error" + condition)
             i = i + 1
@@ -138,14 +150,14 @@ class Results():
         #Headers
         worksheetNoTP.write(0, 0, 'ID')
         worksheetTP.write(0, 0, 'ID')
-        slide_names = ['slide1', 'slide2', 'slide3', 'slide4', 'slide5', 'slide6', 'slide7', 'slide8', 'slide9']
+        slide_names = ['slide1', 'slide2', 'slide3', 'slide4', 'slide5', 'slide6', 'slide7', 'slide8', 'slide9', 'slide10']
         for col_num, data in enumerate(slide_names):
             worksheetNoTP.write(0, col_num+1, data)
             worksheetTP.write(0, col_num+1, data)
-        worksheetNoTP.write(0, 10, 'consistent error')
-        worksheetTP.write(0, 10, 'consistent error')
-        worksheetNoTP.write(0,11, 'label')
-        worksheetTP.write(0,11, 'label')
+        worksheetNoTP.write(0, 11, 'consistent error')
+        worksheetTP.write(0, 11, 'consistent error')
+        worksheetNoTP.write(0,12, 'label')
+        worksheetTP.write(0,12, 'label')
         #Data
         expList = Experiment.objects.all()
         i = 1
@@ -159,6 +171,7 @@ class Results():
                 sumNoTP = 0
                 sumTP = 0
                 for col_num,slide in enumerate(firstSplit):
+                    print(exp.email + " " + condition + " " + slide + " " + str(Data.objects.get(experiment=exp, condition=condition, slide=firstSplit[col_num])))
                     dataFirst = Data.objects.get(experiment=exp, condition=condition, slide=firstSplit[col_num]) 
                     dataSecond = Data.objects.get(experiment=exp, condition=condition, slide=secondSplit[col_num])
                     if (exp.group == 'A' or exp.group== 'B'):
@@ -173,10 +186,10 @@ class Results():
                         worksheetTP.write(i, col_num+1, dataSecond.tcp_est)
                         sumNoTP = sumNoTP + self.calcDeviation(dataFirst.slide, dataFirst.tcp_est)
                         sumTP = sumTP+  self.calcDeviation(dataSecond.slide, dataSecond.tcp_est)
-                meanNoTP = sumNoTP / 9
-                meanTP = sumTP / 9
-                worksheetNoTP.write(i, 10, meanNoTP)
-                worksheetTP.write(i, 10, meanTP)
+                meanNoTP = sumNoTP / 10
+                meanTP = sumTP / 10
+                worksheetNoTP.write(i, 11, meanNoTP)
+                worksheetTP.write(i, 11, meanTP)
                 #value to be changed later
                 labelNoTP = ''
                 if meanNoTP < -1:
@@ -185,7 +198,7 @@ class Results():
                     labelNoTP = 'overestimation'
                 else:
                     labelNoTP = 'no tendency'
-                worksheetNoTP.write(i, 11, labelNoTP)
+                worksheetNoTP.write(i, 12, labelNoTP)
                 labelTP = ''
                 if meanTP < -1:
                     labelTP = 'underestimation'
@@ -193,7 +206,7 @@ class Results():
                     labelTP = 'overestimation'
                 else:
                     labelTP = 'no tendency'
-                worksheetTP.write(i, 11, labelTP)
+                worksheetTP.write(i, 12, labelTP)
             except ObjectDoesNotExist:
                 print ("ups in filling conditions with data")
             i = i + 1
@@ -216,9 +229,9 @@ class Results():
         for exp in expList:
             worksheetJAS.write(i, 0, exp.email)
             worksheetErr.write(i, 0, exp.email)
-            underestimation = [10,12,17,21,23,28]
-            overestimation = [14,15,16,24,25,26]
-            nothing = [11,13,18,20,22,27]
+            underestimation = [10,12,16,21,23]
+            overestimation = [14,15,24,25,27]
+            nothing = [11,13,17,18,19,20,22,26,28,29]
             sumUnder = 0
             sumNothing = 0
             sumOver = 0
@@ -243,12 +256,12 @@ class Results():
                     sumJASUnder = sumJASUnder + self.calcJAS(dataUnderestimation.slide, dataUnderestimationBaseline.tcp_est, dataUnderestimation.tcp_est)
                     sumJASNothing = sumJASNothing + self.calcJAS(dataNothing.slide, dataNothingBaseline.tcp_est, dataNothing.tcp_est)
                     sumJASOver = sumJASOver + self.calcJAS(dataOverestimation.slide, dataOverestimationBaseline.tcp_est, dataOverestimation.tcp_est)
-                meanUnder = sumUnder / 6
-                meanNothing = sumNothing / 6
-                meanOver = sumOver / 6
-                meanJASUnder = sumJASUnder / 6
-                meanJASNothing = sumJASNothing/ 6
-                meanJASOver = sumJASOver / 6
+                meanUnder = sumUnder / 5
+                meanNothing = sumNothing / 10
+                meanOver = sumOver / 5
+                meanJASUnder = sumJASUnder / 5
+                meanJASNothing = sumJASNothing/ 10
+                meanJASOver = sumJASOver / 5
                 worksheetErr.write(i, 1, meanUnder)
                 worksheetErr.write(i, 2, meanNothing)
                 worksheetErr.write(i, 3, meanOver)

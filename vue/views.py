@@ -3,17 +3,18 @@ from django.core.exceptions import ObjectDoesNotExist
 from vue.predictions import AIPredictions, TrainingAIPredictions
 from vue.results import Results
 from vue.models import Experiment, Order, Data, PostStudyData, PreStudyData, TrainingData
-from vue.forms import Registration, PreStudy, PostStudy, Confidence
+from vue.forms import RegistrationBaseline, RegistrationXAI, PreStudy, PostStudy, Confidence, PostStudyXAI
 import json
 import csv
 import time
+from django.contrib import messages
 
 def startingpageBaseline(request):
     if request.user_agent.is_mobile:
         return redirect('mobile')
     else:
         if request.method =='POST':
-            form = Registration(request.POST)
+            form = RegistrationBaseline(request.POST)
             if form.is_valid():
                 form_email = form.cleaned_data["email"]
                 try:
@@ -21,22 +22,25 @@ def startingpageBaseline(request):
                 except ObjectDoesNotExist:
                     currentExp = Experiment.objects.create()
                     group = ""
+                    order_nr = int((currentExp.participant_id%40)/4)
+                    if currentExp.participant_id%40 == 0:
+                        order_nr = 10
                     match int(currentExp.participant_id)%4:
                         case 1:
                             group = "A"
+                            order_nr = order_nr + 1
                         case 2:
                             group = "B"
+                            order_nr = order_nr + 11
                         case 3:
                             group = "C"
+                            order_nr = order_nr + 1
                         case 0:
                             group = "D"
+                            order_nr = order_nr + 10
                         case _:
                             print("we should not get here")
                     currentExp.group = group
-                    #assign slide order
-                    order_nr = currentExp.participant_id%10
-                    if order_nr == 0:
-                        order_nr = 10
                     currentExp.order = Order.objects.get(pk=order_nr)
                     currentExp.email = form_email
                     currentExp.save()
@@ -48,7 +52,7 @@ def startingpageBaseline(request):
                     w.writerow(row)
                 return redirect('training', currentExp.participant_id, 'Baseline', 0, 0)
         else:
-            form = Registration()
+            form = RegistrationBaseline()
         return render(request, 'startingpageBaseline.html', {'form': form})
 
 def startingpageXAI(request):
@@ -56,7 +60,7 @@ def startingpageXAI(request):
         return redirect('mobile')
     else:
         if request.method =='POST':
-            form = Registration(request.POST)
+            form = RegistrationXAI(request.POST)
             if form.is_valid():
                 form_email = form.cleaned_data["email"]
                 try:
@@ -64,22 +68,25 @@ def startingpageXAI(request):
                 except ObjectDoesNotExist:
                     currentExp = Experiment.objects.create()
                     group = ""
+                    order_nr = int((currentExp.participant_id%40)/4)
+                    if currentExp.participant_id%40 == 0:
+                        order_nr = 10
                     match int(currentExp.participant_id)%4:
                         case 1:
                             group = "A"
+                            order_nr = order_nr + 1
                         case 2:
                             group = "B"
+                            order_nr = order_nr + 11
                         case 3:
                             group = "C"
+                            order_nr = order_nr + 1
                         case 0:
                             group = "D"
+                            order_nr = order_nr + 10
                         case _:
                             print("we should not get here")
                     currentExp.group = group
-                    #assign slide order
-                    order_nr = currentExp.participant_id%10
-                    if order_nr == 0:
-                        order_nr = 10
                     currentExp.order = Order.objects.get(pk=order_nr)
                     currentExp.email = form_email
                     currentExp.save()
@@ -90,8 +97,10 @@ def startingpageXAI(request):
                     w = csv.writer(f)
                     w.writerow(row)
                 return redirect('training', currentExp.participant_id, 'XAI', 0, 0)
+            else:
+                messages.error(request, "Error!")
         else:
-            form = Registration()
+            form = RegistrationXAI()
         return render(request, 'startingpageXAI.html', {'form': form})
 
 def training(request, participant_id, condition, timer_active, slide_counter):
@@ -151,12 +160,15 @@ def experiment(request, participant_id, condition, timer_active, slide_counter):
         expData.tcp_est = tcpEst
         expData.save()
         #log to csv
-        row = [time.ctime(), currentExp.email, condition, 'experiment', 'TCP estimation for slide ' + str(expData.slide) + ': ' + tcpEst + ' with timerActive = ' + str(timer_active)]    
+        tempTimer = timer_active
+        if slide_counter == 10:
+            tempTimer = 1 - tempTimer
+        row = [time.ctime(), currentExp.email, condition, 'experiment', 'TCP estimation for slide ' + str(expData.slide) + ': ' + tcpEst + ' with timerActive = ' + str(tempTimer)]    
         with open('log.csv', 'a') as f:
             w = csv.writer(f)
             w.writerow(row)
         #log time
-        rowTime = [currentExp.email, condition, slide_list[slide_counter-1], timer_active, taskTime]    
+        rowTime = [currentExp.email, condition, slide_list[slide_counter-1], tempTimer, taskTime]    
         with open('timeLog.csv', 'a') as f:
             x = csv.writer(f)
             x.writerow(rowTime)
@@ -205,11 +217,14 @@ def confidence(request, participant_id, condition, timer_active, slide_counter):
             expData.confidence_score = form_likertScale
             expData.save()
             #log to csv
-            row = [time.ctime(), currentExp.email, condition, 'confidence', 'confidence for slide ' + str(expData.slide) + ': ' + str(form_likertScale) + ' with timerActive = ' + str(timer_active)]    
+            tempTimer = timer_active
+            if slide_counter == 10:
+                tempTimer = 1 - tempTimer
+            row = [time.ctime(), currentExp.email, condition, 'confidence', 'confidence for slide ' + str(expData.slide) + ': ' + str(form_likertScale) + ' with timerActive = ' + str(tempTimer)]    
             with open('log.csv', 'a') as f:
                 w = csv.writer(f)
                 w.writerow(row)
-            if slide_counter==18:
+            if slide_counter==20:
                 return redirect('poststudy', participant_id, condition)
             else:
                 return redirect('experiment', participant_id, condition, timer_active, slide_counter)
@@ -272,7 +287,8 @@ def poststudy(request, participant_id, condition):
     currentExp = Experiment.objects.get(pk=participant_id)
     if request.method =='POST':
         form = PostStudy(request.POST)
-        if form.is_valid():
+        form2 = PostStudyXAI(request.POST)
+        if (form.is_valid() and condition=='Baseline') or (form.is_valid() and form2.is_valid()):
             form_item1 = form.cleaned_data["item1"]
             form_item2 = form.cleaned_data["item2"]
             form_item3 = form.cleaned_data["item3"]
@@ -281,6 +297,13 @@ def poststudy(request, participant_id, condition):
             form_item6 = form.cleaned_data["item6"]
             form_item7 = form.cleaned_data["item7"]
             form_item8 = form.cleaned_data["item8"]
+            if condition == 'XAI':
+                form_question1 = form2.cleaned_data["question1"]
+                form_question2 = form2.cleaned_data["question2"]
+                form_question3 = form2.cleaned_data["question3"]
+                form_question4 = form2.cleaned_data["question4"]
+                form_question5 = form2.cleaned_data["question5"]
+                form_question6 = form2.cleaned_data["question6"]
             poststudyData = None
             try:
                 poststudyData = PostStudyData.objects.get(experiment=currentExp, condition=condition)
@@ -296,6 +319,13 @@ def poststudy(request, participant_id, condition):
             poststudyData.item6 = form_item6
             poststudyData.item7 = form_item7
             poststudyData.item8 = form_item8
+            if condition == 'XAI':
+                poststudyData.question1 = form_question1
+                poststudyData.question2 = form_question2
+                poststudyData.question3 = form_question3
+                poststudyData.question4 = form_question4
+                poststudyData.question5 = form_question5
+                poststudyData.question6 = form_question6
             poststudyData.save()
             if condition == 'Baseline':
                 currentExp.statusBaseline = 'completed'
@@ -310,12 +340,15 @@ def poststudy(request, participant_id, condition):
             return redirect('endpage')
     else:
         form = PostStudy()
+        form2 = PostStudyXAI()
         negAttrib = ["obstructive", "complicated", "inefficient", "confusing", "boring", "not interesting", "conventional", "usual"]
         posAttrib = ["supportive", "easy", "efficient", "clear", "exciting", "interesting", "inventive", "leading edge"]
         context = {
             'form': form,
+            'form2': form2,
             'negAttrib': negAttrib,
-            'posAttrib' : posAttrib
+            'posAttrib' : posAttrib,
+            'condition': condition,
         }
     return render(request, 'poststudy.html', context)
 

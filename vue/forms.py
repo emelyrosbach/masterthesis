@@ -1,10 +1,25 @@
 from django import forms
+from vue.models import Experiment
+from django.core.exceptions import ObjectDoesNotExist
+from django.core import validators
 
-class Registration(forms.Form):
+class RegistrationBaseline(forms.Form):
     email = forms.EmailField(label="", required=True, widget=forms.TextInput(
     attrs={'type': 'email',
            'placeholder': ('example@app.com')}))
     terms = forms.BooleanField(required=True) 
+
+def validate_email(email):
+    try:
+        Experiment.objects.get(email=email)
+    except ObjectDoesNotExist:
+        raise forms.ValidationError("E-mail not used in round 1!")
+
+class RegistrationXAI(forms.Form):   
+    email = forms.EmailField(label="", required=True,validators=[validate_email], widget=forms.TextInput(
+    attrs={'type': 'email',
+           'placeholder': ('example@app.com')}))
+    terms = forms.BooleanField(required=True)
 
 class PreStudy(forms.Form):
     GENDEROPTS = [
@@ -141,6 +156,47 @@ class PostStudy(forms.Form):
         label="",
         required=True
     )
+
+class PostStudyXAI(forms.Form):
+    CHOICES = [
+        ('1', ''),
+        ('2', ''),
+        ('3', ''),
+        ('4', ''),
+        ('5', ''),
+        ('6', ''),
+        ('7', ''),
+        ('8', ''),
+        ('9', ''),
+        ('10', '')
+    ]
+    question1 = forms.ChoiceField(
+        widget=forms.RadioSelect,
+        choices=CHOICES,
+        label="1. How satisfied are you with the overall performance of the AI tool?",
+        required=True
+    )
+    question2 = forms.ChoiceField(
+        widget=forms.RadioSelect,
+        choices=CHOICES,
+        label="2. How helpful do you find the AI tool in assisting your tasks?",
+        required=True
+    )
+    question3 = forms.ChoiceField(
+        widget=forms.RadioSelect,
+        choices=CHOICES,
+        label="3. Do you trust the recommendations provided by the AI tool?",
+        required=True
+    )
+    question4 = forms.ChoiceField(
+        widget=forms.RadioSelect,
+        choices=CHOICES,
+        label="4. Do you believe the AI tool provides accurate results?",
+        required=True
+    )
+    question5 = forms.CharField(label="5. Have you encountered any errors or limitations while using the AI tool? If yes, please describe.", required=True)
+    question6 = forms.CharField(label="6. Do you have any suggestions for improving the functionality or usability of the AI tool?", required=True)
+
 
 class Confidence(forms.Form):
     CHOICES = [

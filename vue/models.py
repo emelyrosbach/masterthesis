@@ -42,6 +42,12 @@ class PostStudyData(models.Model):
     item6 = models.CharField(max_length=10, null=True)
     item7 = models.CharField(max_length=10, null=True)
     item8 = models.CharField(max_length=10, null=True)
+    question1 = models.CharField(max_length=200, null=True)
+    question2 = models.CharField(max_length=200, null=True)
+    question3 = models.CharField(max_length=200, null=True)
+    question4 = models.CharField(max_length=200, null=True)
+    question5 = models.CharField(max_length=200, null=True)
+    question6 = models.CharField(max_length=200, null=True)
     experiment = models.ForeignKey(Experiment, on_delete=models.CASCADE, null=True)
 
 class TrainingData(models.Model):
