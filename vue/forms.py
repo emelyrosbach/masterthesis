@@ -1,10 +1,25 @@
 from django import forms
+from vue.models import Experiment
+from django.core.exceptions import ObjectDoesNotExist
+from django.core import validators
 
-class Registration(forms.Form):
+class RegistrationBaseline(forms.Form):
     email = forms.EmailField(label="", required=True, widget=forms.TextInput(
     attrs={'type': 'email',
            'placeholder': ('example@app.com')}))
     terms = forms.BooleanField(required=True) 
+
+def validate_email(email):
+    try:
+        Experiment.objects.get(email=email)
+    except ObjectDoesNotExist:
+        raise forms.ValidationError("E-mail not used in round 1!")
+
+class RegistrationXAI(forms.Form):   
+    email = forms.EmailField(label="", required=True,validators=[validate_email], widget=forms.TextInput(
+    attrs={'type': 'email',
+           'placeholder': ('example@app.com')}))
+    terms = forms.BooleanField(required=True)
 
 class PreStudy(forms.Form):
     GENDEROPTS = [

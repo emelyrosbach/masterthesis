@@ -2,7 +2,7 @@
 {% load my-tags %}
 
 {% block navbar %}
-<div id="timer" class="timer-container">
+<div class="timer-container">
     {% if showTimer %}
     <div class="timer-text"><h1>${timerDisplay}</h1></div>
     <div class="timer-bar" :style="{ width: bar + '%', backgroundColor: hue }"></div> 
@@ -46,15 +46,14 @@
         </div>
         <div class="columns">
             <div class="column is-8 image-container">
-                <!--{% load static %}-->
                 <div v-if="lockOn" class="image-lock">
                     {% load static %}
                     <img class="lock-icon" src="../../../../../static/icons/lock.png">
                 </div>
                 <div id="image-div" @mousedown="startDrag()" @mouseup="stopDrag()" @mousemove="whileDrag()">
-                    <div class="field switch-container">
+                    <div v-if="condition=='XAI'" class="field switch-container">
                         <div>
-                           <div class="switch-toggle-container">
+                            <div class="switch-toggle-container">
                                 <input id="annotations" name="annotations" class="switch is-rounded is-rtl" type="checkbox" v-model="annotationsOn" autocomplete="off">
                                 <label for="annotations">Annotations</label>
                             </div>
@@ -66,7 +65,7 @@
                     <div class="zoom">
                         <button id="plus" @click="zoomIn()">
                             {% load static %}
-                             <img src="../../../../../static/icons/plus.png">
+                            <img src="../../../../../static/icons/plus.png">
                         </button>
                         <button id="minus" @click="zoomOut()" disabled="true">
                             {% load static %}
@@ -77,8 +76,9 @@
                                 <img style="width:100%" src="../../../../../static/icons/reset.png">
                         </button>
                     </div>
-                    <img v-if="annotationsOn && condition=='XAI'" id="drag-img" :src="'../../../../../static/trainingAnnotations/' + slideCounter + '.png'">
-                    <img v-else ondragstart="return false" id="drag-img" :src="'../../../../../static/trainingImages/' + slideCounter + '.png'">
+                    {% load static %}
+                    <img v-if="annotationsOn && condition=='XAI'" id="drag-img" :src="'../../../../../static/trainingAnnotations/' + slideCounter + '.png'" @load="loaded()">
+                    <img v-else id="drag-img" :src="'../../../../../static/trainingImages/' + slideCounter + '.png'" @load="loaded()">
                 </div>
             </div>
             <div class="column is-4 side-bar">
@@ -148,7 +148,7 @@
 {% block script %}
 <script>
     var surveyapp = new Vue({
-        el: '#survey-app',
+        el: '#experiment',
         delimiters: ['${', '}'],
         data () {
             return {
@@ -157,13 +157,18 @@
                 slideCounter: {{slideCounter}},
                 condition: "{{condition}}",
                 tcpEst : "",
-                annotationsOn: true,
+                annotationsOn: false,
                 zoomLevel: 0,
                 posX: 0,
                 posY: 0,
                 dragOn: false,
                 lockOn: false,
-                centiseconds: 700,
+                seconds: 10, 
+                centiseconds: 0,
+                timerDisplay: "00:10",
+                bar : 100,
+                hue: "hsl(120,80%,85%)",
+                firstLoad: 0,
                 modalOpen: true,
             }
         },
@@ -173,7 +178,17 @@
                     if (value > 0) {
                         setTimeout(() => {
                             this.centiseconds--;
-                            if (this.centiseconds == 200 && this.timerActive==1) {
+                            this.seconds =  Math.floor(this.centiseconds/100);
+                            if (this.centiseconds>=10) {
+                                this.timerDisplay = "00:0" + this.seconds + ","+ Math.floor(this.centiseconds/10);
+                            }
+                            else {
+                                this.timerDisplay = "00:0" + this.seconds + ",0"+ Math.floor(this.centiseconds/10);
+                            }
+                            this.bar = Math.floor(this.centiseconds/10)
+                            var hue=(((this.bar/100))*120).toString(10);
+                            this.hue = "hsl(" + hue + ",80%,85%)"; 
+                            if (this.centiseconds == 300 && this.timerActive==1) {
                                 this.lockOn = true;
                             }
                         }, 10);
@@ -183,6 +198,12 @@
             },
         },
         methods: {
+            loaded() {
+                this.firstLoad++;
+                if (this.firstLoad == 1) {
+                this.centiseconds = 1000;
+                }
+            },
             validateEntry() {
                 let temp = this.tcpEst;
                 temp = temp.replace(',','.');
@@ -242,11 +263,6 @@
                     const newHeight = draggableRect.height * scale;
                     draggable.style.width = newWidth+ "px";
                     draggable.style.height = newHeight + "px"
-                    //zoom from img middle
-                    /*var oCX = draggable.offsetLeft + (draggableRect.width/2);
-                    var oCY = draggable.offsetTop + (draggableRect.height/2);
-                    var newX = oCX - (newWidth/2);
-                    var newY = oCY - (newHeight/2);*/
                     //zoom from parent middel
                     var oCX = (parent.offsetLeft + parentRect.width/2) - draggable.offsetLeft;
                     var oCY = (parent.offsetTop + parentRect.height/2) - draggable.offsetTop;
@@ -274,11 +290,6 @@
                     const newHeight = draggableRect.height/scale;
                     draggable.style.width = newWidth+ "px";
                     draggable.style.height = newHeight + "px"
-                    //zoom from img middle
-                    /*var oCX = draggable.offsetLeft + (draggableRect.width/2);
-                    var oCY = draggable.offsetTop + (draggableRect.height/2);
-                    var newX = oCX - (newWidth/2);
-                    var newY = oCY - (newHeight/2);*/
                     //zoom from parent middel
                     var oCX = (parent.offsetLeft + parentRect.width/2) - draggable.offsetLeft;
                     var oCY = (parent.offsetTop + parentRect.height/2) - draggable.offsetTop;
@@ -341,50 +352,12 @@
         }
     });
 </script>
-
-<script>
-    var surveyapp = new Vue({
-        el: '#timer',
-        delimiters: ['${', '}'],
-        data () {
-            return {
-                seconds: 7, 
-                centiseconds: 700,
-                timerDisplay: "00:07",
-                bar : 100,
-                hue: "hsl(120,80%,85%)",
-            }
-        },
-        watch: {
-            centiseconds: {
-                handler(value) {
-                    if (value > 0) {
-                        setTimeout(() => {
-                            this.centiseconds--;
-                            this.seconds =  Math.floor(this.centiseconds/100);
-                            if (this.centiseconds>=10) {
-                                this.timerDisplay = "00:0" + this.seconds + ","+ Math.floor(this.centiseconds/7);
-                            }
-                            else {
-                                this.timerDisplay = "00:0" + this.seconds + ",0"+ Math.floor(this.centiseconds/7);
-                            }
-                            this.bar = Math.floor(this.centiseconds/7)
-                            var hue=(((this.bar/100))*120).toString(10);
-                            this.hue = "hsl(" + hue + ",80%,85%)"; 
-                        }, 10);
-                    }
-                },
-                immediate: true // This ensures the watcher is triggered upon creation
-            },
-        }
-    });
-</script>
 <script src="https://cdn.jsdelivr.net/npm/bulma-carousel@4.0.3/dist/js/bulma-carousel.min.js"></script>
 <script>
     bulmaCarousel.attach('#carousel', {
-			slidesToScroll: 1,
-			slidesToShow: 1,
-            icons: { previous: "{% load static %}<img src='../../../../../static/icons/left.png'>", next: "{% load static %}<img src='../../../../../static/icons/right.png'>"}
-		});
+		slidesToScroll: 1,
+		slidesToShow: 1,
+        icons: { previous: "{% load static %}<img src='../../../../../static/icons/left.png'>", next: "{% load static %}<img src='../../../../../static/icons/right.png'>"}
+	});
 </script>
 {% endblock %}

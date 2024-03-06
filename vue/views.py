@@ -3,17 +3,18 @@ from django.core.exceptions import ObjectDoesNotExist
 from vue.predictions import AIPredictions, TrainingAIPredictions
 from vue.results import Results
 from vue.models import Experiment, Order, Data, PostStudyData, PreStudyData, TrainingData
-from vue.forms import Registration, PreStudy, PostStudy, Confidence, PostStudyXAI
+from vue.forms import RegistrationBaseline, RegistrationXAI, PreStudy, PostStudy, Confidence, PostStudyXAI
 import json
 import csv
 import time
+from django.contrib import messages
 
 def startingpageBaseline(request):
     if request.user_agent.is_mobile:
         return redirect('mobile')
     else:
         if request.method =='POST':
-            form = Registration(request.POST)
+            form = RegistrationBaseline(request.POST)
             if form.is_valid():
                 form_email = form.cleaned_data["email"]
                 try:
@@ -21,22 +22,25 @@ def startingpageBaseline(request):
                 except ObjectDoesNotExist:
                     currentExp = Experiment.objects.create()
                     group = ""
+                    order_nr = int((currentExp.participant_id%40)/4)
+                    if currentExp.participant_id%40 == 0:
+                        order_nr = 10
                     match int(currentExp.participant_id)%4:
                         case 1:
                             group = "A"
+                            order_nr = order_nr + 1
                         case 2:
                             group = "B"
+                            order_nr = order_nr + 11
                         case 3:
                             group = "C"
+                            order_nr = order_nr + 1
                         case 0:
                             group = "D"
+                            order_nr = order_nr + 10
                         case _:
                             print("we should not get here")
                     currentExp.group = group
-                    #assign slide order
-                    order_nr = currentExp.participant_id%10
-                    if order_nr == 0:
-                        order_nr = 10
                     currentExp.order = Order.objects.get(pk=order_nr)
                     currentExp.email = form_email
                     currentExp.save()
@@ -48,7 +52,7 @@ def startingpageBaseline(request):
                     w.writerow(row)
                 return redirect('training', currentExp.participant_id, 'Baseline', 0, 0)
         else:
-            form = Registration()
+            form = RegistrationBaseline()
         return render(request, 'startingpageBaseline.html', {'form': form})
 
 def startingpageXAI(request):
@@ -56,7 +60,7 @@ def startingpageXAI(request):
         return redirect('mobile')
     else:
         if request.method =='POST':
-            form = Registration(request.POST)
+            form = RegistrationXAI(request.POST)
             if form.is_valid():
                 form_email = form.cleaned_data["email"]
                 try:
@@ -64,22 +68,25 @@ def startingpageXAI(request):
                 except ObjectDoesNotExist:
                     currentExp = Experiment.objects.create()
                     group = ""
+                    order_nr = int((currentExp.participant_id%40)/4)
+                    if currentExp.participant_id%40 == 0:
+                        order_nr = 10
                     match int(currentExp.participant_id)%4:
                         case 1:
                             group = "A"
+                            order_nr = order_nr + 1
                         case 2:
                             group = "B"
+                            order_nr = order_nr + 11
                         case 3:
                             group = "C"
+                            order_nr = order_nr + 1
                         case 0:
                             group = "D"
+                            order_nr = order_nr + 10
                         case _:
                             print("we should not get here")
                     currentExp.group = group
-                    #assign slide order
-                    order_nr = currentExp.participant_id%10
-                    if order_nr == 0:
-                        order_nr = 10
                     currentExp.order = Order.objects.get(pk=order_nr)
                     currentExp.email = form_email
                     currentExp.save()
@@ -90,8 +97,10 @@ def startingpageXAI(request):
                     w = csv.writer(f)
                     w.writerow(row)
                 return redirect('training', currentExp.participant_id, 'XAI', 0, 0)
+            else:
+                messages.error(request, "Error!")
         else:
-            form = Registration()
+            form = RegistrationXAI()
         return render(request, 'startingpageXAI.html', {'form': form})
 
 def training(request, participant_id, condition, timer_active, slide_counter):
@@ -152,7 +161,7 @@ def experiment(request, participant_id, condition, timer_active, slide_counter):
         expData.save()
         #log to csv
         tempTimer = timer_active
-        if slide_counter == 9:
+        if slide_counter == 10:
             tempTimer = 1 - tempTimer
         row = [time.ctime(), currentExp.email, condition, 'experiment', 'TCP estimation for slide ' + str(expData.slide) + ': ' + tcpEst + ' with timerActive = ' + str(tempTimer)]    
         with open('log.csv', 'a') as f:
@@ -209,13 +218,13 @@ def confidence(request, participant_id, condition, timer_active, slide_counter):
             expData.save()
             #log to csv
             tempTimer = timer_active
-            if slide_counter == 9:
+            if slide_counter == 10:
                 tempTimer = 1 - tempTimer
             row = [time.ctime(), currentExp.email, condition, 'confidence', 'confidence for slide ' + str(expData.slide) + ': ' + str(form_likertScale) + ' with timerActive = ' + str(tempTimer)]    
             with open('log.csv', 'a') as f:
                 w = csv.writer(f)
                 w.writerow(row)
-            if slide_counter==18:
+            if slide_counter==20:
                 return redirect('poststudy', participant_id, condition)
             else:
                 return redirect('experiment', participant_id, condition, timer_active, slide_counter)
