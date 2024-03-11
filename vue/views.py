@@ -232,8 +232,11 @@ def confidence(request, participant_id, condition, timer_active, slide_counter):
         form = Confidence()
     return render(request, 'confidence.html', {'form': form})
 
-def endpage(request):
-    return render(request, 'endpage.html')
+def endpage(request, condition):
+    context = {
+        'condition' : condition,
+    }
+    return render(request, 'endpage.html', context)
     
 def prestudy(request, participant_id, condition):
     currentExp = Experiment.objects.get(pk=participant_id)
@@ -337,7 +340,7 @@ def poststudy(request, participant_id, condition):
             with open('log.csv', 'a') as f:
                 w = csv.writer(f)
                 w.writerow(row)
-            return redirect('endpage')
+            return redirect('endpage', condition)
     else:
         form = PostStudy()
         form2 = PostStudyXAI()
