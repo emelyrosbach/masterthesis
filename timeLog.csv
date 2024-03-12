@@ -2,7 +2,4 @@ email,condition,slide,timerActive,tasktime
 
 test@bla.de,Baseline,18,0,00:03
 
-test@bla.de,Baseline,13,0,00:10
-test@bla.de,Baseline,28,1,00:10
-test@bla.de,XAI,13,0,00:04
-test@bla.de,Baseline,28,1,00:06
+
