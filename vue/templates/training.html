@@ -20,11 +20,19 @@
                             <img src="../../../../../static/icons/i-icon.png">
                         </div>
                         <div class="column is-11 item-text">
-                            <p>This AI model was validated and trained on the BreCaHad breast cancer dataset with its main tasks being cell detection and classification. The model destinguishes between tumour- and non tumour cells, which can be further split into mitosis, non mitosis, apoptosis, lumen and non lumen.</p>
+                            <p>This AI model was validated and trained on the BreCaHad breast cancer dataset with its main tasks being cell detection and classification. The model distinguishes between tumor- and non tumor cells, which can be further split into mitosis, non mitosis, apoptosis, lumen and non lumen.</p>
                         </div>
                     </div>
                 </div>
+                {% if condition == 'Baseline' %}
                 <div class="item-2">
+                    <div class="columns">
+                        <div class="column is-12 item-text">
+                            <p>As part of this training session please estimate the tumor cell percentage, defined as the ratio of tumor cells to the total cell count, on the following two slides. Kindly note, that the second estimation will be conducted under a time constraint of 10 seconds. The actual study will be structured similarly to this training session, so feel free to take your time to get accustomed to the format and functionality of our application.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="item-3">
                     <div class="close-icon">
                         <a @click="modalOpen=false">
                             {% load static %}
@@ -32,11 +40,52 @@
                         </a>
                     </div>
                     <div class="columns">
-                        <div class="column is-12 item-text">
-                            <p>As part of this training session please estimate the tumor cell percentage, defined as the ratio of tumor cells to the total cell count, on the following two slides. Kindly note, that the second estimation will be conducted under a time constraint of 7 seconds. The actual study will be structured similarly to this training session, so feel free to take your time to get acustomed to the format and functionallity of our application.</p>
+                        <div class="column is-4 car-img">
+                            {% load static %}
+                            <img class="test" src="../../../../../static/icons/zoom.png">
+                        </div>
+                        <div class="column is-8 item-text">
+                            <p>Please also take note of our zoom feature located in the top left corner: you can zoom in and out by pressing the plus and minus buttons, or reset the slide to its original state by clicking the refresh button. Additionally, by dragging the slide, you can move it around for better examination.</p>
                         </div>
                     </div>
                 </div>
+                {% else %}
+                <div class="item-2">
+                    <div class="columns">
+                        <div class="column is-12 item-text">
+                            <p>As part of this training session please estimate the tumor cell percentage, defined as the ratio of tumor cells to the total cell count, on the following two slides. Kindly note, that the second estimation will be conducted under a time constraint of 10 seconds. The actual study will be structured similarly to this training session, so feel free to take your time to get accustomed to the format and functionality of our application.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="item-3">
+                    <div class="columns">
+                        <div class="column is-5 car-img">
+                            {% load static %}
+                            <img src="../../../../../static/icons/toggle.png">
+                        </div>
+                        <div class="column is-7 item-text">
+                            <p>By toggling the slider in the bottom left corner, you can visualize the AI cell detections. Tumor cells are indicated by an orange dot, while non-tumor cells are marked green. Below the slider, the ratio of detected tumor cells to total detected cells is displayed for analysis.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="item-4">
+                    <div class="close-icon">
+                        <a @click="modalOpen=false">
+                            {% load static %}
+                            <img src="../../../../../static/icons/close.png">
+                        </a>
+                    </div>
+                    <div class="columns">
+                        <div class="column is-4 car-img">
+                            {% load static %}
+                            <img class="test" src="../../../../../static/icons/zoom.png">
+                        </div>
+                        <div class="column is-8 item-text">
+                            <p>Please also take note of our zoom feature located in the top left corner: you can zoom in and out by pressing the plus and minus buttons, or reset the slide to its original state by clicking the refresh button. Additionally, by dragging the slide, you can move it around for better examination.</p>
+                        </div>
+                    </div>
+                </div>
+                {% endif %}
             </div>
         </div>
         <div class="training-sign">
@@ -55,7 +104,7 @@
                         <div>
                             <div class="switch-toggle-container">
                                 <input id="annotations" name="annotations" class="switch is-rounded is-rtl" type="checkbox" v-model="annotationsOn" autocomplete="off">
-                                <label for="annotations">Annotations</label>
+                                <label for="annotations">Detections</label>
                             </div>
                             <div>
                                 <p><b class="tumor-cell">{{tumorCells|dicIndex:slideCounter}}</b>/{{totalCells|dicIndex:slideCounter}}</p>
@@ -86,7 +135,7 @@
                 <div class="column is-12 AI-rec">
                     <div v-if="lockOn" class="AI-rec-lock"></div>
                     <div class="AI-rec-titles">
-                        <h1>AI Reccomendation</h1>
+                        <h1>AI Recommendation</h1>
                         <h2>The AI estimates a tumor cell percentage of:</h2>
                         <h1 class="mb-5 percentage">{{predictions|dicIndex:slideCounter}}%</h1>
                         <div class="columns">
