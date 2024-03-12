@@ -2,3 +2,15 @@ time,email,condition,action,data
 
 Mon Mar 11 15:29:24 2024,test@bla.de,XAI,confidence,confidence for slide 13: 4 with timerActive = 0
 
+Tue Mar 12 07:58:11 2024,test@bla.de,Baseline,training,TCP estimation for slide 0: 11
+Tue Mar 12 07:58:25 2024,test@bla.de,Baseline,training,TCP estimation for slide 1: 33
+Tue Mar 12 07:58:57 2024,test@bla.de,Baseline,experiment,TCP estimation for slide 13: 11 with timerActive = 0
+Tue Mar 12 07:59:00 2024,test@bla.de,Baseline,confidence,confidence for slide 13: 2 with timerActive = 0
+Tue Mar 12 07:59:10 2024,test@bla.de,Baseline,experiment,TCP estimation for slide 28: 12 with timerActive = 1
+Tue Mar 12 07:59:13 2024,test@bla.de,Baseline,confidence,confidence for slide 28: 2 with timerActive = 1
+Tue Mar 12 08:01:11 2024,test@bla.de,Baseline,training,TCP estimation for slide 0: 12
+Tue Mar 12 08:01:21 2024,test@bla.de,Baseline,training,TCP estimation for slide 1: 13
+Tue Mar 12 08:03:32 2024,test@bla.de,XAI,experiment,TCP estimation for slide 13: 22 with timerActive = 0
+Tue Mar 12 08:03:35 2024,test@bla.de,XAI,confidence,confidence for slide 13: 2 with timerActive = 0
+Tue Mar 12 08:04:06 2024,test@bla.de,Baseline,experiment,TCP estimation for slide 28: 11 with timerActive = 1
+Tue Mar 12 08:04:08 2024,test@bla.de,Baseline,confidence,confidence for slide 28: 1 with timerActive = 1
