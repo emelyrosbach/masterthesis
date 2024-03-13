@@ -30,7 +30,8 @@ ALLOWED_HOSTS = [
     'deepmicroscopy.org',
     'survey.deepmicroscopy.org',
     '85.214.21.251',
-    '127.0.0.1'
+    '127.0.0.1',
+    '85.215.133.178'
 ]
 
 
@@ -62,7 +63,8 @@ CSRF_TRUSTED_ORIGINS = [
     'http://deepmicroscopy.org',
     'https://survey.deepmicroscopy.org',
     'http://85.214.21.251',
-    'https://127.0.0.1'
+    'https://127.0.0.1',
+    'http://85.215.133.178'
 ]
 
 ROOT_URLCONF = 'web_project.urls'
