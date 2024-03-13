@@ -85,7 +85,7 @@
                     this.submit();
                 }
                 else {
-                    url ='../../../end';
+                    url ='../../../end/' + this.condition;
                     fetch(url)
                     .then((response) => {
                             window.location.href = response.url;

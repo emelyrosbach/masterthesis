@@ -3,32 +3,3 @@ time,email,condition,action,data
 Mon Mar 11 15:29:24 2024,test@bla.de,XAI,confidence,confidence for slide 13: 4 with timerActive = 0
 
 
-Wed Mar 13 09:29:39 2024,test@bla.de,Baseline,register,status:completed
-Wed Mar 13 09:37:24 2024,5@bb.de,Baseline,register,status:open
-Wed Mar 13 09:39:18 2024,5@bb.de,Baseline,training,TCP estimation for slide 1: 2
-Wed Mar 13 09:39:22 2024,5@bb.de,Baseline,training,TCP estimation for slide 2: 3
-Wed Mar 13 09:39:35 2024,5@bb.de,Baseline,demographic data,"gender: Female, age: <18, experience: 5-10 years, interest in technology: 2, adoption of new technologies: 3, familiarity with AI: 1"
-Wed Mar 13 09:39:49 2024,5@bb.de,Baseline,experiment,TCP estimation for slide 21: 1 with timerActive = 1
-Wed Mar 13 09:51:05 2024,5@bb.de,Baseline,experiment,TCP estimation for slide 21: 1 with timerActive = 1
-Wed Mar 13 09:51:08 2024,5@bb.de,Baseline,confidence,confidence for slide 21: 1 with timerActive = 1
-Wed Mar 13 09:51:19 2024,5@bb.de,Baseline,experiment,TCP estimation for slide 22: 2 with timerActive = 1
-Wed Mar 13 09:51:22 2024,5@bb.de,Baseline,confidence,confidence for slide 22: 1 with timerActive = 1
-Wed Mar 13 09:51:37 2024,5@bb.de,Baseline,experiment,TCP estimation for slide 20: 3 with timerActive = 1
-Wed Mar 13 09:51:40 2024,5@bb.de,Baseline,confidence,confidence for slide 20: 1 with timerActive = 1
-Wed Mar 13 09:51:46 2024,5@bb.de,Baseline,experiment,TCP estimation for slide 23: 4 with timerActive = 1
-Wed Mar 13 09:51:48 2024,5@bb.de,Baseline,confidence,confidence for slide 23: 1 with timerActive = 1
-Wed Mar 13 09:52:00 2024,5@bb.de,Baseline,experiment,TCP estimation for slide 29: 5 with timerActive = 1
-Wed Mar 13 10:02:42 2024,test@bla.de,Baseline,register,status:completed
-Wed Mar 13 10:02:45 2024,5@bb.de,Baseline,confidence,confidence for slide 29: 1 with timerActive = 1
-Wed Mar 13 10:02:53 2024,5@bb.de,Baseline,experiment,TCP estimation for slide 24: 6 with timerActive = 1
-Wed Mar 13 10:03:09 2024,test@bla.de,Baseline,training,TCP estimation for slide 0: 50
-Wed Mar 13 10:03:21 2024,test@bla.de,Baseline,training,TCP estimation for slide 1: 35
-Wed Mar 13 10:03:27 2024,test@bla.de,Baseline,training,TCP estimation for slide 2: 25
-Wed Mar 13 10:06:31 2024,5@bb.de,Baseline,confidence,confidence for slide 24: 1 with timerActive = 1
-Wed Mar 13 10:06:35 2024,5@bb.de,Baseline,experiment,TCP estimation for slide 28: 7 with timerActive = 1
-Wed Mar 13 10:06:37 2024,5@bb.de,Baseline,confidence,confidence for slide 28: 1 with timerActive = 1
-Wed Mar 13 10:06:39 2024,5@bb.de,Baseline,experiment,TCP estimation for slide 25: 8 with timerActive = 1
-Wed Mar 13 10:06:41 2024,5@bb.de,Baseline,confidence,confidence for slide 25: 2 with timerActive = 1
-Wed Mar 13 10:06:44 2024,5@bb.de,Baseline,experiment,TCP estimation for slide 27: 9 with timerActive = 1
-Wed Mar 13 10:06:45 2024,5@bb.de,Baseline,confidence,confidence for slide 27: 4 with timerActive = 1
-Wed Mar 13 10:06:48 2024,5@bb.de,Baseline,experiment,TCP estimation for slide 26: 10 with timerActive = 1

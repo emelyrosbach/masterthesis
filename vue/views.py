@@ -284,7 +284,7 @@ def startexperiment(request, participant_id, condition):
         status = currentExp.statusXAI
     else:
         status = currentExp.statusBaseline
-    return render(request, 'startExperiment.html', {'status':status})
+    return render(request, 'startExperiment.html', {'status':status, 'condition':condition})
 
 def poststudy(request, participant_id, condition):
     currentExp = Experiment.objects.get(pk=participant_id)
