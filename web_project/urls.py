@@ -16,6 +16,7 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path
+from django.contrib.staticfiles.urls import staticfiles_urlpatterns
 from vue import views as vue_views
 
 urlpatterns = [
@@ -32,3 +33,5 @@ urlpatterns = [
     path('mobile/', vue_views.mobile, name='mobile'),
     path('results/', vue_views.results, name='results'),
 ]
+
+urlpatterns += staticfiles_urlpatterns()
