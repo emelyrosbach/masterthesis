@@ -1013,3 +1013,372 @@ Fri Mar 22 12:49:31 2024,alexander.haake@fu-berlin.de,Baseline,confidence,confid
 Fri Mar 22 12:49:45 2024,alexander.haake@fu-berlin.de,Baseline,experiment,TCP estimation for slide 22: 68 with timerActive = 0
 Fri Mar 22 12:49:46 2024,alexander.haake@fu-berlin.de,Baseline,confidence,confidence for slide 22: 3 with timerActive = 0
 Fri Mar 22 12:50:24 2024,alexander.haake@fu-berlin.de,Baseline,UEQS,"item1: 7, item2: 7, item3: 7, item4: 7, item5: 5, item6: 5, item7: 5, item8: 5"
+Fri Mar 22 14:23:19 2024,Barbara.Richter@vetmeduni.ac.at,Baseline,register,status:open
+Fri Mar 22 14:25:33 2024,Barbara.Richter@vetmeduni.ac.at,Baseline,training,TCP estimation for slide 0: 70
+Fri Mar 22 14:25:46 2024,Barbara.Richter@vetmeduni.ac.at,Baseline,training,TCP estimation for slide 1: 30
+Fri Mar 22 14:25:58 2024,Barbara.Richter@vetmeduni.ac.at,Baseline,training,TCP estimation for slide 2: 90
+Fri Mar 22 14:28:43 2024,Barbara.Richter@vetmeduni.ac.at,Baseline,demographic data,"gender: Female, age: 45-54, experience: >15 years, interest in technology: 2, adoption of new technologies: 2, familiarity with AI: 2"
+Fri Mar 22 14:29:27 2024,Barbara.Richter@vetmeduni.ac.at,Baseline,experiment,TCP estimation for slide 27: 20 with timerActive = 1
+Fri Mar 22 14:29:32 2024,Barbara.Richter@vetmeduni.ac.at,Baseline,confidence,confidence for slide 27: 2 with timerActive = 1
+Fri Mar 22 14:29:44 2024,Barbara.Richter@vetmeduni.ac.at,Baseline,experiment,TCP estimation for slide 28: 95 with timerActive = 1
+Fri Mar 22 14:29:48 2024,Barbara.Richter@vetmeduni.ac.at,Baseline,confidence,confidence for slide 28: 3 with timerActive = 1
+Fri Mar 22 14:30:01 2024,Barbara.Richter@vetmeduni.ac.at,Baseline,experiment,TCP estimation for slide 26: 60 with timerActive = 1
+Fri Mar 22 14:30:05 2024,Barbara.Richter@vetmeduni.ac.at,Baseline,confidence,confidence for slide 26: 3 with timerActive = 1
+Fri Mar 22 14:30:17 2024,Barbara.Richter@vetmeduni.ac.at,Baseline,experiment,TCP estimation for slide 29: 95 with timerActive = 1
+Fri Mar 22 14:30:22 2024,Barbara.Richter@vetmeduni.ac.at,Baseline,confidence,confidence for slide 29: 3 with timerActive = 1
+Fri Mar 22 14:30:33 2024,Barbara.Richter@vetmeduni.ac.at,Baseline,experiment,TCP estimation for slide 25: 20 with timerActive = 1
+Fri Mar 22 14:30:40 2024,Barbara.Richter@vetmeduni.ac.at,Baseline,confidence,confidence for slide 25: 3 with timerActive = 1
+Fri Mar 22 14:30:53 2024,Barbara.Richter@vetmeduni.ac.at,Baseline,experiment,TCP estimation for slide 20: 80 with timerActive = 1
+Fri Mar 22 14:31:01 2024,Barbara.Richter@vetmeduni.ac.at,Baseline,confidence,confidence for slide 20: 1 with timerActive = 1
+Fri Mar 22 14:31:13 2024,Barbara.Richter@vetmeduni.ac.at,Baseline,experiment,TCP estimation for slide 24: 30 with timerActive = 1
+Fri Mar 22 14:31:17 2024,Barbara.Richter@vetmeduni.ac.at,Baseline,confidence,confidence for slide 24: 3 with timerActive = 1
+Fri Mar 22 14:31:29 2024,Barbara.Richter@vetmeduni.ac.at,Baseline,experiment,TCP estimation for slide 21: 70 with timerActive = 1
+Fri Mar 22 14:31:32 2024,Barbara.Richter@vetmeduni.ac.at,Baseline,confidence,confidence for slide 21: 2 with timerActive = 1
+Fri Mar 22 14:31:43 2024,Barbara.Richter@vetmeduni.ac.at,Baseline,experiment,TCP estimation for slide 23: 80 with timerActive = 1
+Fri Mar 22 14:31:47 2024,Barbara.Richter@vetmeduni.ac.at,Baseline,confidence,confidence for slide 23: 3 with timerActive = 1
+Fri Mar 22 14:31:59 2024,Barbara.Richter@vetmeduni.ac.at,Baseline,experiment,TCP estimation for slide 22: 40 with timerActive = 1
+Fri Mar 22 14:32:02 2024,Barbara.Richter@vetmeduni.ac.at,Baseline,confidence,confidence for slide 22: 3 with timerActive = 1
+Fri Mar 22 14:32:20 2024,Barbara.Richter@vetmeduni.ac.at,Baseline,experiment,TCP estimation for slide 17: 70 with timerActive = 0
+Fri Mar 22 14:32:23 2024,Barbara.Richter@vetmeduni.ac.at,Baseline,confidence,confidence for slide 17: 3 with timerActive = 0
+Fri Mar 22 14:32:35 2024,Barbara.Richter@vetmeduni.ac.at,Baseline,experiment,TCP estimation for slide 18: 80 with timerActive = 0
+Fri Mar 22 14:32:37 2024,Barbara.Richter@vetmeduni.ac.at,Baseline,confidence,confidence for slide 18: 4 with timerActive = 0
+Fri Mar 22 14:33:09 2024,Barbara.Richter@vetmeduni.ac.at,Baseline,experiment,TCP estimation for slide 16: 40 with timerActive = 0
+Fri Mar 22 14:33:11 2024,Barbara.Richter@vetmeduni.ac.at,Baseline,confidence,confidence for slide 16: 3 with timerActive = 0
+Fri Mar 22 14:33:27 2024,Barbara.Richter@vetmeduni.ac.at,Baseline,experiment,TCP estimation for slide 19: 90 with timerActive = 0
+Fri Mar 22 14:33:30 2024,Barbara.Richter@vetmeduni.ac.at,Baseline,confidence,confidence for slide 19: 4 with timerActive = 0
+Fri Mar 22 14:34:05 2024,Barbara.Richter@vetmeduni.ac.at,Baseline,experiment,TCP estimation for slide 15: 70 with timerActive = 0
+Fri Mar 22 14:34:07 2024,Barbara.Richter@vetmeduni.ac.at,Baseline,confidence,confidence for slide 15: 3 with timerActive = 0
+Fri Mar 22 14:34:21 2024,Barbara.Richter@vetmeduni.ac.at,Baseline,experiment,TCP estimation for slide 10: 30 with timerActive = 0
+Fri Mar 22 14:34:24 2024,Barbara.Richter@vetmeduni.ac.at,Baseline,confidence,confidence for slide 10: 3 with timerActive = 0
+Fri Mar 22 14:34:54 2024,Barbara.Richter@vetmeduni.ac.at,Baseline,experiment,TCP estimation for slide 14: 20 with timerActive = 0
+Fri Mar 22 14:34:58 2024,Barbara.Richter@vetmeduni.ac.at,Baseline,confidence,confidence for slide 14: 2 with timerActive = 0
+Fri Mar 22 14:35:11 2024,Barbara.Richter@vetmeduni.ac.at,Baseline,experiment,TCP estimation for slide 11: 50 with timerActive = 0
+Fri Mar 22 14:35:14 2024,Barbara.Richter@vetmeduni.ac.at,Baseline,confidence,confidence for slide 11: 3 with timerActive = 0
+Fri Mar 22 14:35:25 2024,Barbara.Richter@vetmeduni.ac.at,Baseline,experiment,TCP estimation for slide 13: 80 with timerActive = 0
+Fri Mar 22 14:35:27 2024,Barbara.Richter@vetmeduni.ac.at,Baseline,confidence,confidence for slide 13: 3 with timerActive = 0
+Fri Mar 22 14:35:48 2024,Barbara.Richter@vetmeduni.ac.at,Baseline,experiment,TCP estimation for slide 12: 70 with timerActive = 0
+Fri Mar 22 14:35:51 2024,Barbara.Richter@vetmeduni.ac.at,Baseline,confidence,confidence for slide 12: 3 with timerActive = 0
+Fri Mar 22 14:37:18 2024,Barbara.Richter@vetmeduni.ac.at,Baseline,UEQS,"item1: 6, item2: 7, item3: 6, item4: 7, item5: 6, item6: 6, item7: 7, item8: 6"
+Fri Mar 22 14:49:05 2024,t.q.nguyen@umcutrecht.nl,Baseline,register,status:open
+Fri Mar 22 14:50:17 2024,t.q.nguyen@umcutrecht.nl,Baseline,training,TCP estimation for slide 0: 30
+Fri Mar 22 14:50:26 2024,t.q.nguyen@umcutrecht.nl,Baseline,training,TCP estimation for slide 1: 40
+Fri Mar 22 14:50:36 2024,t.q.nguyen@umcutrecht.nl,Baseline,training,TCP estimation for slide 2: 80
+Fri Mar 22 14:51:16 2024,t.q.nguyen@umcutrecht.nl,Baseline,demographic data,"gender: Male, age: 45-54, experience: >15 years, interest in technology: 5, adoption of new technologies: 3, familiarity with AI: 4"
+Fri Mar 22 14:51:27 2024,t.q.nguyen@umcutrecht.nl,Baseline,experiment,TCP estimation for slide 17: 80 with timerActive = 0
+Fri Mar 22 14:51:32 2024,t.q.nguyen@umcutrecht.nl,Baseline,confidence,confidence for slide 17: 4 with timerActive = 0
+Fri Mar 22 14:51:40 2024,t.q.nguyen@umcutrecht.nl,Baseline,experiment,TCP estimation for slide 18: 80 with timerActive = 0
+Fri Mar 22 14:51:42 2024,t.q.nguyen@umcutrecht.nl,Baseline,confidence,confidence for slide 18: 4 with timerActive = 0
+Fri Mar 22 14:51:51 2024,t.q.nguyen@umcutrecht.nl,Baseline,experiment,TCP estimation for slide 16: 20 with timerActive = 0
+Fri Mar 22 14:51:53 2024,t.q.nguyen@umcutrecht.nl,Baseline,confidence,confidence for slide 16: 3 with timerActive = 0
+Fri Mar 22 14:52:00 2024,t.q.nguyen@umcutrecht.nl,Baseline,experiment,TCP estimation for slide 19: 85 with timerActive = 0
+Fri Mar 22 14:52:02 2024,t.q.nguyen@umcutrecht.nl,Baseline,confidence,confidence for slide 19: 4 with timerActive = 0
+Fri Mar 22 14:52:12 2024,t.q.nguyen@umcutrecht.nl,Baseline,experiment,TCP estimation for slide 15: 70 with timerActive = 0
+Fri Mar 22 14:52:15 2024,t.q.nguyen@umcutrecht.nl,Baseline,confidence,confidence for slide 15: 3 with timerActive = 0
+Fri Mar 22 14:52:22 2024,t.q.nguyen@umcutrecht.nl,Baseline,experiment,TCP estimation for slide 10: 20 with timerActive = 0
+Fri Mar 22 14:52:25 2024,t.q.nguyen@umcutrecht.nl,Baseline,confidence,confidence for slide 10: 3 with timerActive = 0
+Fri Mar 22 14:52:34 2024,t.q.nguyen@umcutrecht.nl,Baseline,experiment,TCP estimation for slide 14: 20 with timerActive = 0
+Fri Mar 22 14:52:36 2024,t.q.nguyen@umcutrecht.nl,Baseline,confidence,confidence for slide 14: 3 with timerActive = 0
+Fri Mar 22 14:52:45 2024,t.q.nguyen@umcutrecht.nl,Baseline,experiment,TCP estimation for slide 11: 30 with timerActive = 0
+Fri Mar 22 14:52:48 2024,t.q.nguyen@umcutrecht.nl,Baseline,confidence,confidence for slide 11: 4 with timerActive = 0
+Fri Mar 22 14:52:55 2024,t.q.nguyen@umcutrecht.nl,Baseline,experiment,TCP estimation for slide 13: 60 with timerActive = 0
+Fri Mar 22 14:52:57 2024,t.q.nguyen@umcutrecht.nl,Baseline,confidence,confidence for slide 13: 4 with timerActive = 0
+Fri Mar 22 14:53:05 2024,t.q.nguyen@umcutrecht.nl,Baseline,experiment,TCP estimation for slide 12: 35 with timerActive = 0
+Fri Mar 22 14:53:07 2024,t.q.nguyen@umcutrecht.nl,Baseline,confidence,confidence for slide 12: 3 with timerActive = 0
+Fri Mar 22 14:53:16 2024,t.q.nguyen@umcutrecht.nl,Baseline,experiment,TCP estimation for slide 27: 10 with timerActive = 1
+Fri Mar 22 14:53:20 2024,t.q.nguyen@umcutrecht.nl,Baseline,confidence,confidence for slide 27: 3 with timerActive = 1
+Fri Mar 22 14:53:25 2024,t.q.nguyen@umcutrecht.nl,Baseline,experiment,TCP estimation for slide 28: 80 with timerActive = 1
+Fri Mar 22 14:53:27 2024,t.q.nguyen@umcutrecht.nl,Baseline,confidence,confidence for slide 28: 3 with timerActive = 1
+Fri Mar 22 14:53:32 2024,t.q.nguyen@umcutrecht.nl,Baseline,experiment,TCP estimation for slide 26: 30 with timerActive = 1
+Fri Mar 22 14:53:34 2024,t.q.nguyen@umcutrecht.nl,Baseline,confidence,confidence for slide 26: 2 with timerActive = 1
+Fri Mar 22 14:53:40 2024,t.q.nguyen@umcutrecht.nl,Baseline,experiment,TCP estimation for slide 29: 90 with timerActive = 1
+Fri Mar 22 14:53:42 2024,t.q.nguyen@umcutrecht.nl,Baseline,confidence,confidence for slide 29: 3 with timerActive = 1
+Fri Mar 22 14:53:48 2024,t.q.nguyen@umcutrecht.nl,Baseline,experiment,TCP estimation for slide 25: 15 with timerActive = 1
+Fri Mar 22 14:53:51 2024,t.q.nguyen@umcutrecht.nl,Baseline,confidence,confidence for slide 25: 3 with timerActive = 1
+Fri Mar 22 14:53:57 2024,t.q.nguyen@umcutrecht.nl,Baseline,experiment,TCP estimation for slide 20: 10 with timerActive = 1
+Fri Mar 22 14:53:59 2024,t.q.nguyen@umcutrecht.nl,Baseline,confidence,confidence for slide 20: 3 with timerActive = 1
+Fri Mar 22 14:54:04 2024,t.q.nguyen@umcutrecht.nl,Baseline,experiment,TCP estimation for slide 24: 15 with timerActive = 1
+Fri Mar 22 14:54:07 2024,t.q.nguyen@umcutrecht.nl,Baseline,confidence,confidence for slide 24: 2 with timerActive = 1
+Fri Mar 22 14:54:14 2024,t.q.nguyen@umcutrecht.nl,Baseline,experiment,TCP estimation for slide 21: 40 with timerActive = 1
+Fri Mar 22 14:54:17 2024,t.q.nguyen@umcutrecht.nl,Baseline,confidence,confidence for slide 21: 2 with timerActive = 1
+Fri Mar 22 14:54:24 2024,t.q.nguyen@umcutrecht.nl,Baseline,experiment,TCP estimation for slide 23: 60 with timerActive = 1
+Fri Mar 22 14:54:26 2024,t.q.nguyen@umcutrecht.nl,Baseline,confidence,confidence for slide 23: 3 with timerActive = 1
+Fri Mar 22 14:54:32 2024,t.q.nguyen@umcutrecht.nl,Baseline,experiment,TCP estimation for slide 22: 35 with timerActive = 1
+Fri Mar 22 14:54:34 2024,t.q.nguyen@umcutrecht.nl,Baseline,confidence,confidence for slide 22: 3 with timerActive = 1
+Fri Mar 22 14:56:05 2024,t.q.nguyen@umcutrecht.nl,Baseline,UEQS,"item1: 4, item2: 4, item3: 4, item4: 4, item5: 4, item6: 4, item7: 4, item8: 4"
+Fri Mar 22 15:30:57 2024,a.nama@umcutrecht.nl,Baseline,register,status:open
+Fri Mar 22 15:31:36 2024,a.nama@umcutrecht.nl,Baseline,training,TCP estimation for slide 0: 40
+Fri Mar 22 15:31:44 2024,a.nama@umcutrecht.nl,Baseline,training,TCP estimation for slide 1: 30
+Fri Mar 22 15:31:59 2024,a.nama@umcutrecht.nl,Baseline,training,TCP estimation for slide 2: 20
+Fri Mar 22 15:32:45 2024,a.nama@umcutrecht.nl,Baseline,demographic data,"gender: Female, age: 25-34, experience: <5 years, interest in technology: 5, adoption of new technologies: 3, familiarity with AI: 1"
+Fri Mar 22 15:32:55 2024,a.nama@umcutrecht.nl,Baseline,experiment,TCP estimation for slide 27: 30 with timerActive = 0
+Fri Mar 22 15:32:58 2024,a.nama@umcutrecht.nl,Baseline,confidence,confidence for slide 27: 3 with timerActive = 0
+Fri Mar 22 15:33:13 2024,a.nama@umcutrecht.nl,Baseline,experiment,TCP estimation for slide 28: 50 with timerActive = 0
+Fri Mar 22 15:33:16 2024,a.nama@umcutrecht.nl,Baseline,confidence,confidence for slide 28: 3 with timerActive = 0
+Fri Mar 22 15:33:37 2024,a.nama@umcutrecht.nl,Baseline,experiment,TCP estimation for slide 26: 50 with timerActive = 0
+Fri Mar 22 15:33:39 2024,a.nama@umcutrecht.nl,Baseline,confidence,confidence for slide 26: 3 with timerActive = 0
+Fri Mar 22 15:34:05 2024,a.nama@umcutrecht.nl,Baseline,experiment,TCP estimation for slide 29: 90 with timerActive = 0
+Fri Mar 22 15:34:07 2024,a.nama@umcutrecht.nl,Baseline,confidence,confidence for slide 29: 3 with timerActive = 0
+Fri Mar 22 15:34:16 2024,a.nama@umcutrecht.nl,Baseline,experiment,TCP estimation for slide 25: 20 with timerActive = 0
+Fri Mar 22 15:34:19 2024,a.nama@umcutrecht.nl,Baseline,confidence,confidence for slide 25: 3 with timerActive = 0
+Fri Mar 22 15:34:35 2024,a.nama@umcutrecht.nl,Baseline,experiment,TCP estimation for slide 20: 50 with timerActive = 0
+Fri Mar 22 15:34:37 2024,a.nama@umcutrecht.nl,Baseline,confidence,confidence for slide 20: 3 with timerActive = 0
+Fri Mar 22 15:34:48 2024,a.nama@umcutrecht.nl,Baseline,experiment,TCP estimation for slide 24: 25 with timerActive = 0
+Fri Mar 22 15:34:50 2024,a.nama@umcutrecht.nl,Baseline,confidence,confidence for slide 24: 3 with timerActive = 0
+Fri Mar 22 15:35:00 2024,a.nama@umcutrecht.nl,Baseline,experiment,TCP estimation for slide 21: 60 with timerActive = 0
+Fri Mar 22 15:35:02 2024,a.nama@umcutrecht.nl,Baseline,confidence,confidence for slide 21: 3 with timerActive = 0
+Fri Mar 22 15:35:11 2024,a.nama@umcutrecht.nl,Baseline,experiment,TCP estimation for slide 23: 80 with timerActive = 0
+Fri Mar 22 15:35:13 2024,a.nama@umcutrecht.nl,Baseline,confidence,confidence for slide 23: 3 with timerActive = 0
+Fri Mar 22 15:35:25 2024,a.nama@umcutrecht.nl,Baseline,experiment,TCP estimation for slide 22: 80 with timerActive = 0
+Fri Mar 22 15:35:28 2024,a.nama@umcutrecht.nl,Baseline,confidence,confidence for slide 22: 3 with timerActive = 0
+Fri Mar 22 15:35:37 2024,a.nama@umcutrecht.nl,Baseline,experiment,TCP estimation for slide 17: 70 with timerActive = 1
+Fri Mar 22 15:35:40 2024,a.nama@umcutrecht.nl,Baseline,confidence,confidence for slide 17: 3 with timerActive = 1
+Fri Mar 22 15:35:46 2024,a.nama@umcutrecht.nl,Baseline,experiment,TCP estimation for slide 18: 90 with timerActive = 1
+Fri Mar 22 15:35:48 2024,a.nama@umcutrecht.nl,Baseline,confidence,confidence for slide 18: 3 with timerActive = 1
+Fri Mar 22 15:35:53 2024,a.nama@umcutrecht.nl,Baseline,experiment,TCP estimation for slide 16: 30 with timerActive = 1
+Fri Mar 22 15:35:56 2024,a.nama@umcutrecht.nl,Baseline,confidence,confidence for slide 16: 3 with timerActive = 1
+Fri Mar 22 15:36:01 2024,a.nama@umcutrecht.nl,Baseline,experiment,TCP estimation for slide 19: 100 with timerActive = 1
+Fri Mar 22 15:36:04 2024,a.nama@umcutrecht.nl,Baseline,confidence,confidence for slide 19: 3 with timerActive = 1
+Fri Mar 22 15:36:10 2024,a.nama@umcutrecht.nl,Baseline,experiment,TCP estimation for slide 15: 40 with timerActive = 1
+Fri Mar 22 15:36:12 2024,a.nama@umcutrecht.nl,Baseline,confidence,confidence for slide 15: 3 with timerActive = 1
+Fri Mar 22 15:36:21 2024,a.nama@umcutrecht.nl,Baseline,experiment,TCP estimation for slide 10: 40 with timerActive = 1
+Fri Mar 22 15:36:24 2024,a.nama@umcutrecht.nl,Baseline,confidence,confidence for slide 10: 3 with timerActive = 1
+Fri Mar 22 15:36:30 2024,a.nama@umcutrecht.nl,Baseline,experiment,TCP estimation for slide 14: 25 with timerActive = 1
+Fri Mar 22 15:36:32 2024,a.nama@umcutrecht.nl,Baseline,confidence,confidence for slide 14: 3 with timerActive = 1
+Fri Mar 22 15:36:38 2024,a.nama@umcutrecht.nl,Baseline,experiment,TCP estimation for slide 11: 40 with timerActive = 1
+Fri Mar 22 15:36:41 2024,a.nama@umcutrecht.nl,Baseline,confidence,confidence for slide 11: 3 with timerActive = 1
+Fri Mar 22 15:36:48 2024,a.nama@umcutrecht.nl,Baseline,experiment,TCP estimation for slide 13: 75 with timerActive = 1
+Fri Mar 22 15:36:50 2024,a.nama@umcutrecht.nl,Baseline,confidence,confidence for slide 13: 3 with timerActive = 1
+Fri Mar 22 15:36:58 2024,R.R.deKrijger-2@prinsesmaximacentrum.nl,Baseline,register,status:open
+Fri Mar 22 15:36:58 2024,a.nama@umcutrecht.nl,Baseline,experiment,TCP estimation for slide 12: 80 with timerActive = 1
+Fri Mar 22 15:37:00 2024,a.nama@umcutrecht.nl,Baseline,confidence,confidence for slide 12: 3 with timerActive = 1
+Fri Mar 22 15:37:27 2024,a.nama@umcutrecht.nl,Baseline,UEQS,"item1: 7, item2: 4, item3: 4, item4: 7, item5: 7, item6: 7, item7: 7, item8: 6"
+Fri Mar 22 15:37:41 2024,R.R.deKrijger-2@prinsesmaximacentrum.nl,Baseline,training,TCP estimation for slide 0: 50
+Fri Mar 22 15:37:52 2024,R.R.deKrijger-2@prinsesmaximacentrum.nl,Baseline,training,TCP estimation for slide 1: 30
+Fri Mar 22 15:38:01 2024,R.R.deKrijger-2@prinsesmaximacentrum.nl,Baseline,training,TCP estimation for slide 2: 70
+Fri Mar 22 15:39:05 2024,R.R.deKrijger-2@prinsesmaximacentrum.nl,Baseline,demographic data,"gender: Male, age: >55, experience: >15 years, interest in technology: 5, adoption of new technologies: 2, familiarity with AI: 3"
+Fri Mar 22 15:39:17 2024,R.R.deKrijger-2@prinsesmaximacentrum.nl,Baseline,experiment,TCP estimation for slide 18: 70 with timerActive = 1
+Fri Mar 22 15:39:22 2024,R.R.deKrijger-2@prinsesmaximacentrum.nl,Baseline,confidence,confidence for slide 18: 3 with timerActive = 1
+Fri Mar 22 15:39:30 2024,R.R.deKrijger-2@prinsesmaximacentrum.nl,Baseline,experiment,TCP estimation for slide 19: 80 with timerActive = 1
+Fri Mar 22 15:39:33 2024,R.R.deKrijger-2@prinsesmaximacentrum.nl,Baseline,confidence,confidence for slide 19: 4 with timerActive = 1
+Fri Mar 22 15:39:42 2024,R.R.deKrijger-2@prinsesmaximacentrum.nl,Baseline,experiment,TCP estimation for slide 17: 70 with timerActive = 1
+Fri Mar 22 15:39:45 2024,R.R.deKrijger-2@prinsesmaximacentrum.nl,Baseline,confidence,confidence for slide 17: 4 with timerActive = 1
+Fri Mar 22 15:39:51 2024,R.R.deKrijger-2@prinsesmaximacentrum.nl,Baseline,experiment,TCP estimation for slide 10: 40 with timerActive = 1
+Fri Mar 22 15:39:54 2024,R.R.deKrijger-2@prinsesmaximacentrum.nl,Baseline,confidence,confidence for slide 10: 3 with timerActive = 1
+Fri Mar 22 15:40:01 2024,R.R.deKrijger-2@prinsesmaximacentrum.nl,Baseline,experiment,TCP estimation for slide 16: 30 with timerActive = 1
+Fri Mar 22 15:40:05 2024,R.R.deKrijger-2@prinsesmaximacentrum.nl,Baseline,confidence,confidence for slide 16: 3 with timerActive = 1
+Fri Mar 22 15:40:14 2024,R.R.deKrijger-2@prinsesmaximacentrum.nl,Baseline,experiment,TCP estimation for slide 11: 50 with timerActive = 1
+Fri Mar 22 15:40:17 2024,R.R.deKrijger-2@prinsesmaximacentrum.nl,Baseline,confidence,confidence for slide 11: 3 with timerActive = 1
+Fri Mar 22 15:40:25 2024,R.R.deKrijger-2@prinsesmaximacentrum.nl,Baseline,experiment,TCP estimation for slide 15: 60 with timerActive = 1
+Fri Mar 22 15:40:29 2024,R.R.deKrijger-2@prinsesmaximacentrum.nl,Baseline,confidence,confidence for slide 15: 2 with timerActive = 1
+Fri Mar 22 15:40:38 2024,R.R.deKrijger-2@prinsesmaximacentrum.nl,Baseline,experiment,TCP estimation for slide 12: 40 with timerActive = 1
+Fri Mar 22 15:40:40 2024,R.R.deKrijger-2@prinsesmaximacentrum.nl,Baseline,confidence,confidence for slide 12: 3 with timerActive = 1
+Fri Mar 22 15:40:48 2024,R.R.deKrijger-2@prinsesmaximacentrum.nl,Baseline,experiment,TCP estimation for slide 14: 10 with timerActive = 1
+Fri Mar 22 15:40:51 2024,R.R.deKrijger-2@prinsesmaximacentrum.nl,Baseline,confidence,confidence for slide 14: 3 with timerActive = 1
+Fri Mar 22 15:40:59 2024,R.R.deKrijger-2@prinsesmaximacentrum.nl,Baseline,experiment,TCP estimation for slide 13: 70 with timerActive = 1
+Fri Mar 22 15:41:04 2024,R.R.deKrijger-2@prinsesmaximacentrum.nl,Baseline,confidence,confidence for slide 13: 4 with timerActive = 1
+Fri Mar 22 15:41:13 2024,R.R.deKrijger-2@prinsesmaximacentrum.nl,Baseline,experiment,TCP estimation for slide 28: 90 with timerActive = 0
+Fri Mar 22 15:41:15 2024,R.R.deKrijger-2@prinsesmaximacentrum.nl,Baseline,confidence,confidence for slide 28: 4 with timerActive = 0
+Fri Mar 22 15:41:24 2024,R.R.deKrijger-2@prinsesmaximacentrum.nl,Baseline,experiment,TCP estimation for slide 29: 80 with timerActive = 0
+Fri Mar 22 15:41:27 2024,R.R.deKrijger-2@prinsesmaximacentrum.nl,Baseline,confidence,confidence for slide 29: 4 with timerActive = 0
+Fri Mar 22 15:41:35 2024,R.R.deKrijger-2@prinsesmaximacentrum.nl,Baseline,experiment,TCP estimation for slide 27: 10 with timerActive = 0
+Fri Mar 22 15:41:38 2024,R.R.deKrijger-2@prinsesmaximacentrum.nl,Baseline,confidence,confidence for slide 27: 4 with timerActive = 0
+Fri Mar 22 15:41:46 2024,R.R.deKrijger-2@prinsesmaximacentrum.nl,Baseline,experiment,TCP estimation for slide 20: 10 with timerActive = 0
+Fri Mar 22 15:41:49 2024,R.R.deKrijger-2@prinsesmaximacentrum.nl,Baseline,confidence,confidence for slide 20: 4 with timerActive = 0
+Fri Mar 22 15:41:57 2024,R.R.deKrijger-2@prinsesmaximacentrum.nl,Baseline,experiment,TCP estimation for slide 26: 50 with timerActive = 0
+Fri Mar 22 15:41:59 2024,R.R.deKrijger-2@prinsesmaximacentrum.nl,Baseline,confidence,confidence for slide 26: 4 with timerActive = 0
+Fri Mar 22 15:42:10 2024,R.R.deKrijger-2@prinsesmaximacentrum.nl,Baseline,experiment,TCP estimation for slide 21: 50 with timerActive = 0
+Fri Mar 22 15:42:13 2024,R.R.deKrijger-2@prinsesmaximacentrum.nl,Baseline,confidence,confidence for slide 21: 3 with timerActive = 0
+Fri Mar 22 15:42:23 2024,R.R.deKrijger-2@prinsesmaximacentrum.nl,Baseline,experiment,TCP estimation for slide 25: 5 with timerActive = 0
+Fri Mar 22 15:42:26 2024,R.R.deKrijger-2@prinsesmaximacentrum.nl,Baseline,confidence,confidence for slide 25: 4 with timerActive = 0
+Fri Mar 22 15:42:35 2024,R.R.deKrijger-2@prinsesmaximacentrum.nl,Baseline,experiment,TCP estimation for slide 22: 40 with timerActive = 0
+Fri Mar 22 15:42:38 2024,R.R.deKrijger-2@prinsesmaximacentrum.nl,Baseline,confidence,confidence for slide 22: 3 with timerActive = 0
+Fri Mar 22 15:42:46 2024,R.R.deKrijger-2@prinsesmaximacentrum.nl,Baseline,experiment,TCP estimation for slide 24: 5 with timerActive = 0
+Fri Mar 22 15:42:49 2024,R.R.deKrijger-2@prinsesmaximacentrum.nl,Baseline,confidence,confidence for slide 24: 4 with timerActive = 0
+Fri Mar 22 15:43:02 2024,R.R.deKrijger-2@prinsesmaximacentrum.nl,Baseline,experiment,TCP estimation for slide 23: 70 with timerActive = 0
+Fri Mar 22 15:43:05 2024,R.R.deKrijger-2@prinsesmaximacentrum.nl,Baseline,confidence,confidence for slide 23: 3 with timerActive = 0
+Fri Mar 22 15:43:33 2024,R.R.deKrijger-2@prinsesmaximacentrum.nl,Baseline,UEQS,"item1: 5, item2: 5, item3: 5, item4: 6, item5: 4, item6: 5, item7: 5, item8: 4"
+Fri Mar 22 18:54:24 2024,monali.bera@avd.asia,Baseline,register,status:open
+Fri Mar 22 18:55:35 2024,monali.bera@avd.asia,Baseline,training,TCP estimation for slide 0: 25
+Fri Mar 22 18:55:49 2024,monali.bera@avd.asia,Baseline,training,TCP estimation for slide 1: 40
+Fri Mar 22 18:55:57 2024,monali.bera@avd.asia,Baseline,training,TCP estimation for slide 2: 25
+Fri Mar 22 18:56:51 2024,monali.bera@avd.asia,Baseline,demographic data,"gender: Female, age: 35-44, experience: >15 years, interest in technology: 4, adoption of new technologies: 2, familiarity with AI: 3"
+Fri Mar 22 18:57:07 2024,monali.bera@avd.asia,Baseline,experiment,TCP estimation for slide 28: 70 with timerActive = 1
+Fri Mar 22 18:57:11 2024,monali.bera@avd.asia,Baseline,confidence,confidence for slide 28: 3 with timerActive = 1
+Fri Mar 22 18:57:18 2024,monali.bera@avd.asia,Baseline,experiment,TCP estimation for slide 29: 20 with timerActive = 1
+Fri Mar 22 18:57:21 2024,monali.bera@avd.asia,Baseline,confidence,confidence for slide 29: 3 with timerActive = 1
+Fri Mar 22 18:57:28 2024,monali.bera@avd.asia,Baseline,experiment,TCP estimation for slide 27: 60 with timerActive = 1
+Fri Mar 22 18:57:31 2024,monali.bera@avd.asia,Baseline,confidence,confidence for slide 27: 3 with timerActive = 1
+Fri Mar 22 18:57:38 2024,monali.bera@avd.asia,Baseline,experiment,TCP estimation for slide 20: 35 with timerActive = 1
+Fri Mar 22 18:57:40 2024,monali.bera@avd.asia,Baseline,confidence,confidence for slide 20: 3 with timerActive = 1
+Fri Mar 22 18:57:47 2024,monali.bera@avd.asia,Baseline,experiment,TCP estimation for slide 26: 20 with timerActive = 1
+Fri Mar 22 18:57:50 2024,monali.bera@avd.asia,Baseline,confidence,confidence for slide 26: 3 with timerActive = 1
+Fri Mar 22 18:57:56 2024,monali.bera@avd.asia,Baseline,experiment,TCP estimation for slide 21: 55 with timerActive = 1
+Fri Mar 22 18:57:59 2024,monali.bera@avd.asia,Baseline,confidence,confidence for slide 21: 3 with timerActive = 1
+Fri Mar 22 18:58:04 2024,monali.bera@avd.asia,Baseline,experiment,TCP estimation for slide 25: 10 with timerActive = 1
+Fri Mar 22 18:58:08 2024,monali.bera@avd.asia,Baseline,confidence,confidence for slide 25: 1 with timerActive = 1
+Fri Mar 22 18:58:13 2024,monali.bera@avd.asia,Baseline,experiment,TCP estimation for slide 22: 20 with timerActive = 1
+Fri Mar 22 18:58:16 2024,monali.bera@avd.asia,Baseline,confidence,confidence for slide 22: 4 with timerActive = 1
+Fri Mar 22 18:58:21 2024,monali.bera@avd.asia,Baseline,experiment,TCP estimation for slide 24: 10 with timerActive = 1
+Fri Mar 22 18:58:23 2024,monali.bera@avd.asia,Baseline,confidence,confidence for slide 24: 3 with timerActive = 1
+Fri Mar 22 18:58:28 2024,monali.bera@avd.asia,Baseline,experiment,TCP estimation for slide 23: 70 with timerActive = 1
+Fri Mar 22 18:58:31 2024,monali.bera@avd.asia,Baseline,confidence,confidence for slide 23: 4 with timerActive = 1
+Fri Mar 22 18:58:40 2024,monali.bera@avd.asia,Baseline,experiment,TCP estimation for slide 18: 75 with timerActive = 0
+Fri Mar 22 18:58:43 2024,monali.bera@avd.asia,Baseline,confidence,confidence for slide 18: 4 with timerActive = 0
+Fri Mar 22 18:58:51 2024,monali.bera@avd.asia,Baseline,experiment,TCP estimation for slide 19: 80 with timerActive = 0
+Fri Mar 22 18:58:53 2024,monali.bera@avd.asia,Baseline,confidence,confidence for slide 19: 3 with timerActive = 0
+Fri Mar 22 18:59:01 2024,monali.bera@avd.asia,Baseline,experiment,TCP estimation for slide 17: 40 with timerActive = 0
+Fri Mar 22 18:59:04 2024,monali.bera@avd.asia,Baseline,confidence,confidence for slide 17: 3 with timerActive = 0
+Fri Mar 22 18:59:09 2024,monali.bera@avd.asia,Baseline,experiment,TCP estimation for slide 10: 15 with timerActive = 0
+Fri Mar 22 18:59:12 2024,monali.bera@avd.asia,Baseline,confidence,confidence for slide 10: 2 with timerActive = 0
+Fri Mar 22 18:59:23 2024,monali.bera@avd.asia,Baseline,experiment,TCP estimation for slide 16: 70 with timerActive = 0
+Fri Mar 22 18:59:25 2024,monali.bera@avd.asia,Baseline,confidence,confidence for slide 16: 2 with timerActive = 0
+Fri Mar 22 18:59:31 2024,monali.bera@avd.asia,Baseline,experiment,TCP estimation for slide 11: 45 with timerActive = 0
+Fri Mar 22 18:59:34 2024,monali.bera@avd.asia,Baseline,confidence,confidence for slide 11: 3 with timerActive = 0
+Fri Mar 22 18:59:39 2024,monali.bera@avd.asia,Baseline,experiment,TCP estimation for slide 15: 10 with timerActive = 0
+Fri Mar 22 18:59:42 2024,monali.bera@avd.asia,Baseline,confidence,confidence for slide 15: 3 with timerActive = 0
+Fri Mar 22 18:59:48 2024,monali.bera@avd.asia,Baseline,experiment,TCP estimation for slide 12: 65 with timerActive = 0
+Fri Mar 22 18:59:51 2024,monali.bera@avd.asia,Baseline,confidence,confidence for slide 12: 3 with timerActive = 0
+Fri Mar 22 19:00:00 2024,monali.bera@avd.asia,Baseline,experiment,TCP estimation for slide 14: 40 with timerActive = 0
+Fri Mar 22 19:00:03 2024,monali.bera@avd.asia,Baseline,confidence,confidence for slide 14: 2 with timerActive = 0
+Fri Mar 22 19:00:13 2024,monali.bera@avd.asia,Baseline,experiment,TCP estimation for slide 13: 100 with timerActive = 0
+Fri Mar 22 19:00:16 2024,monali.bera@avd.asia,Baseline,confidence,confidence for slide 13: 4 with timerActive = 0
+Fri Mar 22 19:00:47 2024,monali.bera@avd.asia,Baseline,UEQS,"item1: 2, item2: 3, item3: 3, item4: 3, item5: 3, item6: 4, item7: 6, item8: 5"
+Sat Mar 23 11:24:36 2024,a.f.p.sonnen-3@umcutrecht.nl,Baseline,register,status:open
+Sat Mar 23 11:26:21 2024,a.f.p.sonnen-3@umcutrecht.nl,Baseline,training,TCP estimation for slide 0: 50
+Sat Mar 23 11:26:35 2024,a.f.p.sonnen-3@umcutrecht.nl,Baseline,training,TCP estimation for slide 1: 35
+Sat Mar 23 11:26:52 2024,a.f.p.sonnen-3@umcutrecht.nl,Baseline,training,TCP estimation for slide 2: 30
+Sat Mar 23 11:28:01 2024,a.f.p.sonnen-3@umcutrecht.nl,Baseline,demographic data,"gender: Male, age: 35-44, experience: 5-10 years, interest in technology: 5, adoption of new technologies: 2, familiarity with AI: 3"
+Sat Mar 23 11:28:11 2024,a.f.p.sonnen-3@umcutrecht.nl,Baseline,experiment,TCP estimation for slide 18: 85 with timerActive = 0
+Sat Mar 23 11:28:15 2024,a.f.p.sonnen-3@umcutrecht.nl,Baseline,confidence,confidence for slide 18: 4 with timerActive = 0
+Sat Mar 23 11:28:26 2024,a.f.p.sonnen-3@umcutrecht.nl,Baseline,experiment,TCP estimation for slide 19: 90 with timerActive = 0
+Sat Mar 23 11:28:29 2024,a.f.p.sonnen-3@umcutrecht.nl,Baseline,confidence,confidence for slide 19: 4 with timerActive = 0
+Sat Mar 23 11:28:43 2024,a.f.p.sonnen-3@umcutrecht.nl,Baseline,experiment,TCP estimation for slide 17: 80 with timerActive = 0
+Sat Mar 23 11:28:46 2024,a.f.p.sonnen-3@umcutrecht.nl,Baseline,confidence,confidence for slide 17: 4 with timerActive = 0
+Sat Mar 23 11:28:57 2024,a.f.p.sonnen-3@umcutrecht.nl,Baseline,experiment,TCP estimation for slide 10: 50 with timerActive = 0
+Sat Mar 23 11:29:00 2024,a.f.p.sonnen-3@umcutrecht.nl,Baseline,confidence,confidence for slide 10: 4 with timerActive = 0
+Sat Mar 23 11:29:14 2024,a.f.p.sonnen-3@umcutrecht.nl,Baseline,experiment,TCP estimation for slide 16: 40 with timerActive = 0
+Sat Mar 23 11:29:18 2024,a.f.p.sonnen-3@umcutrecht.nl,Baseline,confidence,confidence for slide 16: 2 with timerActive = 0
+Sat Mar 23 11:29:35 2024,a.f.p.sonnen-3@umcutrecht.nl,Baseline,experiment,TCP estimation for slide 11: 50 with timerActive = 0
+Sat Mar 23 11:29:39 2024,a.f.p.sonnen-3@umcutrecht.nl,Baseline,confidence,confidence for slide 11: 2 with timerActive = 0
+Sat Mar 23 11:29:52 2024,a.f.p.sonnen-3@umcutrecht.nl,Baseline,experiment,TCP estimation for slide 15: 75 with timerActive = 0
+Sat Mar 23 11:29:55 2024,a.f.p.sonnen-3@umcutrecht.nl,Baseline,confidence,confidence for slide 15: 3 with timerActive = 0
+Sat Mar 23 11:30:56 2024,a.f.p.sonnen-3@umcutrecht.nl,Baseline,experiment,TCP estimation for slide 12: 65 with timerActive = 0
+Sat Mar 23 11:30:59 2024,a.f.p.sonnen-3@umcutrecht.nl,Baseline,confidence,confidence for slide 12: 3 with timerActive = 0
+Sat Mar 23 11:31:08 2024,a.f.p.sonnen-3@umcutrecht.nl,Baseline,experiment,TCP estimation for slide 14: 25 with timerActive = 0
+Sat Mar 23 11:31:11 2024,a.f.p.sonnen-3@umcutrecht.nl,Baseline,confidence,confidence for slide 14: 4 with timerActive = 0
+Sat Mar 23 11:31:21 2024,a.f.p.sonnen-3@umcutrecht.nl,Baseline,experiment,TCP estimation for slide 13: 75 with timerActive = 0
+Sat Mar 23 11:31:24 2024,a.f.p.sonnen-3@umcutrecht.nl,Baseline,confidence,confidence for slide 13: 4 with timerActive = 0
+Sat Mar 23 11:31:40 2024,a.f.p.sonnen-3@umcutrecht.nl,Baseline,experiment,TCP estimation for slide 28: 90 with timerActive = 1
+Sat Mar 23 11:31:43 2024,a.f.p.sonnen-3@umcutrecht.nl,Baseline,confidence,confidence for slide 28: 4 with timerActive = 1
+Sat Mar 23 11:31:51 2024,a.f.p.sonnen-3@umcutrecht.nl,Baseline,experiment,TCP estimation for slide 29: 95 with timerActive = 1
+Sat Mar 23 11:31:56 2024,a.f.p.sonnen-3@umcutrecht.nl,Baseline,confidence,confidence for slide 29: 4 with timerActive = 1
+Sat Mar 23 11:32:05 2024,a.f.p.sonnen-3@umcutrecht.nl,Baseline,experiment,TCP estimation for slide 27: 15 with timerActive = 1
+Sat Mar 23 11:32:08 2024,a.f.p.sonnen-3@umcutrecht.nl,Baseline,confidence,confidence for slide 27: 4 with timerActive = 1
+Sat Mar 23 11:32:15 2024,a.f.p.sonnen-3@umcutrecht.nl,Baseline,experiment,TCP estimation for slide 20: 25 with timerActive = 1
+Sat Mar 23 11:32:19 2024,a.f.p.sonnen-3@umcutrecht.nl,Baseline,confidence,confidence for slide 20: 4 with timerActive = 1
+Sat Mar 23 11:32:27 2024,a.f.p.sonnen-3@umcutrecht.nl,Baseline,experiment,TCP estimation for slide 26: 60 with timerActive = 1
+Sat Mar 23 11:32:30 2024,a.f.p.sonnen-3@umcutrecht.nl,Baseline,confidence,confidence for slide 26: 4 with timerActive = 1
+Sat Mar 23 11:32:43 2024,a.f.p.sonnen-3@umcutrecht.nl,Baseline,experiment,TCP estimation for slide 21: 50 with timerActive = 1
+Sat Mar 23 11:32:45 2024,a.f.p.sonnen-3@umcutrecht.nl,Baseline,confidence,confidence for slide 21: 2 with timerActive = 1
+Sat Mar 23 11:32:55 2024,a.f.p.sonnen-3@umcutrecht.nl,Baseline,experiment,TCP estimation for slide 25: 10 with timerActive = 1
+Sat Mar 23 11:32:57 2024,a.f.p.sonnen-3@umcutrecht.nl,Baseline,confidence,confidence for slide 25: 4 with timerActive = 1
+Sat Mar 23 11:33:04 2024,a.f.p.sonnen-3@umcutrecht.nl,Baseline,experiment,TCP estimation for slide 22: 75 with timerActive = 1
+Sat Mar 23 11:33:07 2024,a.f.p.sonnen-3@umcutrecht.nl,Baseline,confidence,confidence for slide 22: 4 with timerActive = 1
+Sat Mar 23 11:33:16 2024,a.f.p.sonnen-3@umcutrecht.nl,Baseline,experiment,TCP estimation for slide 24: 50 with timerActive = 1
+Sat Mar 23 11:33:18 2024,a.f.p.sonnen-3@umcutrecht.nl,Baseline,confidence,confidence for slide 24: 4 with timerActive = 1
+Sat Mar 23 11:33:28 2024,a.f.p.sonnen-3@umcutrecht.nl,Baseline,experiment,TCP estimation for slide 23: 85 with timerActive = 1
+Sat Mar 23 11:33:31 2024,a.f.p.sonnen-3@umcutrecht.nl,Baseline,confidence,confidence for slide 23: 4 with timerActive = 1
+Sat Mar 23 11:34:00 2024,a.f.p.sonnen-3@umcutrecht.nl,Baseline,UEQS,"item1: 6, item2: 6, item3: 6, item4: 6, item5: 6, item6: 6, item7: 6, item8: 5"
+Sat Mar 23 15:16:12 2024,ori.brenner@weizmann.ac.il,Baseline,register,status:open
+Sat Mar 23 15:22:37 2024,ori.brenner@weizmann.ac.il,Baseline,training,TCP estimation for slide 0: 50
+Sat Mar 23 15:23:16 2024,ori.brenner@weizmann.ac.il,Baseline,training,TCP estimation for slide 0: 50
+Sat Mar 23 15:23:27 2024,ori.brenner@weizmann.ac.il,Baseline,training,TCP estimation for slide 1: 60
+Sat Mar 23 15:23:41 2024,ori.brenner@weizmann.ac.il,Baseline,training,TCP estimation for slide 2: 40
+Sat Mar 23 15:25:37 2024,ori.brenner@weizmann.ac.il,Baseline,demographic data,"gender: Male, age: >55, experience: >15 years, interest in technology: 4, adoption of new technologies: 3, familiarity with AI: 1"
+Sat Mar 23 15:26:14 2024,ori.brenner@weizmann.ac.il,Baseline,experiment,TCP estimation for slide 28: 97 with timerActive = 0
+Sat Mar 23 15:26:21 2024,ori.brenner@weizmann.ac.il,Baseline,confidence,confidence for slide 28: 4 with timerActive = 0
+Sat Mar 23 15:26:43 2024,ori.brenner@weizmann.ac.il,Baseline,experiment,TCP estimation for slide 29: 100 with timerActive = 0
+Sat Mar 23 15:26:47 2024,ori.brenner@weizmann.ac.il,Baseline,confidence,confidence for slide 29: 4 with timerActive = 0
+Sat Mar 23 15:27:19 2024,ori.brenner@weizmann.ac.il,Baseline,experiment,TCP estimation for slide 27: 25 with timerActive = 0
+Sat Mar 23 15:27:22 2024,ori.brenner@weizmann.ac.il,Baseline,confidence,confidence for slide 27: 3 with timerActive = 0
+Sat Mar 23 15:27:44 2024,ori.brenner@weizmann.ac.il,Baseline,experiment,TCP estimation for slide 20: 25 with timerActive = 0
+Sat Mar 23 15:27:49 2024,ori.brenner@weizmann.ac.il,Baseline,confidence,confidence for slide 20: 3 with timerActive = 0
+Sat Mar 23 15:28:07 2024,ori.brenner@weizmann.ac.il,Baseline,experiment,TCP estimation for slide 26: 60 with timerActive = 0
+Sat Mar 23 15:28:10 2024,ori.brenner@weizmann.ac.il,Baseline,confidence,confidence for slide 26: 3 with timerActive = 0
+Sat Mar 23 15:28:28 2024,ori.brenner@weizmann.ac.il,Baseline,experiment,TCP estimation for slide 21: 60 with timerActive = 0
+Sat Mar 23 15:28:31 2024,ori.brenner@weizmann.ac.il,Baseline,confidence,confidence for slide 21: 3 with timerActive = 0
+Sat Mar 23 15:28:56 2024,ori.brenner@weizmann.ac.il,Baseline,experiment,TCP estimation for slide 25: 7 with timerActive = 0
+Sat Mar 23 15:29:00 2024,ori.brenner@weizmann.ac.il,Baseline,confidence,confidence for slide 25: 3 with timerActive = 0
+Sat Mar 23 15:29:16 2024,ori.brenner@weizmann.ac.il,Baseline,experiment,TCP estimation for slide 22: 60 with timerActive = 0
+Sat Mar 23 15:29:19 2024,ori.brenner@weizmann.ac.il,Baseline,confidence,confidence for slide 22: 3 with timerActive = 0
+Sat Mar 23 15:29:37 2024,ori.brenner@weizmann.ac.il,Baseline,experiment,TCP estimation for slide 24: 20 with timerActive = 0
+Sat Mar 23 15:29:42 2024,ori.brenner@weizmann.ac.il,Baseline,confidence,confidence for slide 24: 3 with timerActive = 0
+Sat Mar 23 15:29:56 2024,ori.brenner@weizmann.ac.il,Baseline,experiment,TCP estimation for slide 23: 70 with timerActive = 0
+Sat Mar 23 15:30:00 2024,ori.brenner@weizmann.ac.il,Baseline,confidence,confidence for slide 23: 3 with timerActive = 0
+Sat Mar 23 18:35:08 2024,ori.brenner@weizmann.ac.il,Baseline,experiment,TCP estimation for slide 18: 100 with timerActive = 1
+Sat Mar 23 18:35:12 2024,ori.brenner@weizmann.ac.il,Baseline,confidence,confidence for slide 18: 3 with timerActive = 1
+Sat Mar 23 18:35:20 2024,ori.brenner@weizmann.ac.il,Baseline,experiment,TCP estimation for slide 19: 80 with timerActive = 1
+Sat Mar 23 18:35:23 2024,ori.brenner@weizmann.ac.il,Baseline,confidence,confidence for slide 19: 3 with timerActive = 1
+Sat Mar 23 18:35:30 2024,ori.brenner@weizmann.ac.il,Baseline,experiment,TCP estimation for slide 17: 60 with timerActive = 1
+Sat Mar 23 18:35:33 2024,ori.brenner@weizmann.ac.il,Baseline,confidence,confidence for slide 17: 3 with timerActive = 1
+Sat Mar 23 18:35:40 2024,ori.brenner@weizmann.ac.il,Baseline,experiment,TCP estimation for slide 10: 40 with timerActive = 1
+Sat Mar 23 18:35:44 2024,ori.brenner@weizmann.ac.il,Baseline,confidence,confidence for slide 10: 3 with timerActive = 1
+Sat Mar 23 18:35:51 2024,ori.brenner@weizmann.ac.il,Baseline,experiment,TCP estimation for slide 16: 20 with timerActive = 1
+Sat Mar 23 18:35:55 2024,ori.brenner@weizmann.ac.il,Baseline,confidence,confidence for slide 16: 3 with timerActive = 1
+Sat Mar 23 18:36:04 2024,ori.brenner@weizmann.ac.il,Baseline,experiment,TCP estimation for slide 11: 50 with timerActive = 1
+Sat Mar 23 18:36:09 2024,ori.brenner@weizmann.ac.il,Baseline,confidence,confidence for slide 11: 3 with timerActive = 1
+Sat Mar 23 18:36:16 2024,ori.brenner@weizmann.ac.il,Baseline,experiment,TCP estimation for slide 15: 60 with timerActive = 1
+Sat Mar 23 18:36:19 2024,ori.brenner@weizmann.ac.il,Baseline,confidence,confidence for slide 15: 3 with timerActive = 1
+Sat Mar 23 18:36:26 2024,ori.brenner@weizmann.ac.il,Baseline,experiment,TCP estimation for slide 12: 60 with timerActive = 1
+Sat Mar 23 18:36:29 2024,ori.brenner@weizmann.ac.il,Baseline,confidence,confidence for slide 12: 3 with timerActive = 1
+Sat Mar 23 18:36:35 2024,ori.brenner@weizmann.ac.il,Baseline,experiment,TCP estimation for slide 14: 25 with timerActive = 1
+Sat Mar 23 18:36:39 2024,ori.brenner@weizmann.ac.il,Baseline,confidence,confidence for slide 14: 3 with timerActive = 1
+Sat Mar 23 18:36:45 2024,ori.brenner@weizmann.ac.il,Baseline,experiment,TCP estimation for slide 13: 85 with timerActive = 1
+Sat Mar 23 18:36:48 2024,ori.brenner@weizmann.ac.il,Baseline,confidence,confidence for slide 13: 3 with timerActive = 1
+Sat Mar 23 18:38:04 2024,ori.brenner@weizmann.ac.il,Baseline,UEQS,"item1: 4, item2: 4, item3: 4, item4: 4, item5: 3, item6: 4, item7: 4, item8: 4"
+Sun Mar 24 14:55:05 2024,tanitkasantikul@gmail.com,Baseline,register,status:open
+Sun Mar 24 17:56:25 2024,tanitkasantikul@gmail.com,Baseline,training,TCP estimation for slide 0: 75
+Sun Mar 24 17:56:38 2024,tanitkasantikul@gmail.com,Baseline,training,TCP estimation for slide 1: 50
+Sun Mar 24 17:56:49 2024,tanitkasantikul@gmail.com,Baseline,training,TCP estimation for slide 2: 100
+Sun Mar 24 17:58:41 2024,tanitkasantikul@gmail.com,Baseline,demographic data,"gender: Male, age: 35-44, experience: 10-15 years, interest in technology: 4, adoption of new technologies: 3, familiarity with AI: 3"
+Sun Mar 24 18:25:17 2024,tanitkasantikul@gmail.com,Baseline,experiment,TCP estimation for slide 19: 100 with timerActive = 1
+Sun Mar 24 18:25:22 2024,tanitkasantikul@gmail.com,Baseline,confidence,confidence for slide 19: 4 with timerActive = 1
+Sun Mar 24 18:25:32 2024,tanitkasantikul@gmail.com,Baseline,experiment,TCP estimation for slide 10: 75 with timerActive = 1
+Sun Mar 24 18:25:35 2024,tanitkasantikul@gmail.com,Baseline,confidence,confidence for slide 10: 4 with timerActive = 1
+Sun Mar 24 18:25:42 2024,tanitkasantikul@gmail.com,Baseline,experiment,TCP estimation for slide 18: 100 with timerActive = 1
+Sun Mar 24 18:25:45 2024,tanitkasantikul@gmail.com,Baseline,confidence,confidence for slide 18: 5 with timerActive = 1
+Sun Mar 24 18:25:51 2024,tanitkasantikul@gmail.com,Baseline,experiment,TCP estimation for slide 11: 100 with timerActive = 1
+Sun Mar 24 18:25:56 2024,tanitkasantikul@gmail.com,Baseline,confidence,confidence for slide 11: 5 with timerActive = 1
+Sun Mar 24 18:26:04 2024,tanitkasantikul@gmail.com,Baseline,experiment,TCP estimation for slide 17: 100 with timerActive = 1
+Sun Mar 24 18:26:08 2024,tanitkasantikul@gmail.com,Baseline,confidence,confidence for slide 17: 4 with timerActive = 1
+Sun Mar 24 18:26:15 2024,tanitkasantikul@gmail.com,Baseline,experiment,TCP estimation for slide 12: 100 with timerActive = 1
+Sun Mar 24 18:26:19 2024,tanitkasantikul@gmail.com,Baseline,confidence,confidence for slide 12: 5 with timerActive = 1
+Sun Mar 24 18:26:24 2024,tanitkasantikul@gmail.com,Baseline,experiment,TCP estimation for slide 16: 50 with timerActive = 1
+Sun Mar 24 18:26:28 2024,tanitkasantikul@gmail.com,Baseline,confidence,confidence for slide 16: 4 with timerActive = 1
+Sun Mar 24 18:26:34 2024,tanitkasantikul@gmail.com,Baseline,experiment,TCP estimation for slide 13: 100 with timerActive = 1
+Sun Mar 24 18:26:37 2024,tanitkasantikul@gmail.com,Baseline,confidence,confidence for slide 13: 5 with timerActive = 1
+Sun Mar 24 18:26:44 2024,tanitkasantikul@gmail.com,Baseline,experiment,TCP estimation for slide 15: 75 with timerActive = 1
+Sun Mar 24 18:26:48 2024,tanitkasantikul@gmail.com,Baseline,confidence,confidence for slide 15: 4 with timerActive = 1
+Sun Mar 24 18:26:57 2024,tanitkasantikul@gmail.com,Baseline,experiment,TCP estimation for slide 14: 40 with timerActive = 1
+Sun Mar 24 18:27:00 2024,tanitkasantikul@gmail.com,Baseline,confidence,confidence for slide 14: 4 with timerActive = 1
+Sun Mar 24 18:27:09 2024,tanitkasantikul@gmail.com,Baseline,experiment,TCP estimation for slide 29: 75 with timerActive = 0
+Sun Mar 24 18:27:14 2024,tanitkasantikul@gmail.com,Baseline,confidence,confidence for slide 29: 4 with timerActive = 0
+Sun Mar 24 18:27:21 2024,tanitkasantikul@gmail.com,Baseline,experiment,TCP estimation for slide 20: 100 with timerActive = 0
+Sun Mar 24 18:27:27 2024,tanitkasantikul@gmail.com,Baseline,confidence,confidence for slide 20: 4 with timerActive = 0
+Sun Mar 24 18:27:34 2024,tanitkasantikul@gmail.com,Baseline,experiment,TCP estimation for slide 28: 100 with timerActive = 0
+Sun Mar 24 18:27:38 2024,tanitkasantikul@gmail.com,Baseline,confidence,confidence for slide 28: 4 with timerActive = 0
+Sun Mar 24 18:27:55 2024,tanitkasantikul@gmail.com,Baseline,experiment,TCP estimation for slide 21: 80 with timerActive = 0
+Sun Mar 24 18:27:57 2024,tanitkasantikul@gmail.com,Baseline,confidence,confidence for slide 21: 5 with timerActive = 0
+Sun Mar 24 18:28:18 2024,tanitkasantikul@gmail.com,Baseline,experiment,TCP estimation for slide 27: 35 with timerActive = 0
+Sun Mar 24 18:28:21 2024,tanitkasantikul@gmail.com,Baseline,confidence,confidence for slide 27: 4 with timerActive = 0
+Sun Mar 24 18:28:43 2024,tanitkasantikul@gmail.com,Baseline,experiment,TCP estimation for slide 22: 75 with timerActive = 0
+Sun Mar 24 18:28:47 2024,tanitkasantikul@gmail.com,Baseline,confidence,confidence for slide 22: 4 with timerActive = 0
+Sun Mar 24 18:28:59 2024,tanitkasantikul@gmail.com,Baseline,experiment,TCP estimation for slide 26: 75 with timerActive = 0
+Sun Mar 24 18:29:02 2024,tanitkasantikul@gmail.com,Baseline,confidence,confidence for slide 26: 5 with timerActive = 0
+Sun Mar 24 18:29:16 2024,tanitkasantikul@gmail.com,Baseline,experiment,TCP estimation for slide 23: 80 with timerActive = 0
+Sun Mar 24 18:29:19 2024,tanitkasantikul@gmail.com,Baseline,confidence,confidence for slide 23: 5 with timerActive = 0
+Sun Mar 24 18:29:43 2024,tanitkasantikul@gmail.com,Baseline,experiment,TCP estimation for slide 25: 35 with timerActive = 0
+Sun Mar 24 18:29:51 2024,tanitkasantikul@gmail.com,Baseline,confidence,confidence for slide 25: 5 with timerActive = 0
+Sun Mar 24 18:30:14 2024,tanitkasantikul@gmail.com,Baseline,experiment,TCP estimation for slide 24: 0 with timerActive = 0
+Sun Mar 24 18:30:17 2024,tanitkasantikul@gmail.com,Baseline,confidence,confidence for slide 24: 4 with timerActive = 0
+Sun Mar 24 18:34:51 2024,tanitkasantikul@gmail.com,Baseline,UEQS,"item1: 4, item2: 3, item3: 4, item4: 3, item5: 4, item6: 5, item7: 5, item8: 5"
