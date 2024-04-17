@@ -2438,3 +2438,185 @@ Sat Apr 13 12:56:56 2024,mccowan@unimelb.edu.au,Baseline,experiment,TCP estimati
 Sat Apr 13 12:57:00 2024,mccowan@unimelb.edu.au,Baseline,confidence,confidence for slide 16: 3 with timerActive = 1
 Sat Apr 13 12:57:11 2024,mccowan@unimelb.edu.au,Baseline,experiment,TCP estimation for slide 15: 40 with timerActive = 1
 Sat Apr 13 12:57:16 2024,mccowan@unimelb.edu.au,Baseline,confidence,confidence for slide 15: 3 with timerActive = 1
+Sun Apr 14 10:49:54 2024,R.R.deKrijger-2@prinsesmaximacentrum.nl,XAI,register,status:completed
+Sun Apr 14 10:51:38 2024,R.R.deKrijger-2@prinsesmaximacentrum.nl,XAI,training,TCP estimation for slide 0: 50
+Sun Apr 14 10:51:51 2024,R.R.deKrijger-2@prinsesmaximacentrum.nl,XAI,training,TCP estimation for slide 1: 40
+Sun Apr 14 10:52:01 2024,R.R.deKrijger-2@prinsesmaximacentrum.nl,XAI,training,TCP estimation for slide 2: 80
+Sun Apr 14 10:52:36 2024,R.R.deKrijger-2@prinsesmaximacentrum.nl,XAI,experiment,TCP estimation for slide 18: 80 with timerActive = 1
+Sun Apr 14 10:52:40 2024,R.R.deKrijger-2@prinsesmaximacentrum.nl,XAI,confidence,confidence for slide 18: 4 with timerActive = 1
+Sun Apr 14 10:52:48 2024,R.R.deKrijger-2@prinsesmaximacentrum.nl,XAI,experiment,TCP estimation for slide 19: 90 with timerActive = 1
+Sun Apr 14 10:52:51 2024,R.R.deKrijger-2@prinsesmaximacentrum.nl,XAI,confidence,confidence for slide 19: 4 with timerActive = 1
+Sun Apr 14 10:53:00 2024,R.R.deKrijger-2@prinsesmaximacentrum.nl,XAI,experiment,TCP estimation for slide 17: 80 with timerActive = 1
+Sun Apr 14 10:53:03 2024,R.R.deKrijger-2@prinsesmaximacentrum.nl,XAI,confidence,confidence for slide 17: 4 with timerActive = 1
+Sun Apr 14 10:53:10 2024,R.R.deKrijger-2@prinsesmaximacentrum.nl,XAI,experiment,TCP estimation for slide 10: 20 with timerActive = 1
+Sun Apr 14 10:53:14 2024,R.R.deKrijger-2@prinsesmaximacentrum.nl,XAI,confidence,confidence for slide 10: 4 with timerActive = 1
+Sun Apr 14 10:53:22 2024,R.R.deKrijger-2@prinsesmaximacentrum.nl,XAI,experiment,TCP estimation for slide 16: 20 with timerActive = 1
+Sun Apr 14 10:53:25 2024,R.R.deKrijger-2@prinsesmaximacentrum.nl,XAI,confidence,confidence for slide 16: 4 with timerActive = 1
+Sun Apr 14 10:53:33 2024,R.R.deKrijger-2@prinsesmaximacentrum.nl,XAI,experiment,TCP estimation for slide 11: 50 with timerActive = 1
+Sun Apr 14 10:53:36 2024,R.R.deKrijger-2@prinsesmaximacentrum.nl,XAI,confidence,confidence for slide 11: 4 with timerActive = 1
+Sun Apr 14 10:53:43 2024,R.R.deKrijger-2@prinsesmaximacentrum.nl,XAI,experiment,TCP estimation for slide 15: 60 with timerActive = 1
+Sun Apr 14 10:53:46 2024,R.R.deKrijger-2@prinsesmaximacentrum.nl,XAI,confidence,confidence for slide 15: 4 with timerActive = 1
+Sun Apr 14 10:53:54 2024,R.R.deKrijger-2@prinsesmaximacentrum.nl,XAI,experiment,TCP estimation for slide 12: 40 with timerActive = 1
+Sun Apr 14 10:53:57 2024,R.R.deKrijger-2@prinsesmaximacentrum.nl,XAI,confidence,confidence for slide 12: 4 with timerActive = 1
+Sun Apr 14 10:54:07 2024,R.R.deKrijger-2@prinsesmaximacentrum.nl,XAI,experiment,TCP estimation for slide 14: 30 with timerActive = 1
+Sun Apr 14 10:54:10 2024,R.R.deKrijger-2@prinsesmaximacentrum.nl,XAI,confidence,confidence for slide 14: 3 with timerActive = 1
+Sun Apr 14 10:54:19 2024,R.R.deKrijger-2@prinsesmaximacentrum.nl,XAI,experiment,TCP estimation for slide 13: 70 with timerActive = 1
+Sun Apr 14 10:54:22 2024,R.R.deKrijger-2@prinsesmaximacentrum.nl,XAI,confidence,confidence for slide 13: 4 with timerActive = 1
+Sun Apr 14 10:54:32 2024,R.R.deKrijger-2@prinsesmaximacentrum.nl,XAI,experiment,TCP estimation for slide 28: 90 with timerActive = 0
+Sun Apr 14 10:54:35 2024,R.R.deKrijger-2@prinsesmaximacentrum.nl,XAI,confidence,confidence for slide 28: 4 with timerActive = 0
+Sun Apr 14 10:54:43 2024,R.R.deKrijger-2@prinsesmaximacentrum.nl,XAI,experiment,TCP estimation for slide 29: 80 with timerActive = 0
+Sun Apr 14 10:54:46 2024,R.R.deKrijger-2@prinsesmaximacentrum.nl,XAI,confidence,confidence for slide 29: 4 with timerActive = 0
+Sun Apr 14 10:54:55 2024,R.R.deKrijger-2@prinsesmaximacentrum.nl,XAI,experiment,TCP estimation for slide 27: 30 with timerActive = 0
+Sun Apr 14 10:54:57 2024,R.R.deKrijger-2@prinsesmaximacentrum.nl,XAI,confidence,confidence for slide 27: 4 with timerActive = 0
+Sun Apr 14 10:55:08 2024,R.R.deKrijger-2@prinsesmaximacentrum.nl,XAI,experiment,TCP estimation for slide 20: 40 with timerActive = 0
+Sun Apr 14 10:55:11 2024,R.R.deKrijger-2@prinsesmaximacentrum.nl,XAI,confidence,confidence for slide 20: 4 with timerActive = 0
+Sun Apr 14 10:55:20 2024,R.R.deKrijger-2@prinsesmaximacentrum.nl,XAI,experiment,TCP estimation for slide 26: 50 with timerActive = 0
+Sun Apr 14 10:55:23 2024,R.R.deKrijger-2@prinsesmaximacentrum.nl,XAI,confidence,confidence for slide 26: 4 with timerActive = 0
+Sun Apr 14 10:55:35 2024,R.R.deKrijger-2@prinsesmaximacentrum.nl,XAI,experiment,TCP estimation for slide 21: 40 with timerActive = 0
+Sun Apr 14 10:55:38 2024,R.R.deKrijger-2@prinsesmaximacentrum.nl,XAI,confidence,confidence for slide 21: 4 with timerActive = 0
+Sun Apr 14 10:55:45 2024,R.R.deKrijger-2@prinsesmaximacentrum.nl,XAI,experiment,TCP estimation for slide 25: 15 with timerActive = 0
+Sun Apr 14 10:55:47 2024,R.R.deKrijger-2@prinsesmaximacentrum.nl,XAI,confidence,confidence for slide 25: 4 with timerActive = 0
+Sun Apr 14 10:55:58 2024,R.R.deKrijger-2@prinsesmaximacentrum.nl,XAI,experiment,TCP estimation for slide 22: 40 with timerActive = 0
+Sun Apr 14 10:56:01 2024,R.R.deKrijger-2@prinsesmaximacentrum.nl,XAI,confidence,confidence for slide 22: 4 with timerActive = 0
+Sun Apr 14 10:56:20 2024,R.R.deKrijger-2@prinsesmaximacentrum.nl,XAI,experiment,TCP estimation for slide 24: 15 with timerActive = 0
+Sun Apr 14 10:56:22 2024,R.R.deKrijger-2@prinsesmaximacentrum.nl,XAI,confidence,confidence for slide 24: 3 with timerActive = 0
+Sun Apr 14 10:56:32 2024,R.R.deKrijger-2@prinsesmaximacentrum.nl,XAI,experiment,TCP estimation for slide 23: 60 with timerActive = 0
+Sun Apr 14 10:56:34 2024,R.R.deKrijger-2@prinsesmaximacentrum.nl,XAI,confidence,confidence for slide 23: 4 with timerActive = 0
+Sun Apr 14 10:58:09 2024,R.R.deKrijger-2@prinsesmaximacentrum.nl,XAI,UEQS,"item1: 6, item2: 6, item3: 6, item4: 6, item5: 4, item6: 5, item7: 5, item8: 4"
+Sun Apr 14 16:57:01 2024,tanitkasantikul@gmail.com,XAI,register,status:completed
+Sun Apr 14 17:00:23 2024,tanitkasantikul@gmail.com,XAI,training,TCP estimation for slide 0: 60
+Sun Apr 14 17:00:40 2024,tanitkasantikul@gmail.com,XAI,training,TCP estimation for slide 1: 50
+Sun Apr 14 17:00:52 2024,tanitkasantikul@gmail.com,XAI,training,TCP estimation for slide 2: 100
+Sun Apr 14 17:01:10 2024,tanitkasantikul@gmail.com,XAI,experiment,TCP estimation for slide 19: 100 with timerActive = 1
+Sun Apr 14 17:01:14 2024,tanitkasantikul@gmail.com,XAI,confidence,confidence for slide 19: 4 with timerActive = 1
+Sun Apr 14 17:01:22 2024,tanitkasantikul@gmail.com,XAI,experiment,TCP estimation for slide 10: 10 with timerActive = 1
+Sun Apr 14 17:01:29 2024,tanitkasantikul@gmail.com,XAI,confidence,confidence for slide 10: 2 with timerActive = 1
+Sun Apr 14 17:01:35 2024,tanitkasantikul@gmail.com,XAI,experiment,TCP estimation for slide 18: 100 with timerActive = 1
+Sun Apr 14 17:01:38 2024,tanitkasantikul@gmail.com,XAI,confidence,confidence for slide 18: 5 with timerActive = 1
+Sun Apr 14 17:01:47 2024,tanitkasantikul@gmail.com,XAI,experiment,TCP estimation for slide 11: 70 with timerActive = 1
+Sun Apr 14 17:01:53 2024,tanitkasantikul@gmail.com,XAI,confidence,confidence for slide 11: 3 with timerActive = 1
+Sun Apr 14 17:02:00 2024,tanitkasantikul@gmail.com,XAI,experiment,TCP estimation for slide 17: 70 with timerActive = 1
+Sun Apr 14 17:02:04 2024,tanitkasantikul@gmail.com,XAI,confidence,confidence for slide 17: 3 with timerActive = 1
+Sun Apr 14 17:02:12 2024,tanitkasantikul@gmail.com,XAI,experiment,TCP estimation for slide 12: 75 with timerActive = 1
+Sun Apr 14 17:02:17 2024,tanitkasantikul@gmail.com,XAI,confidence,confidence for slide 12: 3 with timerActive = 1
+Sun Apr 14 17:02:25 2024,tanitkasantikul@gmail.com,XAI,experiment,TCP estimation for slide 16: 25 with timerActive = 1
+Sun Apr 14 17:02:28 2024,tanitkasantikul@gmail.com,XAI,confidence,confidence for slide 16: 4 with timerActive = 1
+Sun Apr 14 17:02:36 2024,tanitkasantikul@gmail.com,XAI,experiment,TCP estimation for slide 13: 80 with timerActive = 1
+Sun Apr 14 17:02:40 2024,tanitkasantikul@gmail.com,XAI,confidence,confidence for slide 13: 4 with timerActive = 1
+Sun Apr 14 17:02:48 2024,tanitkasantikul@gmail.com,XAI,experiment,TCP estimation for slide 15: 50 with timerActive = 1
+Sun Apr 14 17:02:51 2024,tanitkasantikul@gmail.com,XAI,confidence,confidence for slide 15: 3 with timerActive = 1
+Sun Apr 14 17:03:00 2024,tanitkasantikul@gmail.com,XAI,experiment,TCP estimation for slide 14: 25 with timerActive = 1
+Sun Apr 14 17:03:03 2024,tanitkasantikul@gmail.com,XAI,confidence,confidence for slide 14: 3 with timerActive = 1
+Sun Apr 14 17:03:11 2024,tanitkasantikul@gmail.com,XAI,experiment,TCP estimation for slide 29: 100 with timerActive = 0
+Sun Apr 14 17:03:14 2024,tanitkasantikul@gmail.com,XAI,confidence,confidence for slide 29: 4 with timerActive = 0
+Sun Apr 14 17:03:24 2024,tanitkasantikul@gmail.com,XAI,experiment,TCP estimation for slide 20: 40 with timerActive = 0
+Sun Apr 14 17:03:28 2024,tanitkasantikul@gmail.com,XAI,confidence,confidence for slide 20: 3 with timerActive = 0
+Sun Apr 14 17:03:37 2024,tanitkasantikul@gmail.com,XAI,experiment,TCP estimation for slide 28: 95 with timerActive = 0
+Sun Apr 14 17:03:41 2024,tanitkasantikul@gmail.com,XAI,confidence,confidence for slide 28: 3 with timerActive = 0
+Sun Apr 14 17:03:54 2024,tanitkasantikul@gmail.com,XAI,experiment,TCP estimation for slide 21: 40 with timerActive = 0
+Sun Apr 14 17:03:57 2024,tanitkasantikul@gmail.com,XAI,confidence,confidence for slide 21: 3 with timerActive = 0
+Sun Apr 14 17:04:06 2024,tanitkasantikul@gmail.com,XAI,experiment,TCP estimation for slide 27: 25 with timerActive = 0
+Sun Apr 14 17:04:09 2024,tanitkasantikul@gmail.com,XAI,confidence,confidence for slide 27: 4 with timerActive = 0
+Sun Apr 14 17:04:23 2024,tanitkasantikul@gmail.com,XAI,experiment,TCP estimation for slide 22: 75 with timerActive = 0
+Sun Apr 14 17:04:29 2024,tanitkasantikul@gmail.com,XAI,confidence,confidence for slide 22: 3 with timerActive = 0
+Sun Apr 14 17:04:37 2024,tanitkasantikul@gmail.com,XAI,experiment,TCP estimation for slide 26: 70 with timerActive = 0
+Sun Apr 14 17:04:40 2024,tanitkasantikul@gmail.com,XAI,confidence,confidence for slide 26: 4 with timerActive = 0
+Sun Apr 14 17:04:58 2024,tanitkasantikul@gmail.com,XAI,experiment,TCP estimation for slide 23: 80 with timerActive = 0
+Sun Apr 14 17:05:01 2024,tanitkasantikul@gmail.com,XAI,confidence,confidence for slide 23: 4 with timerActive = 0
+Sun Apr 14 17:05:08 2024,tanitkasantikul@gmail.com,XAI,experiment,TCP estimation for slide 25: 10 with timerActive = 0
+Sun Apr 14 17:05:11 2024,tanitkasantikul@gmail.com,XAI,confidence,confidence for slide 25: 4 with timerActive = 0
+Sun Apr 14 17:05:26 2024,tanitkasantikul@gmail.com,XAI,experiment,TCP estimation for slide 24: 20 with timerActive = 0
+Sun Apr 14 17:05:29 2024,tanitkasantikul@gmail.com,XAI,confidence,confidence for slide 24: 4 with timerActive = 0
+Sun Apr 14 17:08:30 2024,tanitkasantikul@gmail.com,XAI,UEQS,"item1: 4, item2: 3, item3: 4, item4: 3, item5: 5, item6: 5, item7: 5, item8: 5"
+Mon Apr 15 06:09:03 2024,imatise.vh@gmail.com,Baseline,register,status:open
+Mon Apr 15 06:11:29 2024,imatise.vh@gmail.com,Baseline,training,TCP estimation for slide 0: 40
+Mon Apr 15 06:13:14 2024,imatise.vh@gmail.com,Baseline,training,TCP estimation for slide 1: 70
+Mon Apr 15 06:13:42 2024,imatise.vh@gmail.com,Baseline,training,TCP estimation for slide 2: 90
+Mon Apr 15 06:16:49 2024,imatise.vh@gmail.com,Baseline,demographic data,"gender: Female, age: 45-54, experience: >15 years, interest in technology: 4, adoption of new technologies: 2, familiarity with AI: 3"
+Mon Apr 15 06:18:23 2024,imatise.vh@gmail.com,Baseline,experiment,TCP estimation for slide 11: 50 with timerActive = 1
+Mon Apr 15 06:18:33 2024,imatise.vh@gmail.com,Baseline,confidence,confidence for slide 11: 2 with timerActive = 1
+Mon Apr 15 06:18:54 2024,imatise.vh@gmail.com,Baseline,experiment,TCP estimation for slide 12: 70 with timerActive = 1
+Mon Apr 15 06:19:02 2024,imatise.vh@gmail.com,Baseline,confidence,confidence for slide 12: 2 with timerActive = 1
+Mon Apr 15 06:19:17 2024,imatise.vh@gmail.com,Baseline,experiment,TCP estimation for slide 10: 20 with timerActive = 1
+Mon Apr 15 06:19:19 2024,imatise.vh@gmail.com,Baseline,confidence,confidence for slide 10: 3 with timerActive = 1
+Mon Apr 15 06:19:37 2024,imatise.vh@gmail.com,Baseline,experiment,TCP estimation for slide 13: 90 with timerActive = 1
+Mon Apr 15 06:19:41 2024,imatise.vh@gmail.com,Baseline,confidence,confidence for slide 13: 3 with timerActive = 1
+Mon Apr 15 06:20:10 2024,imatise.vh@gmail.com,Baseline,experiment,TCP estimation for slide 19: 98 with timerActive = 1
+Mon Apr 15 06:20:13 2024,imatise.vh@gmail.com,Baseline,confidence,confidence for slide 19: 4 with timerActive = 1
+Mon Apr 15 06:20:30 2024,imatise.vh@gmail.com,Baseline,experiment,TCP estimation for slide 14: 20 with timerActive = 1
+Mon Apr 15 06:20:34 2024,imatise.vh@gmail.com,Baseline,confidence,confidence for slide 14: 3 with timerActive = 1
+Mon Apr 15 06:20:55 2024,imatise.vh@gmail.com,Baseline,experiment,TCP estimation for slide 18: 80 with timerActive = 1
+Mon Apr 15 06:21:00 2024,imatise.vh@gmail.com,Baseline,confidence,confidence for slide 18: 2 with timerActive = 1
+Mon Apr 15 06:21:24 2024,imatise.vh@gmail.com,Baseline,experiment,TCP estimation for slide 15: 90 with timerActive = 1
+Mon Apr 15 06:21:27 2024,imatise.vh@gmail.com,Baseline,confidence,confidence for slide 15: 2 with timerActive = 1
+Mon Apr 15 06:22:01 2024,imatise.vh@gmail.com,Baseline,experiment,TCP estimation for slide 17: 85 with timerActive = 1
+Mon Apr 15 06:22:04 2024,imatise.vh@gmail.com,Baseline,confidence,confidence for slide 17: 2 with timerActive = 1
+Mon Apr 15 06:22:27 2024,imatise.vh@gmail.com,Baseline,experiment,TCP estimation for slide 16: 30 with timerActive = 1
+Mon Apr 15 06:22:33 2024,imatise.vh@gmail.com,Baseline,confidence,confidence for slide 16: 2 with timerActive = 1
+Mon Apr 15 06:23:37 2024,imatise.vh@gmail.com,Baseline,experiment,TCP estimation for slide 21: 80 with timerActive = 0
+Mon Apr 15 06:23:41 2024,imatise.vh@gmail.com,Baseline,confidence,confidence for slide 21: 3 with timerActive = 0
+Mon Apr 15 06:24:49 2024,imatise.vh@gmail.com,Baseline,experiment,TCP estimation for slide 22: 60 with timerActive = 0
+Mon Apr 15 06:24:53 2024,imatise.vh@gmail.com,Baseline,confidence,confidence for slide 22: 3 with timerActive = 0
+Mon Apr 15 06:25:15 2024,imatise.vh@gmail.com,Baseline,experiment,TCP estimation for slide 20: 50 with timerActive = 0
+Mon Apr 15 06:25:18 2024,imatise.vh@gmail.com,Baseline,confidence,confidence for slide 20: 3 with timerActive = 0
+Mon Apr 15 06:25:43 2024,imatise.vh@gmail.com,Baseline,experiment,TCP estimation for slide 23: 85 with timerActive = 0
+Mon Apr 15 06:25:46 2024,imatise.vh@gmail.com,Baseline,confidence,confidence for slide 23: 3 with timerActive = 0
+Mon Apr 15 06:26:16 2024,imatise.vh@gmail.com,Baseline,experiment,TCP estimation for slide 29: 95 with timerActive = 0
+Mon Apr 15 06:26:18 2024,imatise.vh@gmail.com,Baseline,confidence,confidence for slide 29: 4 with timerActive = 0
+Mon Apr 15 06:26:34 2024,imatise.vh@gmail.com,Baseline,experiment,TCP estimation for slide 24: 20 with timerActive = 0
+Mon Apr 15 06:26:38 2024,imatise.vh@gmail.com,Baseline,confidence,confidence for slide 24: 3 with timerActive = 0
+Mon Apr 15 06:27:00 2024,imatise.vh@gmail.com,Baseline,experiment,TCP estimation for slide 28: 95 with timerActive = 0
+Mon Apr 15 06:27:03 2024,imatise.vh@gmail.com,Baseline,confidence,confidence for slide 28: 4 with timerActive = 0
+Mon Apr 15 06:27:25 2024,imatise.vh@gmail.com,Baseline,experiment,TCP estimation for slide 25: 5 with timerActive = 0
+Mon Apr 15 06:27:28 2024,imatise.vh@gmail.com,Baseline,confidence,confidence for slide 25: 4 with timerActive = 0
+Mon Apr 15 06:27:55 2024,imatise.vh@gmail.com,Baseline,experiment,TCP estimation for slide 27: 50 with timerActive = 0
+Mon Apr 15 06:27:59 2024,imatise.vh@gmail.com,Baseline,confidence,confidence for slide 27: 3 with timerActive = 0
+Mon Apr 15 06:28:24 2024,imatise.vh@gmail.com,Baseline,experiment,TCP estimation for slide 26: 40 with timerActive = 0
+Mon Apr 15 06:28:27 2024,imatise.vh@gmail.com,Baseline,confidence,confidence for slide 26: 2 with timerActive = 0
+Mon Apr 15 06:29:55 2024,imatise.vh@gmail.com,Baseline,UEQS,"item1: 4, item2: 4, item3: 3, item4: 3, item5: 5, item6: 6, item7: 6, item8: 5"
+Tue Apr 16 21:35:49 2024,jmagnussonwulcan@ucdavis.edu,XAI,register,status:completed
+Tue Apr 16 21:36:34 2024,jmagnussonwulcan@ucdavis.edu,XAI,training,TCP estimation for slide 0: 50
+Tue Apr 16 21:36:46 2024,jmagnussonwulcan@ucdavis.edu,XAI,training,TCP estimation for slide 1: 35
+Tue Apr 16 21:37:06 2024,jmagnussonwulcan@ucdavis.edu,XAI,training,TCP estimation for slide 2: 90
+Tue Apr 16 21:37:27 2024,jmagnussonwulcan@ucdavis.edu,XAI,experiment,TCP estimation for slide 19: 90 with timerActive = 0
+Tue Apr 16 21:37:35 2024,jmagnussonwulcan@ucdavis.edu,XAI,confidence,confidence for slide 19: 4 with timerActive = 0
+Tue Apr 16 21:37:47 2024,jmagnussonwulcan@ucdavis.edu,XAI,experiment,TCP estimation for slide 10: 20 with timerActive = 0
+Tue Apr 16 21:37:51 2024,jmagnussonwulcan@ucdavis.edu,XAI,confidence,confidence for slide 10: 4 with timerActive = 0
+Tue Apr 16 21:38:07 2024,jmagnussonwulcan@ucdavis.edu,XAI,experiment,TCP estimation for slide 18: 70 with timerActive = 0
+Tue Apr 16 21:38:12 2024,jmagnussonwulcan@ucdavis.edu,XAI,confidence,confidence for slide 18: 2 with timerActive = 0
+Tue Apr 16 21:38:29 2024,jmagnussonwulcan@ucdavis.edu,XAI,experiment,TCP estimation for slide 11: 50 with timerActive = 0
+Tue Apr 16 21:38:32 2024,jmagnussonwulcan@ucdavis.edu,XAI,confidence,confidence for slide 11: 3 with timerActive = 0
+Tue Apr 16 21:38:56 2024,jmagnussonwulcan@ucdavis.edu,XAI,experiment,TCP estimation for slide 17: 90 with timerActive = 0
+Tue Apr 16 21:38:58 2024,jmagnussonwulcan@ucdavis.edu,XAI,confidence,confidence for slide 17: 3 with timerActive = 0
+Tue Apr 16 21:39:18 2024,jmagnussonwulcan@ucdavis.edu,XAI,experiment,TCP estimation for slide 12: 35 with timerActive = 0
+Tue Apr 16 21:39:21 2024,jmagnussonwulcan@ucdavis.edu,XAI,confidence,confidence for slide 12: 3 with timerActive = 0
+Tue Apr 16 21:39:31 2024,jmagnussonwulcan@ucdavis.edu,XAI,experiment,TCP estimation for slide 16: 30 with timerActive = 0
+Tue Apr 16 21:39:35 2024,jmagnussonwulcan@ucdavis.edu,XAI,confidence,confidence for slide 16: 3 with timerActive = 0
+Tue Apr 16 21:39:56 2024,jmagnussonwulcan@ucdavis.edu,XAI,experiment,TCP estimation for slide 13: 90 with timerActive = 0
+Tue Apr 16 21:39:59 2024,jmagnussonwulcan@ucdavis.edu,XAI,confidence,confidence for slide 13: 3 with timerActive = 0
+Tue Apr 16 21:40:10 2024,jmagnussonwulcan@ucdavis.edu,XAI,experiment,TCP estimation for slide 15: 70 with timerActive = 0
+Tue Apr 16 21:40:10 2024,jmagnussonwulcan@ucdavis.edu,XAI,experiment,TCP estimation for slide 15: 70 with timerActive = 0
+Tue Apr 16 21:40:13 2024,jmagnussonwulcan@ucdavis.edu,XAI,confidence,confidence for slide 15: 3 with timerActive = 0
+Tue Apr 16 21:40:41 2024,jmagnussonwulcan@ucdavis.edu,XAI,experiment,TCP estimation for slide 14: 25 with timerActive = 0
+Tue Apr 16 21:40:44 2024,jmagnussonwulcan@ucdavis.edu,XAI,confidence,confidence for slide 14: 4 with timerActive = 0
+Tue Apr 16 21:41:07 2024,jmagnussonwulcan@ucdavis.edu,XAI,experiment,TCP estimation for slide 29: 90 with timerActive = 1
+Tue Apr 16 21:41:10 2024,jmagnussonwulcan@ucdavis.edu,XAI,confidence,confidence for slide 29: 3 with timerActive = 1
+Tue Apr 16 21:41:20 2024,jmagnussonwulcan@ucdavis.edu,XAI,experiment,TCP estimation for slide 20: 25 with timerActive = 1
+Tue Apr 16 21:41:24 2024,jmagnussonwulcan@ucdavis.edu,XAI,confidence,confidence for slide 20: 3 with timerActive = 1
+Tue Apr 16 21:41:33 2024,jmagnussonwulcan@ucdavis.edu,XAI,experiment,TCP estimation for slide 28: 90 with timerActive = 1
+Tue Apr 16 21:41:37 2024,jmagnussonwulcan@ucdavis.edu,XAI,confidence,confidence for slide 28: 3 with timerActive = 1
+Tue Apr 16 21:41:48 2024,jmagnussonwulcan@ucdavis.edu,XAI,experiment,TCP estimation for slide 21: 20 with timerActive = 1
+Tue Apr 16 21:41:51 2024,jmagnussonwulcan@ucdavis.edu,XAI,confidence,confidence for slide 21: 3 with timerActive = 1
+Tue Apr 16 21:42:04 2024,jmagnussonwulcan@ucdavis.edu,XAI,experiment,TCP estimation for slide 27: 20 with timerActive = 1
+Tue Apr 16 21:42:07 2024,jmagnussonwulcan@ucdavis.edu,XAI,confidence,confidence for slide 27: 3 with timerActive = 1
+Tue Apr 16 21:42:24 2024,jmagnussonwulcan@ucdavis.edu,XAI,experiment,TCP estimation for slide 22: 60 with timerActive = 1
+Tue Apr 16 21:42:28 2024,jmagnussonwulcan@ucdavis.edu,XAI,confidence,confidence for slide 22: 2 with timerActive = 1
+Tue Apr 16 21:42:42 2024,jmagnussonwulcan@ucdavis.edu,XAI,experiment,TCP estimation for slide 26: 50 with timerActive = 1
+Tue Apr 16 21:42:45 2024,jmagnussonwulcan@ucdavis.edu,XAI,confidence,confidence for slide 26: 3 with timerActive = 1
+Tue Apr 16 21:43:05 2024,jmagnussonwulcan@ucdavis.edu,XAI,experiment,TCP estimation for slide 23: 65 with timerActive = 1
+Tue Apr 16 21:43:08 2024,jmagnussonwulcan@ucdavis.edu,XAI,confidence,confidence for slide 23: 3 with timerActive = 1
+Tue Apr 16 21:43:19 2024,jmagnussonwulcan@ucdavis.edu,XAI,experiment,TCP estimation for slide 25: 15 with timerActive = 1
+Tue Apr 16 21:43:22 2024,jmagnussonwulcan@ucdavis.edu,XAI,confidence,confidence for slide 25: 3 with timerActive = 1
+Tue Apr 16 21:43:37 2024,jmagnussonwulcan@ucdavis.edu,XAI,experiment,TCP estimation for slide 24: 15 with timerActive = 1
+Tue Apr 16 21:43:39 2024,jmagnussonwulcan@ucdavis.edu,XAI,confidence,confidence for slide 24: 3 with timerActive = 1
+Tue Apr 16 21:45:17 2024,jmagnussonwulcan@ucdavis.edu,XAI,UEQS,"item1: 7, item2: 7, item3: 7, item4: 7, item5: 7, item6: 7, item7: 7, item8: 7"
