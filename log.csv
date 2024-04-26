@@ -2802,3 +2802,48 @@ Tue Apr 23 08:41:53 2024,dorresteingm@noivbd.nl,XAI,confidence,confidence for sl
 Tue Apr 23 08:42:16 2024,dorresteingm@noivbd.nl,XAI,experiment,TCP estimation for slide 14: 40 with timerActive = 0
 Tue Apr 23 08:42:19 2024,dorresteingm@noivbd.nl,XAI,confidence,confidence for slide 14: 4 with timerActive = 0
 Tue Apr 23 08:46:45 2024,dorresteingm@noivbd.nl,XAI,UEQS,"item1: 4, item2: 4, item3: 5, item4: 3, item5: 4, item6: 4, item7: 5, item8: 5"
+Fri Apr 26 10:17:24 2024,kiupel@msu.edu,XAI,register,status:completed
+Fri Apr 26 10:19:02 2024,kiupel@msu.edu,XAI,training,TCP estimation for slide 0: 50
+Fri Apr 26 10:19:13 2024,kiupel@msu.edu,XAI,training,TCP estimation for slide 1: 50
+Fri Apr 26 10:19:24 2024,kiupel@msu.edu,XAI,training,TCP estimation for slide 2: 60
+Fri Apr 26 10:20:05 2024,kiupel@msu.edu,XAI,experiment,TCP estimation for slide 10: 35 with timerActive = 0
+Fri Apr 26 10:20:10 2024,kiupel@msu.edu,XAI,confidence,confidence for slide 10: 3 with timerActive = 0
+Fri Apr 26 10:20:45 2024,kiupel@msu.edu,XAI,experiment,TCP estimation for slide 11: 50 with timerActive = 0
+Fri Apr 26 10:20:48 2024,kiupel@msu.edu,XAI,confidence,confidence for slide 11: 3 with timerActive = 0
+Fri Apr 26 10:21:17 2024,kiupel@msu.edu,XAI,experiment,TCP estimation for slide 19: 80 with timerActive = 0
+Fri Apr 26 10:21:21 2024,kiupel@msu.edu,XAI,confidence,confidence for slide 19: 3 with timerActive = 0
+Fri Apr 26 10:21:50 2024,kiupel@msu.edu,XAI,experiment,TCP estimation for slide 12: 60 with timerActive = 0
+Fri Apr 26 10:21:54 2024,kiupel@msu.edu,XAI,confidence,confidence for slide 12: 3 with timerActive = 0
+Fri Apr 26 10:22:11 2024,kiupel@msu.edu,XAI,experiment,TCP estimation for slide 18: 90 with timerActive = 0
+Fri Apr 26 10:22:14 2024,kiupel@msu.edu,XAI,confidence,confidence for slide 18: 3 with timerActive = 0
+Fri Apr 26 10:22:28 2024,kiupel@msu.edu,XAI,experiment,TCP estimation for slide 13: 75 with timerActive = 0
+Fri Apr 26 10:22:31 2024,kiupel@msu.edu,XAI,confidence,confidence for slide 13: 3 with timerActive = 0
+Fri Apr 26 10:23:13 2024,kiupel@msu.edu,XAI,experiment,TCP estimation for slide 17: 50 with timerActive = 0
+Fri Apr 26 10:23:16 2024,kiupel@msu.edu,XAI,confidence,confidence for slide 17: 3 with timerActive = 0
+Fri Apr 26 10:23:40 2024,kiupel@msu.edu,XAI,experiment,TCP estimation for slide 14: 35 with timerActive = 0
+Fri Apr 26 10:23:43 2024,kiupel@msu.edu,XAI,confidence,confidence for slide 14: 3 with timerActive = 0
+Fri Apr 26 10:24:02 2024,kiupel@msu.edu,XAI,experiment,TCP estimation for slide 16: 25 with timerActive = 0
+Fri Apr 26 10:24:06 2024,kiupel@msu.edu,XAI,confidence,confidence for slide 16: 3 with timerActive = 0
+Fri Apr 26 10:24:35 2024,kiupel@msu.edu,XAI,experiment,TCP estimation for slide 15: 50 with timerActive = 0
+Fri Apr 26 10:24:38 2024,kiupel@msu.edu,XAI,confidence,confidence for slide 15: 3 with timerActive = 0
+Fri Apr 26 10:24:51 2024,kiupel@msu.edu,XAI,experiment,TCP estimation for slide 20: 30 with timerActive = 1
+Fri Apr 26 10:24:56 2024,kiupel@msu.edu,XAI,confidence,confidence for slide 20: 3 with timerActive = 1
+Fri Apr 26 10:25:06 2024,kiupel@msu.edu,XAI,experiment,TCP estimation for slide 21: 45 with timerActive = 1
+Fri Apr 26 10:25:08 2024,kiupel@msu.edu,XAI,confidence,confidence for slide 21: 3 with timerActive = 1
+Fri Apr 26 10:25:21 2024,kiupel@msu.edu,XAI,experiment,TCP estimation for slide 29: 70 with timerActive = 1
+Fri Apr 26 10:25:27 2024,kiupel@msu.edu,XAI,confidence,confidence for slide 29: 3 with timerActive = 1
+Fri Apr 26 10:25:40 2024,kiupel@msu.edu,XAI,experiment,TCP estimation for slide 22: 60 with timerActive = 1
+Fri Apr 26 10:25:45 2024,kiupel@msu.edu,XAI,confidence,confidence for slide 22: 3 with timerActive = 1
+Fri Apr 26 10:25:55 2024,kiupel@msu.edu,XAI,experiment,TCP estimation for slide 28: 90 with timerActive = 1
+Fri Apr 26 10:25:58 2024,kiupel@msu.edu,XAI,confidence,confidence for slide 28: 3 with timerActive = 1
+Fri Apr 26 10:26:08 2024,kiupel@msu.edu,XAI,experiment,TCP estimation for slide 23: 70 with timerActive = 1
+Fri Apr 26 10:26:11 2024,kiupel@msu.edu,XAI,confidence,confidence for slide 23: 3 with timerActive = 1
+Fri Apr 26 10:26:19 2024,kiupel@msu.edu,XAI,experiment,TCP estimation for slide 27: 30 with timerActive = 1
+Fri Apr 26 10:26:23 2024,kiupel@msu.edu,XAI,confidence,confidence for slide 27: 3 with timerActive = 1
+Fri Apr 26 10:26:35 2024,kiupel@msu.edu,XAI,experiment,TCP estimation for slide 24: 20 with timerActive = 1
+Fri Apr 26 10:26:40 2024,kiupel@msu.edu,XAI,confidence,confidence for slide 24: 3 with timerActive = 1
+Fri Apr 26 10:26:49 2024,kiupel@msu.edu,XAI,experiment,TCP estimation for slide 26: 40 with timerActive = 1
+Fri Apr 26 10:26:53 2024,kiupel@msu.edu,XAI,confidence,confidence for slide 26: 3 with timerActive = 1
+Fri Apr 26 10:27:02 2024,kiupel@msu.edu,XAI,experiment,TCP estimation for slide 25: 10 with timerActive = 1
+Fri Apr 26 10:27:05 2024,kiupel@msu.edu,XAI,confidence,confidence for slide 25: 3 with timerActive = 1
+Fri Apr 26 10:31:18 2024,kiupel@msu.edu,XAI,UEQS,"item1: 7, item2: 7, item3: 7, item4: 7, item5: 4, item6: 5, item7: 4, item8: 4"
