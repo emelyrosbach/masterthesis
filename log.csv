@@ -2927,3 +2927,97 @@ Sat Apr 27 15:03:29 2024,imatise.vh@gmail.com,XAI,experiment,TCP estimation for 
 Sat Apr 27 15:03:32 2024,imatise.vh@gmail.com,XAI,confidence,confidence for slide 26: 3 with timerActive = 0
 Sat Apr 27 15:06:40 2024,imatise.vh@gmail.com,XAI,UEQS,"item1: 5, item2: 5, item3: 4, item4: 4, item5: 5, item6: 5, item7: 6, item8: 6"
 Sun Apr 28 15:08:43 2024,test@bla.de,Baseline,experiment,TCP estimation for slide 28: 60 with timerActive = 1
+Mon Apr 29 14:21:59 2024,alexandru.tabaran@usamvcluj.ro,XAI,register,status:completed
+Mon Apr 29 14:24:10 2024,alexandru.tabaran@usamvcluj.ro,XAI,training,TCP estimation for slide 0: 60
+Mon Apr 29 14:24:20 2024,alexandru.tabaran@usamvcluj.ro,XAI,training,TCP estimation for slide 1: 50
+Mon Apr 29 14:24:28 2024,alexandru.tabaran@usamvcluj.ro,XAI,training,TCP estimation for slide 2: 95
+Mon Apr 29 14:26:15 2024,alexandru.tabaran@usamvcluj.ro,XAI,experiment,TCP estimation for slide 10: 10 with timerActive = 1
+Mon Apr 29 14:26:24 2024,alexandru.tabaran@usamvcluj.ro,XAI,confidence,confidence for slide 10: 4 with timerActive = 1
+Mon Apr 29 14:26:30 2024,alexandru.tabaran@usamvcluj.ro,XAI,experiment,TCP estimation for slide 11: 55 with timerActive = 1
+Mon Apr 29 14:26:50 2024,alexandru.tabaran@usamvcluj.ro,XAI,confidence,confidence for slide 11: 4 with timerActive = 1
+Mon Apr 29 14:26:56 2024,alexandru.tabaran@usamvcluj.ro,XAI,experiment,TCP estimation for slide 19: 90 with timerActive = 1
+Mon Apr 29 14:27:19 2024,alexandru.tabaran@usamvcluj.ro,XAI,confidence,confidence for slide 19: 4 with timerActive = 1
+Mon Apr 29 14:27:25 2024,alexandru.tabaran@usamvcluj.ro,XAI,experiment,TCP estimation for slide 12: 60 with timerActive = 1
+Mon Apr 29 14:27:33 2024,alexandru.tabaran@usamvcluj.ro,XAI,confidence,confidence for slide 12: 3 with timerActive = 1
+Mon Apr 29 14:27:40 2024,alexandru.tabaran@usamvcluj.ro,XAI,experiment,TCP estimation for slide 18: 90 with timerActive = 1
+Mon Apr 29 14:27:45 2024,alexandru.tabaran@usamvcluj.ro,XAI,confidence,confidence for slide 18: 4 with timerActive = 1
+Mon Apr 29 14:27:52 2024,alexandru.tabaran@usamvcluj.ro,XAI,experiment,TCP estimation for slide 13: 90 with timerActive = 1
+Mon Apr 29 14:27:59 2024,alexandru.tabaran@usamvcluj.ro,XAI,confidence,confidence for slide 13: 3 with timerActive = 1
+Mon Apr 29 14:28:05 2024,alexandru.tabaran@usamvcluj.ro,XAI,experiment,TCP estimation for slide 17: 90 with timerActive = 1
+Mon Apr 29 14:28:08 2024,alexandru.tabaran@usamvcluj.ro,XAI,confidence,confidence for slide 17: 4 with timerActive = 1
+Mon Apr 29 14:28:14 2024,alexandru.tabaran@usamvcluj.ro,XAI,experiment,TCP estimation for slide 14: 10 with timerActive = 1
+Mon Apr 29 14:28:17 2024,alexandru.tabaran@usamvcluj.ro,XAI,confidence,confidence for slide 14: 4 with timerActive = 1
+Mon Apr 29 14:28:26 2024,alexandru.tabaran@usamvcluj.ro,XAI,experiment,TCP estimation for slide 16: 55 with timerActive = 1
+Mon Apr 29 14:28:30 2024,alexandru.tabaran@usamvcluj.ro,XAI,confidence,confidence for slide 16: 3 with timerActive = 1
+Mon Apr 29 14:28:39 2024,alexandru.tabaran@usamvcluj.ro,XAI,experiment,TCP estimation for slide 15: 80 with timerActive = 1
+Mon Apr 29 14:28:42 2024,alexandru.tabaran@usamvcluj.ro,XAI,confidence,confidence for slide 15: 3 with timerActive = 1
+Mon Apr 29 14:28:51 2024,alexandru.tabaran@usamvcluj.ro,XAI,experiment,TCP estimation for slide 20: 20 with timerActive = 0
+Mon Apr 29 14:28:55 2024,alexandru.tabaran@usamvcluj.ro,XAI,confidence,confidence for slide 20: 4 with timerActive = 0
+Mon Apr 29 14:29:07 2024,alexandru.tabaran@usamvcluj.ro,XAI,experiment,TCP estimation for slide 21: 70 with timerActive = 0
+Mon Apr 29 14:29:10 2024,alexandru.tabaran@usamvcluj.ro,XAI,confidence,confidence for slide 21: 4 with timerActive = 0
+Mon Apr 29 14:29:21 2024,alexandru.tabaran@usamvcluj.ro,XAI,experiment,TCP estimation for slide 29: 90 with timerActive = 0
+Mon Apr 29 14:29:23 2024,alexandru.tabaran@usamvcluj.ro,XAI,confidence,confidence for slide 29: 4 with timerActive = 0
+Mon Apr 29 14:29:30 2024,alexandru.tabaran@usamvcluj.ro,XAI,experiment,TCP estimation for slide 22: 40 with timerActive = 0
+Mon Apr 29 14:29:33 2024,alexandru.tabaran@usamvcluj.ro,XAI,confidence,confidence for slide 22: 4 with timerActive = 0
+Mon Apr 29 14:29:40 2024,alexandru.tabaran@usamvcluj.ro,XAI,experiment,TCP estimation for slide 28: 95 with timerActive = 0
+Mon Apr 29 14:29:43 2024,alexandru.tabaran@usamvcluj.ro,XAI,confidence,confidence for slide 28: 3 with timerActive = 0
+Mon Apr 29 14:29:51 2024,alexandru.tabaran@usamvcluj.ro,XAI,experiment,TCP estimation for slide 23: 80 with timerActive = 0
+Mon Apr 29 14:29:54 2024,alexandru.tabaran@usamvcluj.ro,XAI,confidence,confidence for slide 23: 3 with timerActive = 0
+Mon Apr 29 14:30:03 2024,alexandru.tabaran@usamvcluj.ro,XAI,experiment,TCP estimation for slide 27: 30 with timerActive = 0
+Mon Apr 29 14:30:05 2024,alexandru.tabaran@usamvcluj.ro,XAI,confidence,confidence for slide 27: 3 with timerActive = 0
+Mon Apr 29 14:30:24 2024,alexandru.tabaran@usamvcluj.ro,XAI,experiment,TCP estimation for slide 24: 10 with timerActive = 0
+Mon Apr 29 14:30:27 2024,alexandru.tabaran@usamvcluj.ro,XAI,confidence,confidence for slide 24: 3 with timerActive = 0
+Mon Apr 29 14:31:11 2024,alexandru.tabaran@usamvcluj.ro,XAI,experiment,TCP estimation for slide 26: 50 with timerActive = 0
+Mon Apr 29 14:31:14 2024,alexandru.tabaran@usamvcluj.ro,XAI,confidence,confidence for slide 26: 3 with timerActive = 0
+Mon Apr 29 14:32:00 2024,alexandru.tabaran@usamvcluj.ro,XAI,experiment,TCP estimation for slide 25: 10 with timerActive = 0
+Mon Apr 29 14:32:04 2024,alexandru.tabaran@usamvcluj.ro,XAI,confidence,confidence for slide 25: 3 with timerActive = 0
+Mon Apr 29 14:38:00 2024,alexandru.tabaran@usamvcluj.ro,XAI,UEQS,"item1: 6, item2: 6, item3: 7, item4: 6, item5: 7, item6: 7, item7: 7, item8: 6"
+Mon Apr 29 15:35:06 2024,a.nama@umcutrecht.nl,XAI,register,status:completed
+Mon Apr 29 15:35:39 2024,a.nama@umcutrecht.nl,XAI,training,TCP estimation for slide 0: 50
+Mon Apr 29 15:35:51 2024,a.nama@umcutrecht.nl,XAI,training,TCP estimation for slide 1: 50
+Mon Apr 29 15:35:59 2024,a.nama@umcutrecht.nl,XAI,training,TCP estimation for slide 2: 80
+Mon Apr 29 17:49:20 2024,a.nama@umcutrecht.nl,XAI,register,status:completed
+Mon Apr 29 17:50:10 2024,a.nama@umcutrecht.nl,XAI,training,TCP estimation for slide 0: 50
+Mon Apr 29 17:50:18 2024,a.nama@umcutrecht.nl,XAI,training,TCP estimation for slide 1: 50
+Mon Apr 29 17:50:24 2024,a.nama@umcutrecht.nl,XAI,training,TCP estimation for slide 2: 90
+Mon Apr 29 17:50:48 2024,a.nama@umcutrecht.nl,XAI,experiment,TCP estimation for slide 27: 25 with timerActive = 0
+Mon Apr 29 17:50:52 2024,a.nama@umcutrecht.nl,XAI,confidence,confidence for slide 27: 3 with timerActive = 0
+Mon Apr 29 17:51:16 2024,a.nama@umcutrecht.nl,XAI,experiment,TCP estimation for slide 28: 95 with timerActive = 0
+Mon Apr 29 17:51:22 2024,a.nama@umcutrecht.nl,XAI,confidence,confidence for slide 28: 3 with timerActive = 0
+Mon Apr 29 17:57:03 2024,a.nama@umcutrecht.nl,XAI,experiment,TCP estimation for slide 26: 50 with timerActive = 0
+Mon Apr 29 17:57:07 2024,a.nama@umcutrecht.nl,XAI,confidence,confidence for slide 26: 3 with timerActive = 0
+Mon Apr 29 17:57:14 2024,a.nama@umcutrecht.nl,XAI,experiment,TCP estimation for slide 29: 80 with timerActive = 0
+Mon Apr 29 17:57:17 2024,a.nama@umcutrecht.nl,XAI,confidence,confidence for slide 29: 3 with timerActive = 0
+Mon Apr 29 17:57:36 2024,a.nama@umcutrecht.nl,XAI,experiment,TCP estimation for slide 25: 25 with timerActive = 0
+Mon Apr 29 17:57:40 2024,a.nama@umcutrecht.nl,XAI,confidence,confidence for slide 25: 3 with timerActive = 0
+Mon Apr 29 17:58:51 2024,a.nama@umcutrecht.nl,XAI,experiment,TCP estimation for slide 20: 30 with timerActive = 0
+Mon Apr 29 17:58:54 2024,a.nama@umcutrecht.nl,XAI,confidence,confidence for slide 20: 3 with timerActive = 0
+Mon Apr 29 17:59:09 2024,a.nama@umcutrecht.nl,XAI,experiment,TCP estimation for slide 24: 50 with timerActive = 0
+Mon Apr 29 17:59:13 2024,a.nama@umcutrecht.nl,XAI,confidence,confidence for slide 24: 3 with timerActive = 0
+Mon Apr 29 17:59:22 2024,a.nama@umcutrecht.nl,XAI,experiment,TCP estimation for slide 21: 30 with timerActive = 0
+Mon Apr 29 17:59:25 2024,a.nama@umcutrecht.nl,XAI,confidence,confidence for slide 21: 3 with timerActive = 0
+Mon Apr 29 17:59:35 2024,a.nama@umcutrecht.nl,XAI,experiment,TCP estimation for slide 23: 60 with timerActive = 0
+Mon Apr 29 17:59:38 2024,a.nama@umcutrecht.nl,XAI,confidence,confidence for slide 23: 3 with timerActive = 0
+Mon Apr 29 18:00:01 2024,a.nama@umcutrecht.nl,XAI,experiment,TCP estimation for slide 22: 60 with timerActive = 0
+Mon Apr 29 18:00:04 2024,a.nama@umcutrecht.nl,XAI,confidence,confidence for slide 22: 3 with timerActive = 0
+Mon Apr 29 18:00:14 2024,a.nama@umcutrecht.nl,XAI,experiment,TCP estimation for slide 17: 60 with timerActive = 1
+Mon Apr 29 18:00:17 2024,a.nama@umcutrecht.nl,XAI,confidence,confidence for slide 17: 3 with timerActive = 1
+Mon Apr 29 18:00:24 2024,a.nama@umcutrecht.nl,XAI,experiment,TCP estimation for slide 18: 70 with timerActive = 1
+Mon Apr 29 18:00:26 2024,a.nama@umcutrecht.nl,XAI,confidence,confidence for slide 18: 3 with timerActive = 1
+Mon Apr 29 18:00:33 2024,a.nama@umcutrecht.nl,XAI,experiment,TCP estimation for slide 16: 50 with timerActive = 1
+Mon Apr 29 18:00:36 2024,a.nama@umcutrecht.nl,XAI,confidence,confidence for slide 16: 3 with timerActive = 1
+Mon Apr 29 18:00:43 2024,a.nama@umcutrecht.nl,XAI,experiment,TCP estimation for slide 19: 90 with timerActive = 1
+Mon Apr 29 18:00:46 2024,a.nama@umcutrecht.nl,XAI,confidence,confidence for slide 19: 3 with timerActive = 1
+Mon Apr 29 18:00:53 2024,a.nama@umcutrecht.nl,XAI,experiment,TCP estimation for slide 15: 50 with timerActive = 1
+Mon Apr 29 18:00:55 2024,a.nama@umcutrecht.nl,XAI,confidence,confidence for slide 15: 3 with timerActive = 1
+Mon Apr 29 18:01:04 2024,a.nama@umcutrecht.nl,XAI,experiment,TCP estimation for slide 10: 70 with timerActive = 1
+Mon Apr 29 18:01:06 2024,a.nama@umcutrecht.nl,XAI,confidence,confidence for slide 10: 3 with timerActive = 1
+Mon Apr 29 18:01:13 2024,a.nama@umcutrecht.nl,XAI,experiment,TCP estimation for slide 14: 20 with timerActive = 1
+Mon Apr 29 18:01:16 2024,a.nama@umcutrecht.nl,XAI,confidence,confidence for slide 14: 3 with timerActive = 1
+Mon Apr 29 18:01:21 2024,a.nama@umcutrecht.nl,XAI,experiment,TCP estimation for slide 11: 90 with timerActive = 1
+Mon Apr 29 18:01:24 2024,a.nama@umcutrecht.nl,XAI,confidence,confidence for slide 11: 3 with timerActive = 1
+Mon Apr 29 18:01:29 2024,a.nama@umcutrecht.nl,XAI,experiment,TCP estimation for slide 13: 90 with timerActive = 1
+Mon Apr 29 18:01:32 2024,a.nama@umcutrecht.nl,XAI,confidence,confidence for slide 13: 3 with timerActive = 1
+Mon Apr 29 18:01:37 2024,a.nama@umcutrecht.nl,XAI,experiment,TCP estimation for slide 12: 50 with timerActive = 1
+Mon Apr 29 18:01:40 2024,a.nama@umcutrecht.nl,XAI,confidence,confidence for slide 12: 3 with timerActive = 1
+Mon Apr 29 18:02:42 2024,a.nama@umcutrecht.nl,XAI,UEQS,"item1: 7, item2: 7, item3: 7, item4: 7, item5: 7, item6: 7, item7: 7, item8: 4"
