@@ -3021,3 +3021,54 @@ Mon Apr 29 18:01:32 2024,a.nama@umcutrecht.nl,XAI,confidence,confidence for slid
 Mon Apr 29 18:01:37 2024,a.nama@umcutrecht.nl,XAI,experiment,TCP estimation for slide 12: 50 with timerActive = 1
 Mon Apr 29 18:01:40 2024,a.nama@umcutrecht.nl,XAI,confidence,confidence for slide 12: 3 with timerActive = 1
 Mon Apr 29 18:02:42 2024,a.nama@umcutrecht.nl,XAI,UEQS,"item1: 7, item2: 7, item3: 7, item4: 7, item5: 7, item6: 7, item7: 7, item8: 4"
+Wed May  1 18:52:02 2024,smedley1@msu.edu,Baseline,register,status:open
+Wed May  1 18:53:29 2024,smedley1@msu.edu,Baseline,training,TCP estimation for slide 0: 55
+Wed May  1 18:54:01 2024,smedley1@msu.edu,Baseline,training,TCP estimation for slide 1: 40
+Wed May  1 18:54:22 2024,smedley1@msu.edu,Baseline,training,TCP estimation for slide 2: 90
+Wed May  1 18:56:05 2024,smedley1@msu.edu,Baseline,demographic data,"gender: Prefer not to say, age: 45-54, experience: >15 years, interest in technology: 3, adoption of new technologies: 2, familiarity with AI: 3"
+Wed May  1 18:56:34 2024,smedley1@msu.edu,Baseline,experiment,TCP estimation for slide 21: 90 with timerActive = 1
+Wed May  1 18:56:38 2024,smedley1@msu.edu,Baseline,confidence,confidence for slide 21: 4 with timerActive = 1
+Wed May  1 18:56:57 2024,smedley1@msu.edu,Baseline,experiment,TCP estimation for slide 22: 50 with timerActive = 1
+Wed May  1 18:57:00 2024,smedley1@msu.edu,Baseline,confidence,confidence for slide 22: 4 with timerActive = 1
+Wed May  1 18:57:19 2024,smedley1@msu.edu,Baseline,experiment,TCP estimation for slide 20: 30 with timerActive = 1
+Wed May  1 18:57:23 2024,smedley1@msu.edu,Baseline,confidence,confidence for slide 20: 4 with timerActive = 1
+Wed May  1 18:57:38 2024,smedley1@msu.edu,Baseline,experiment,TCP estimation for slide 23: 80 with timerActive = 1
+Wed May  1 18:57:41 2024,smedley1@msu.edu,Baseline,confidence,confidence for slide 23: 4 with timerActive = 1
+Wed May  1 18:57:55 2024,smedley1@msu.edu,Baseline,experiment,TCP estimation for slide 29: 95 with timerActive = 1
+Wed May  1 18:57:59 2024,smedley1@msu.edu,Baseline,confidence,confidence for slide 29: 5 with timerActive = 1
+Wed May  1 18:58:17 2024,smedley1@msu.edu,Baseline,experiment,TCP estimation for slide 24: 20 with timerActive = 1
+Wed May  1 18:58:21 2024,smedley1@msu.edu,Baseline,confidence,confidence for slide 24: 4 with timerActive = 1
+Wed May  1 18:58:37 2024,smedley1@msu.edu,Baseline,experiment,TCP estimation for slide 28: 99 with timerActive = 1
+Wed May  1 18:58:41 2024,smedley1@msu.edu,Baseline,confidence,confidence for slide 28: 4 with timerActive = 1
+Wed May  1 18:58:58 2024,smedley1@msu.edu,Baseline,experiment,TCP estimation for slide 25: 25 with timerActive = 1
+Wed May  1 18:59:02 2024,smedley1@msu.edu,Baseline,confidence,confidence for slide 25: 3 with timerActive = 1
+Wed May  1 18:59:16 2024,smedley1@msu.edu,Baseline,experiment,TCP estimation for slide 27: 10 with timerActive = 1
+Wed May  1 18:59:20 2024,smedley1@msu.edu,Baseline,confidence,confidence for slide 27: 4 with timerActive = 1
+Wed May  1 18:59:36 2024,smedley1@msu.edu,Baseline,experiment,TCP estimation for slide 26: 60 with timerActive = 1
+Wed May  1 18:59:40 2024,smedley1@msu.edu,Baseline,confidence,confidence for slide 26: 2 with timerActive = 1
+Wed May  1 19:00:04 2024,smedley1@msu.edu,Baseline,experiment,TCP estimation for slide 11: 40 with timerActive = 0
+Wed May  1 19:00:08 2024,smedley1@msu.edu,Baseline,confidence,confidence for slide 11: 3 with timerActive = 0
+Wed May  1 19:00:31 2024,smedley1@msu.edu,Baseline,experiment,TCP estimation for slide 12: 60 with timerActive = 0
+Wed May  1 19:00:34 2024,smedley1@msu.edu,Baseline,confidence,confidence for slide 12: 3 with timerActive = 0
+Wed May  1 19:00:57 2024,smedley1@msu.edu,Baseline,experiment,TCP estimation for slide 10: 25 with timerActive = 0
+Wed May  1 19:01:01 2024,smedley1@msu.edu,Baseline,confidence,confidence for slide 10: 3 with timerActive = 0
+Wed May  1 19:01:11 2024,smedley1@msu.edu,Baseline,experiment,TCP estimation for slide 13: 90 with timerActive = 0
+Wed May  1 19:01:15 2024,smedley1@msu.edu,Baseline,confidence,confidence for slide 13: 4 with timerActive = 0
+Wed May  1 19:01:27 2024,smedley1@msu.edu,Baseline,experiment,TCP estimation for slide 19: 95 with timerActive = 0
+Wed May  1 19:01:32 2024,smedley1@msu.edu,Baseline,confidence,confidence for slide 19: 4 with timerActive = 0
+Wed May  1 19:01:45 2024,smedley1@msu.edu,Baseline,experiment,TCP estimation for slide 14: 20 with timerActive = 0
+Wed May  1 19:01:48 2024,smedley1@msu.edu,Baseline,confidence,confidence for slide 14: 3 with timerActive = 0
+Wed May  1 19:02:01 2024,smedley1@msu.edu,Baseline,experiment,TCP estimation for slide 18: 95 with timerActive = 0
+Wed May  1 19:02:05 2024,smedley1@msu.edu,Baseline,confidence,confidence for slide 18: 4 with timerActive = 0
+Wed May  1 19:02:27 2024,smedley1@msu.edu,Baseline,experiment,TCP estimation for slide 15: 80 with timerActive = 0
+Wed May  1 19:02:31 2024,smedley1@msu.edu,Baseline,confidence,confidence for slide 15: 3 with timerActive = 0
+Wed May  1 19:03:01 2024,smedley1@msu.edu,Baseline,experiment,TCP estimation for slide 17: 90 with timerActive = 0
+Wed May  1 19:03:04 2024,smedley1@msu.edu,Baseline,confidence,confidence for slide 17: 4 with timerActive = 0
+Wed May  1 19:03:45 2024,smedley1@msu.edu,Baseline,experiment,TCP estimation for slide 16: 40 with timerActive = 0
+Wed May  1 19:03:48 2024,smedley1@msu.edu,Baseline,confidence,confidence for slide 16: 4 with timerActive = 0
+Wed May  1 19:04:40 2024,smedley1@msu.edu,Baseline,UEQS,"item1: 7, item2: 7, item3: 7, item4: 7, item5: 5, item6: 6, item7: 6, item8: 6"
+Wed May  1 19:36:59 2024,test@bla.de,Baseline,register,status:completed
+Wed May  1 19:37:35 2024,test@bla.de,Baseline,training,TCP estimation for slide 2: 44
+Wed May  1 19:38:39 2024,test@bla.de,Baseline,demographic data,"gender: Female, age: 25-34, experience: 5-10 years, interest in technology: 4, adoption of new technologies: 2, familiarity with AI: 4"
+Wed May  1 19:39:11 2024,test@bla.de,Baseline,experiment,TCP estimation for slide 23: 23 with timerActive = 1
+Wed May  1 19:39:21 2024,test@bla.de,Baseline,confidence,confidence for slide 23: 4 with timerActive = 1
