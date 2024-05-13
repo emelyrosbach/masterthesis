@@ -340,15 +340,24 @@ class Results():
                 meanBNothing = sumBNothing / 10
                 meanBOver = sumBOver / 5
                 worksheetErr.write(i, 1, meanUnder)
-                worksheetErr.write(i, 2, meanOver)
+                worksheetErr.write(i, 2, meanNothing)
+                worksheetErr.write(i, 3, meanOver)
+
                 worksheetJAS.write(i, 1, meanJASUnder)
-                worksheetJAS.write(i, 2, meanJASOver)
+                worksheetJAS.write(i, 2, meanJASNothing)
+                worksheetJAS.write(i, 3, meanJASOver)
+
                 worksheetAn.write(i, 1, meanAnUnder)
-                worksheetAn.write(i, 2, meanAnOver)
+                worksheetAn.write(i, 2, meanAnNothing)
+                worksheetAn.write(i, 3, meanAnOver)
+
                 worksheet3.write((i*2)-1, 1, meanBUnder)
-                worksheet3.write((i*2)-1, 2, meanBOver)
+                worksheet3.write((i*2)-1, 2, meanBNothing)
+                worksheet3.write((i*2)-1, 3, meanBOver)
+
                 worksheet3.write((i*2), 1, meanUnder)
-                worksheet3.write((i*2), 2, meanOver)
+                worksheet3.write((i*2), 2, meanNothing)
+                worksheet3.write((i*2), 3, meanOver)
             except ObjectDoesNotExist:
                 print ("ups in comp to AI")
             i = i + 1

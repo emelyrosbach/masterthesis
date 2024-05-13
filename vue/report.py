@@ -5,15 +5,40 @@ from vue.predictions import GroundTruth
 from django.core.exceptions import ObjectDoesNotExist
 import os
 import pandas as pd
-import fpdf as FPDF
+from fpdf import FPDF
 
 class Report():
-    def createGraphics (self):
+    def createPDF (self):
         df = pd.DataFrame()
         df[""]=["Independent assessment", "With xAI assistance"]
         df['AI minimal estimation error'] = ["3.6","7.66"]
         df['AI substantial estimation error'] = ["1.40","14.25"]
 
+        #create pdf 
+        pdf = FPDF()
+        pdf.add_page()
+        pdf.set_xy(0, 0)
+        pdf.set_font('arial', 'B', 12)
+        pdf.ln(10)
+        pdf.cell(0, 10, "Study on human-AI interaction in digital pathology", 0, 1, 'C')
+        pdf.ln(10)
+        pdf.multi_cell(0,10,"Thank you for participating in our study on human-AI interaction in digital pathology!")
+        pdf.ln(10)
+        pdf.cell(50, 10, '', 1, 0, 'C')
+        pdf.cell(70, 10, 'AI minimal estimation error', 1, 0, 'C')
+        pdf.cell(70, 10, 'AI substantial estimation error', 1, 2, 'C')
+        pdf.cell(-120)
+        pdf.set_font('arial', '', 12)
+        for i in range(0, len(df)):
+            pdf.cell(50, 10, '%s' % (df[''].iloc[i]), 1, 0, 'C')
+            pdf.cell(70, 10, '%s' % (str(df['AI minimal estimation error'].iloc[i])), 1, 0, 'C')
+            pdf.cell(70, 10, '%s' % (str(df['AI substantial estimation error'].iloc[i])), 1, 2, 'C')
+            pdf.cell(-120)
+        pdf.cell(90, 10, " ", 0, 2, 'C')
+        report = './plots/report.pdf'
+        pdf.output(report, 'F')
+
+    def createGraphics (self):
         performanceBaseline = self.prepareData('Baseline')
         performanceXAI = self.prepareData('XAI')
         expList = Experiment.objects.all()
@@ -36,7 +61,7 @@ class Report():
                 emailList = list(newBaseline.keys())
                 baseline = list(newBaseline.values())
                 xAI = list(newXAI.values())
-                plt.figure(figsize=(35, 7), dpi=80)
+                plt.figure(figsize=(35, 17), dpi=80)
                 n=len(emailList)
                 r = np.arange(n)
                 width = 0.3
@@ -53,13 +78,12 @@ class Report():
                 legend = plt.legend()
                 legend.get_frame().set_linewidth(0.0)
                 plt.rcParams.update({'font.size': 22})
-               
                 
                 filename = './plots/' + exp.email + '.pdf'
                 if os.path.isfile(filename):
                     os.remove(filename) 
                 plt.savefig(filename)
-                plt.close() 
+                plt.close()
 
     def prepareData(self, condition):
         performance = {}
@@ -74,7 +98,7 @@ class Report():
                         data = Data.objects.get(experiment=exp, condition=condition, slide=slides[col_num])
                         sumDev = sumDev + self.calcDeviation(data.slide, data.tcp_est)
                     sysDev = sumDev / 20
-                    performance[exp.email] = abs(sysDev)
+                    performance[exp.email] = sysDev
                 except ObjectDoesNotExist:
                     print("ups")
         return performance
