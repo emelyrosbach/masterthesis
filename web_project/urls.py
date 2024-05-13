@@ -32,6 +32,7 @@ urlpatterns = [
     path('confidence/<int:participant_id>/<str:condition>/<int:timer_active>/<int:slide_counter>/', vue_views.confidence, name='confidence'),
     path('mobile/', vue_views.mobile, name='mobile'),
     path('results/', vue_views.results, name='results'),
+    path('report/', vue_views.report, name='report'),
 ]
 
 urlpatterns += staticfiles_urlpatterns()
