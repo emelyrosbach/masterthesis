@@ -2,7 +2,6 @@ from django.shortcuts import render, redirect
 from django.core.exceptions import ObjectDoesNotExist
 from vue.predictions import AIPredictions, TrainingAIPredictions
 from vue.results import Results
-from vue.report import Report
 from vue.models import Experiment, Order, Data, PostStudyData, PreStudyData, TrainingData
 from vue.forms import RegistrationBaseline, RegistrationXAI, PreStudy, PostStudy, Confidence, PostStudyXAI
 import json
@@ -363,8 +362,3 @@ def results(request):
     result = Results()
     result.exportResults()
     return render(request, 'results.html')
-
-def report(request):
-    report = Report()
-    report.createGraphics()
-    return render(request, 'report.html')
