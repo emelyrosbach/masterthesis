@@ -3072,3 +3072,48 @@ Wed May  1 19:37:35 2024,test@bla.de,Baseline,training,TCP estimation for slide 
 Wed May  1 19:38:39 2024,test@bla.de,Baseline,demographic data,"gender: Female, age: 25-34, experience: 5-10 years, interest in technology: 4, adoption of new technologies: 2, familiarity with AI: 4"
 Wed May  1 19:39:11 2024,test@bla.de,Baseline,experiment,TCP estimation for slide 23: 23 with timerActive = 1
 Wed May  1 19:39:21 2024,test@bla.de,Baseline,confidence,confidence for slide 23: 4 with timerActive = 1
+Wed May 22 18:32:10 2024,smedley1@msu.edu,XAI,register,status:completed
+Wed May 22 18:35:37 2024,smedley1@msu.edu,XAI,training,TCP estimation for slide 0: 60
+Wed May 22 18:36:00 2024,smedley1@msu.edu,XAI,training,TCP estimation for slide 1: 40
+Wed May 22 18:36:18 2024,smedley1@msu.edu,XAI,training,TCP estimation for slide 2: 90
+Wed May 22 18:36:56 2024,smedley1@msu.edu,XAI,experiment,TCP estimation for slide 21: 40 with timerActive = 1
+Wed May 22 18:37:05 2024,smedley1@msu.edu,XAI,confidence,confidence for slide 21: 3 with timerActive = 1
+Wed May 22 18:37:22 2024,smedley1@msu.edu,XAI,experiment,TCP estimation for slide 22: 55 with timerActive = 1
+Wed May 22 18:37:29 2024,smedley1@msu.edu,XAI,confidence,confidence for slide 22: 4 with timerActive = 1
+Wed May 22 18:37:47 2024,smedley1@msu.edu,XAI,experiment,TCP estimation for slide 20: 20 with timerActive = 1
+Wed May 22 18:37:53 2024,smedley1@msu.edu,XAI,confidence,confidence for slide 20: 4 with timerActive = 1
+Wed May 22 18:38:11 2024,smedley1@msu.edu,XAI,experiment,TCP estimation for slide 23: 65 with timerActive = 1
+Wed May 22 18:38:16 2024,smedley1@msu.edu,XAI,confidence,confidence for slide 23: 4 with timerActive = 1
+Wed May 22 18:38:33 2024,smedley1@msu.edu,XAI,experiment,TCP estimation for slide 29: 95 with timerActive = 1
+Wed May 22 18:38:36 2024,smedley1@msu.edu,XAI,confidence,confidence for slide 29: 4 with timerActive = 1
+Wed May 22 18:38:58 2024,smedley1@msu.edu,XAI,experiment,TCP estimation for slide 24: 20 with timerActive = 1
+Wed May 22 18:39:02 2024,smedley1@msu.edu,XAI,confidence,confidence for slide 24: 3 with timerActive = 1
+Wed May 22 18:39:18 2024,smedley1@msu.edu,XAI,experiment,TCP estimation for slide 28: 95 with timerActive = 1
+Wed May 22 18:39:22 2024,smedley1@msu.edu,XAI,confidence,confidence for slide 28: 4 with timerActive = 1
+Wed May 22 18:39:40 2024,smedley1@msu.edu,XAI,experiment,TCP estimation for slide 25: 15 with timerActive = 1
+Wed May 22 18:39:43 2024,smedley1@msu.edu,XAI,confidence,confidence for slide 25: 4 with timerActive = 1
+Wed May 22 18:40:07 2024,smedley1@msu.edu,XAI,experiment,TCP estimation for slide 27: 20 with timerActive = 1
+Wed May 22 18:40:10 2024,smedley1@msu.edu,XAI,confidence,confidence for slide 27: 4 with timerActive = 1
+Wed May 22 18:40:28 2024,smedley1@msu.edu,XAI,experiment,TCP estimation for slide 26: 60 with timerActive = 1
+Wed May 22 18:40:31 2024,smedley1@msu.edu,XAI,confidence,confidence for slide 26: 4 with timerActive = 1
+Wed May 22 18:41:53 2024,smedley1@msu.edu,XAI,experiment,TCP estimation for slide 11: 55 with timerActive = 0
+Wed May 22 18:41:57 2024,smedley1@msu.edu,XAI,confidence,confidence for slide 11: 4 with timerActive = 0
+Wed May 22 18:42:58 2024,smedley1@msu.edu,XAI,experiment,TCP estimation for slide 12: 50 with timerActive = 0
+Wed May 22 18:43:02 2024,smedley1@msu.edu,XAI,confidence,confidence for slide 12: 4 with timerActive = 0
+Wed May 22 18:43:59 2024,smedley1@msu.edu,XAI,experiment,TCP estimation for slide 10: 30 with timerActive = 0
+Wed May 22 18:44:02 2024,smedley1@msu.edu,XAI,confidence,confidence for slide 10: 4 with timerActive = 0
+Wed May 22 18:44:36 2024,smedley1@msu.edu,XAI,experiment,TCP estimation for slide 13: 75 with timerActive = 0
+Wed May 22 18:44:40 2024,smedley1@msu.edu,XAI,confidence,confidence for slide 13: 4 with timerActive = 0
+Wed May 22 18:45:35 2024,smedley1@msu.edu,XAI,experiment,TCP estimation for slide 19: 90 with timerActive = 0
+Wed May 22 18:45:38 2024,smedley1@msu.edu,XAI,confidence,confidence for slide 19: 5 with timerActive = 0
+Wed May 22 18:46:46 2024,smedley1@msu.edu,XAI,experiment,TCP estimation for slide 14: 30 with timerActive = 0
+Wed May 22 18:46:49 2024,smedley1@msu.edu,XAI,confidence,confidence for slide 14: 4 with timerActive = 0
+Wed May 22 18:47:07 2024,smedley1@msu.edu,XAI,experiment,TCP estimation for slide 18: 95 with timerActive = 0
+Wed May 22 18:47:13 2024,smedley1@msu.edu,XAI,confidence,confidence for slide 18: 5 with timerActive = 0
+Wed May 22 18:48:02 2024,smedley1@msu.edu,XAI,experiment,TCP estimation for slide 15: 50 with timerActive = 0
+Wed May 22 18:48:06 2024,smedley1@msu.edu,XAI,confidence,confidence for slide 15: 3 with timerActive = 0
+Wed May 22 18:48:22 2024,smedley1@msu.edu,XAI,experiment,TCP estimation for slide 17: 95 with timerActive = 0
+Wed May 22 18:48:30 2024,smedley1@msu.edu,XAI,confidence,confidence for slide 17: 5 with timerActive = 0
+Wed May 22 18:49:34 2024,smedley1@msu.edu,XAI,experiment,TCP estimation for slide 16: 35 with timerActive = 0
+Wed May 22 18:49:38 2024,smedley1@msu.edu,XAI,confidence,confidence for slide 16: 4 with timerActive = 0
+Wed May 22 18:51:59 2024,smedley1@msu.edu,XAI,UEQS,"item1: 7, item2: 7, item3: 7, item4: 7, item5: 6, item6: 7, item7: 7, item8: 7"
